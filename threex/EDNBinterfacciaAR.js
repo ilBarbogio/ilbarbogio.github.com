@@ -1174,15 +1174,15 @@
         ////////////////////////////////////////////////////////////
         // ALTRO di meno tecnico
         ////////////////////////////////////////////////////////////
-        let contenitore=document.getElementById(dove);
-        let togglo=document.createElement("input");
-        togglo.type="checkbox";
-        togglo.checked=true;
-        togglo.id="togglePianoXY";
-        togglo.style.zIndex=99;
-        togglo.style.position="absolute";
+        // let contenitore=document.getElementById(dove);
+        // let togglo=document.createElement("input");
+        // togglo.type="checkbox";
+        // togglo.checked=true;
+        // togglo.id="togglePianoXY";
+        // togglo.style.zIndex=99;
+        // togglo.style.position="absolute";
         
-        contenitore.appendChild(togglo);
+        // contenitore.appendChild(togglo);
   
         if(globalOpt.riferimento){
           this.inizializzaAssi(riferimentoDef.rangeMassimo);
