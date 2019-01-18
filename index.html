@@ -38,6 +38,8 @@
 
       AR3D.sfera("ruotaXor",new THREE.Vector3(0,3,-1),0.5,{colore:0xff0000});
       AR3D.sfera("ruotaXantior",new THREE.Vector3(0,-3,-1),0.5,{colore:0x00ff00});
+      AR3D.sfera("ruotaYor",new THREE.Vector3(3,0,-1),0.5,{colore:0x0000ff});
+      AR3D.sfera("ruotaYantior",new THREE.Vector3(-3,0,-1),0.5,{colore:0x00ffff});
     }
     
     function raycast(intersezione){
@@ -59,6 +61,14 @@
             }else if(intersezione[k].object.name=="ruotaXantior"){
               AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(1,0,0),-Math.PI/2,10)
               tastiFissi.forEach(nome=>AR3D.animaRotazioneAffine(nome,new THREE.Vector3(0,0,0),new THREE.Vector3(1,0,0),Math.PI/2,10));
+              break;
+            }else if(intersezione[k].object.name=="ruotaYor"){
+              AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),Math.PI/2,10)
+              tastiFissi.forEach(nome=>AR3D.animaRotazioneAffine(nome,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),-Math.PI/2,10));
+              break;
+            }else if(intersezione[k].object.name=="ruotaYantior"){
+              AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),-Math.PI/2,10)
+              tastiFissi.forEach(nome=>AR3D.animaRotazioneAffine(nome,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),Math.PI/2,10));
               break;
             }
           }
