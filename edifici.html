@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Hello, lights 3D AR!</title>
+	<!-- include three.js library -->
+	<script src='js/three.js'></script>
+	<!-- include jsartookit -->
+	<script src="jsartoolkit5/artoolkit.min.js"></script>
+	<script src="jsartoolkit5/artoolkit.api.js"></script>
+	<!-- include threex.artoolkit -->
+	<script src="threex/threex-artoolkitsource.js"></script>
+	<script src="threex/threex-artoolkitcontext.js"></script>
+	<script src="threex/threex-arbasecontrols.js"></script>
+  <script src="threex/threex-armarkercontrols.js"></script>
+  <script src="threex/EDNBinterfacciaAR.js"></script>
+</head>
+
+<body>
+  <div id="ciao"></div>
+  <button style="position:absolute; top:20px; left:20px; z-index:99" onclick=ruota()>ruota</button>
+
+  <script>
+    
+    function raycast(intersezione){
+      console.log("ciao")
+      console.log(intersezione)
+        for(let k=0;k<intersezione.length;k++){
+          if(intersezione[k].object.name!=null){
+            if(intersezione[k].object.name[0]=="s"){
+              trasla("cubo"+intersezione[k].object.name[1]);
+              break;
+            }
+          }
+        }
+    }
+
+    
+
+    AR3D.setup("ciao",{riferimento:false});
+    
+    AR3D.getOpzioniGlobali().raycastCallback=raycast;
+    
+    let dist=2;
+
+    let A=new THREE.Vector3(dist,0,dist);
+    let B=new THREE.Vector3(dist,0,-dist);
+    let C=new THREE.Vector3(-dist,0,-dist);
+    let D=new THREE.Vector3(-dist,0,dist);
+    // AR3D.sfera("s1",centro,1,{colore:"red"});
+    // AR3D.punto("s2",punto,{colore:"green",spessore:0.1});
+    // AR3D.vettore("s1",punto,{colore:"red"});
+    // AR3D.vettore("s2",punto1,{colore:"green"});
+    // AR3D.vettore("s3",punto2,{colore:"blue"});
+    // AR3D.retta("r",punto,new THREE.Vector3(-1,1,0));
+    // AR3D.piano("p",centro,new THREE.Vector3(1,0,0),new THREE.Vector3(0,1,0),{lato:3})
+    let latoBase=8
+    AR3D.cubo("base",[0,-latoBase/2,0],latoBase,{coloreFacce:0x333333});
+    AR3D.piano("mare",new THREE.Vector3(0,-0.5,0),new THREE.Vector3(1,0,0),new THREE.Vector3(0,0,1),{colore:"cyan",lato:latoBase/2})
+
+    AR3D.sfera("sA",A,1,{colore:"red",trasparenza:1});
+    AR3D.sfera("sB",B,1,{colore:"green",trasparenza:1});
+    AR3D.sfera("sC",C,1,{colore:"blue",trasparenza:1});
+    AR3D.sfera("sD",D,1,{colore:"yellow",trasparenza:1});
+
+    let latoCubo=2;
+    let pos=2;
+    AR3D.cubo("cuboA",[pos,-latoCubo/2+0.01,pos],latoCubo,{coloreFacce:0xaa5555});
+    AR3D.cubo("cuboB",[pos,-latoCubo/2+0.01,-pos],latoCubo,{coloreFacce:0x55aa55});
+    AR3D.cubo("cuboC",[-pos,-latoCubo/2+0.01,-pos],latoCubo,{coloreFacce:0x5555aa});
+    AR3D.cubo("cuboD",[-pos,-latoCubo/2+0.01,pos],latoCubo,{coloreFacce:0xaaaa55});
+
+    function trasla(id){
+      AR3D.animaTraslazione(id,new THREE.Vector3(0,latoCubo,0),200)
+    }
+  </script>
+</body>
+</html>

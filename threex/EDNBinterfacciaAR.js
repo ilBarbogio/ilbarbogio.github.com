@@ -276,8 +276,8 @@
     {//TRASFORMAZIONI
       let trasformazioneDefault={
         scala:0.25,
-        traslazione:new THREE.Vector3(0,1,0),
-        rotazione:new THREE.Euler(-Math.PI/2,0,0,"XYZ")
+        traslazione:new THREE.Vector3(0,0,0),//new THREE.Vector3(0,1,0),
+        rotazione:new THREE.Euler(0,0,0,"XYZ")//new THREE.Euler(-Math.PI/2,0,0,"XYZ")
       }
       function trasformaDefaultMisure(misura){
         return misura*trasformazioneDefault.scala;
