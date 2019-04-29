@@ -24,9 +24,9 @@
     }
 
     let trasformazioneDefault={
-      scala:0.25,
-      traslazione:new THREE.Vector3(0,0,0),//new THREE.Vector3(0,1,0),
-      rotazione:new THREE.Euler(-Math.PI/2,0,0,"XYZ")
+      scala:0.10,
+      traslazione:new THREE.Vector3(0,0.25,0),//new THREE.Vector3(0,1,0),
+      rotazione:new THREE.Euler(Math.PI/2,0,0,"XYZ")
     }
 
     let oggetti={
@@ -534,6 +534,7 @@
         geometria.computeVertexNormals();
 
         let listaFacce = new THREE.Mesh(geometria, materialeFacce);
+        listaFacce.receiveShadow=true;
         poliedro.add(listaFacce);
 
         //mostra gli spigoli
@@ -551,6 +552,7 @@
         }
 
         poliedro.name=id;
+        poliedro.receiveShadow=true;
         scena.add(poliedro);
       }
       _libreria.poliedro.cambiaColore=function(id,coloreFacce,coloreSpigoli){
@@ -618,6 +620,77 @@
         ]
 
         this.poliedro(id,verticiCubo,facceCubo,opt);
+      }
+
+      let estrusioneDef={
+        coloreFacce:"white",
+        colorazioneFacce:"",
+        interno:false,
+        spigoli:true,
+        coloreSpigoli:0x000000,
+        spessoreSpigoli:1,
+      }
+      _libreria.estrusione=function(id,posizione,verticiBase,altezza,opzioni){
+        let opt=Object.assign({},oggettiDef);
+        Object.keys(estrusioneDef).forEach(function(key){
+          opt[key]=estrusioneDef[key];
+        })
+        if(opzioni!=null){
+          Object.keys(opzioni).forEach(function(key){
+            opt[key]=opzioni[key];
+          })
+        }
+        //rimuovo eventuale oggetto preesistente
+        if(opt.cancellabile){
+          this.cancellaOggetto(id);
+          oggetti.cancellabili.push(id);
+        }else{
+          if(oggetti.fissi.indexOf(id)==-1) oggetti.fissi.push(id);
+        }
+
+        
+        let vertici=[];
+        let numeroVerticiBase=verticiBase.length;
+
+        for(let i=0;i<numeroVerticiBase;i++){//deep copy
+          vertici.push(verticiBase[i].slice());
+        }
+
+        for(let i=0;i<numeroVerticiBase;i++){
+          vertici.push([(vertici[i][0]+altezza[0]),(vertici[i][1]+altezza[1]),(vertici[i][2]+altezza[2])]);
+        }
+
+        //traslazione
+        let traslazione;
+        if(!Array.isArray(posizione)) traslazione=[posizione.x,posizione.y,posizione.z];
+        else traslazione=posizione.slice();
+        vertici.forEach(el=>{
+          el.forEach((p,ind)=>{
+            el[ind]+=traslazione[ind];
+          })
+        })
+
+        //facce di base
+        let facciaBase1=[];
+        let facciaBase2=[];
+        for(let i=0;i<numeroVerticiBase;i++){
+          facciaBase1[numeroVerticiBase-i-1]=i;
+          facciaBase2[i]=(i+numeroVerticiBase);
+        }
+        let facce=[
+          facciaBase1,
+          facciaBase2
+        ]
+        //facce laterali
+        for(let i=0;i<numeroVerticiBase;i++){
+          let a=numeroVerticiBase-2-i;
+          if(a<0) a=numeroVerticiBase-1;
+          let b=i+1;
+          if(b>=numeroVerticiBase) b=0;
+          facce.push([facciaBase1[numeroVerticiBase-1-i],facciaBase1[a],facciaBase2[b],facciaBase2[i]])
+        }
+
+        this.poliedro(id,vertici,facce,opt);
       }
 
       //HELPERS
@@ -811,9 +884,12 @@
     {//FUNZIONI SETUP
       _libreria.setup=function(dove,opzioni){
         let markerOpt={
-          detectionMode:"mono",
-          marker:"hiro",
-          tipoMarker:"pattern"
+          // detectionMode:"mono",
+          // marker:"elena",
+          // tipoMarker:"pattern",
+          detectionMode:"mono_and_matrix",
+          tipoMarker:"barcode",
+          numeroBarcode:"20",
         }
         if(opzioni!=null){
           Object.keys(opzioni).forEach(chiave=>{
@@ -835,10 +911,11 @@
         scenaAR = new THREE.Scene();
         //setta luci e atmosfera
         //luci
-        let luceAmbiente=new THREE.AmbientLight(globalOpt.coloreLuci,0.6);
+        let luceAmbiente=new THREE.AmbientLight(globalOpt.coloreLuci,0.2);
         scenaAR.add(luceAmbiente);
-        let luceDirezionale = new THREE.DirectionalLight(globalOpt.coloreLuci,1);
+        let luceDirezionale = new THREE.DirectionalLight(globalOpt.coloreLuci,1.5);
         luceDirezionale.position.set(5,5,5);
+        luceDirezionale.castShadow=true;
         scenaAR.add(luceDirezionale);
         //nebbia
         scenaAR.fog=new THREE.Fog(globalOpt.coloreSfondo,40,80);
@@ -898,6 +975,7 @@
         arToolkitContext = new THREEx.ArToolkitContext({
           cameraParametersUrl: 'data/camera_para.dat',
           detectionMode: markerOpt.detectionMode,
+		      matrixCodeType: "3x3",
           imageSmoothingEnabled : true,
         });
         
@@ -922,10 +1000,9 @@
             patternUrl: "data/"+markerOpt.marker+".patt",
           })
         }else if(markerOpt.tipoMarker=="barcode"){
-          markerControls1=new THREEx.ArMarkerControls(arToolkitContext, scena, {
-            size:1,
-            type: markerOpt.tipoMarker,
-            barcodeValue: markerOpt.marker,
+          markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, scena, {
+            type: "barcode",
+            barcodeValue: 20,
           })
         }
 
