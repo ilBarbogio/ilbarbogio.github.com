@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Venice Voronoi AR</title>
+	<title>Hello, lights 3D AR!</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
 	<!-- include jsartookit -->
@@ -16,668 +16,185 @@
 </head>
 
 <body>
-  <div id="sfondo" style="z-index:10;"></div>
-  <button style="font-size:150%; position:absolute; top:20px; left:20px; z-index:90" onclick=appari()>How to</button>
-  <div id="info" style="display:flex; flex-direction:column; background-color:white; z-index:99; position:absolute; left:20%; top:20%; width:60%; border-radius:5px; padding:10px; opacity: 0.6">
-    <p>Please give permissione to use the camera, and wait a little bit for initialization.</p>
-    <p>
-      Welcome to my little AR (augmented reality!) page. Point your phone toward the marker
-      to make a cell of my Venice Voronoi appear. Observe it from different angles, and tap
-      on the green spheres to rise buildings on predisposed lots.
-    </p>
-    <div style="display:flex; justify-content: center; text-align: center">
-      <img src=".\data\barcode20.png" style="width:100px; height:100px">
-      <img src=".\data\clip1.png" style="height:100px">
-      <div style="width:15px"></div>
-      <img src=".\data\clip2.png" style="height:100px">
-    </div>
-    <p>
-      The ideal experience comes with a printed marker, but you can use the one on my CV.
-      Click anywhere to hide this screen, click the Info button to show again.
-    </p>
-  </div>
+  <div id="ciao"></div>
+
   <script>
-    function appari(){
-      document.getElementById("info").style.display="block";
+    let matrice,m,n,o,origine,vittoria;
+    let colori=[
+      0xff0000,0xff00ff,0x00ff00,0x0000ff,0xffff00,0x00ffff
+    ]
+
+    function collisioni(){
+      for(let i=0;i<m;i++){
+        for(let j=0;j<n;j++){
+          for(let k=0;k<o;k++){
+            if(i!=1||j!=1||k!=1){
+              let centro=new THREE.Vector3(origine[0]+i,origine[1]+j,origine[2]+k);
+              AR3D.sfera("s"+i+"x"+j+"x"+k,centro,0.5,{trasparente:true,trasparenza:1});
+            }
+          }
+        }
+      }
+
+      AR3D.sfera("ruotaXor",new THREE.Vector3(0,3,-1),0.5,{colore:0xff0000});
+      AR3D.sfera("ruotaXantior",new THREE.Vector3(0,-3,-1),0.5,{colore:0x00ff00});
+      // AR3D.sfera("ruotaYor",new THREE.Vector3(3,0,-1),0.5,{colore:0x0000ff});
+      // AR3D.sfera("ruotaYantior",new THREE.Vector3(-3,0,-1),0.5,{colore:0x00ffff});
     }
-
-    document.getElementById("info").addEventListener("click", function(){
-      document.getElementById("info").style.display="none";
-    })
-    document.getElementById("sfondo").addEventListener("click", function(){
-      document.getElementById("info").style.display="none";
-    })
-
+    
     function raycast(intersezione){
+      if(!vittoria){
+        let tastiFissi=["ruotaXor","ruotaXantior","ruotaYor","ruotaYantior"];
+        let beccato=null;
         for(let k=0;k<intersezione.length;k++){
           if(intersezione[k].object.name!=null){
-            switch(intersezione[k].object.name){
-            case "sferaAa":
-              creaCasaAa();
+            if(intersezione[k].object.name[0]=="s"){
+              let stringa=intersezione[k].object.name.substring(1);
+              stringa=stringa.split("x");
+              accendiSpegni(Number(stringa[0]),Number(stringa[1]),Number(stringa[2]));
+              console.log(Number(stringa[0]),Number(stringa[1]),Number(stringa[2]))
               break;
-            case "sferaAb":
-              creaCasaAb();
+            }else if(intersezione[k].object.name=="ruotaXor"){
+              AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(1,0,0),Math.PI/2,10)
+              tastiFissi.forEach(nome=>AR3D.animaRotazioneAffine(nome,new THREE.Vector3(0,0,0),new THREE.Vector3(1,0,0),-Math.PI/2,10));
               break;
-            case "sferaAc":
-              creaCasaAc();
+            }else if(intersezione[k].object.name=="ruotaXantior"){
+              AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(1,0,0),-Math.PI/2,10)
+              tastiFissi.forEach(nome=>AR3D.animaRotazioneAffine(nome,new THREE.Vector3(0,0,0),new THREE.Vector3(1,0,0),Math.PI/2,10));
               break;
-            case "sferaBa":
-              creaCasaBa();
+            }else if(intersezione[k].object.name=="ruotaYor"){
+              AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),Math.PI/2,10)
+              tastiFissi.forEach(nome=>AR3D.animaRotazioneAffine(nome,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),-Math.PI/2,10));
               break;
-            case "sferaBb":
-              creaCasaBb();
-              break;
-            case "sferaBc":
-              creaCasaBc();
-              break;
-            case "sferaC1a":
-              creaCasaC1a();
-              break;
-            case "sferaC1b":
-              creaCasaC1b();
-              break;
-            case "sferaC1c":
-              creaCasaC1c();
-              break;
-            case "sferaC2a":
-              creaCasaC2a();
-              break;
-            case "sferaC2b":
-              creaCasaC2b();
-              break;
-            case "sferaC2c":
-              creaCasaC2c();
-              break;
-            case "sferaC3a":
-              creaCasaC3a();
-              break;
-            case "sferaC3b":
-              creaCasaC3b();
-              break;
-            case "sferaC3c":
-              creaCasaC3c();
-              break;
-            case "sferaC4a":
-              creaCasaC4a();
-              break;
-            case "sferaC4b":
-              creaCasaC4b();
-              break;
-            case "sferaC4c":
-              creaCasaC4c();
-              break;
-            case "sferaDa":
-              creaCasaDa();
-              break;
-            case "sferaDb":
-              creaCasaDb();
-              break;
-            case "sferaDc":
-              creaCasaDc();
+            }else if(intersezione[k].object.name=="ruotaYantior"){
+              AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),-Math.PI/2,10)
+              tastiFissi.forEach(nome=>AR3D.animaRotazioneAffine(nome,new THREE.Vector3(0,0,0),new THREE.Vector3(0,1,0),Math.PI/2,10));
               break;
             }
           }
         }
+      }
     }
 
-    
-    function trasla(id,quanto){
-      AR3D.animaTraslazione(id,new THREE.Vector3(0,0,quanto),20)
+    function accendiSpegni(i,j,k){
+      matrice[i][j][k]++; matrice[i][j][k]%=2; //ciclo tra zero e uno
+      
+      if(i>0){matrice[i-1][j][k]++; matrice[i-1][j][k]%=2;}
+      if(i<m-1){matrice[i+1][j][k]++; matrice[i+1][j][k]%=2;}
+      
+      if(j>0){matrice[i][j-1][k]++; matrice[i][j-1][k]%=2;}
+      if(j<n-1){matrice[i][j+1][k]++; matrice[i][j+1][k]%=2;}
+
+      if(k>0){matrice[i][j][k-1]++; matrice[i][j][k-1]%=2;}
+      if(k<o-1){matrice[i][j][k+1]++; matrice[i][j][k+1]%=2;}
+
+      matrice[1][1][1]=-1;
+      coloraCubi();
+      checkVittoria();
     }
 
-    
-
-    AR3D.setup("sfondo",{riferimento:false});
-    
-    AR3D.getOpzioniGlobali().raycastCallback=raycast;
-  {//MARE
-    let opzioniMare={lato:2,colore:0x002299,trasparenza:0.2};
-    AR3D.piano("mare",new THREE.Vector3(0,0,0.6),new THREE.Vector3(1,0,0),new THREE.Vector3(0,1,0),opzioniMare)
-
-    let opzioniBar={coloreFacce:0xffffff};
-    barchetta("bar1",[1,5,0.5],Math.PI*0.9,0.5,opzioniBar);
-    barchetta("bar2",[-1,5,0.5],Math.PI*0.9,0.5,opzioniBar);
-    barchetta("bar3",[3,-6,0.5],Math.PI*0.9,0.5,opzioniBar);
-    barchetta("bar4",[-6.5,-0.5,0.3],Math.PI*0.6,0.3,opzioniBar);
-    barchetta("bar5",[-5,-2,0.3],Math.PI*0.6,0.3,opzioniBar);
-    
-    function barchetta(id,posizione,angolo,fattoreBar,opzioni){
-      let verBar=[
-        [-1,0,0],//fondo
-        [1,0,0],
-
-        [-2,0,-1],//bordo
-        [0,-1,-1],
-        [2,0,-1],
-        [0,1,-1],
-
-        [-1,0,-0.8],//bordo interno
-        [0,-0.5,-0.8],
-        [1,0,-0.8],
-        [0,0.5,-0.8],
-
-        [0,0,-2]//punta
-      ];
-      verBar.forEach(el=>{
-        let temp=el.slice();
-        el[0]=posizione[0]+fattoreBar*(Math.cos(angolo)*temp[0]-Math.sin(angolo)*temp[1]);
-        el[1]=posizione[1]+fattoreBar*(Math.sin(angolo)*temp[0]+Math.cos(angolo)*temp[1]);
-        el[2]=posizione[2]+fattoreBar*el[2]
-      })
-      let facceBar=[
-        [0,3,2],
-        [0,1,3],
-        [1,4,3],
-        [1,5,4],
-        [1,0,5],
-        [0,2,5],
-        [6,2,3,7],
-        [8,7,3,4],
-        [8,4,5,9],
-        [6,9,5,2],
-        [6,7,10],
-        [7,8,10],
-        [8,9,10],
-        [9,6,10]
-      ];
-      facceBar.forEach(el=>{
-        let temp=el[0];
-        el[0]=el[2];
-        el[2]=temp;
-      })
-      let opzioniBar={colore:0x990099};
-      AR3D.poliedro("barchetta"+id,verBar,facceBar,opzioni);
-    }
-  }
-
-  {//BASE
-
-    var altezzaBase=0.4;
-    let opzioniBase={
-      coloreFacce:0x333333,
-      spigoli:false
-    }
-    let ver=[
-      [0,0,0],
-      [7.4,6.6,0],//1
-      [9.2,6.3,0],
-      [8.4,4.3,0],
-      [7.9,0.1,0],
-      [7.6,0.3,0],//5
-      [8.3,4,0],
-      [7,4.7,0],
-      [4.7,5.1,0],
-      [5,6.1,0],
-      [-5,8.2,0],//10
-      [-6,8.5,0],
-      [-8.9,5.5,0],
-      [-5.2,7.3,0],
-      [-1.6,6.1,0],
-      [-3.3,4.2,0],//15
-      [-3.8,5.3,0],
-      [-6.5,3.4,0],
-      [-5.8,1.8,0],
-      [-7.4,0.9,0],
-      [-5.3,-5.5,0],//20
-      [-6.4,-5.3,0],
-      [-5.2,-5.9,0],
-      [6.2,-6.9,0],
-      [6.5,-7.3,0],
-      [7.4,-2.6,0],//25
-      [7.1,-2.5,0],
-      [-0.7,-9,0],
-      [-5.5,-8,0],
-      [-5.1,-7,0],
-      [-0.4,-6.5,0],//30
-    ];
-    
-    let verticiBaseA=[
-      ver[1],
-      ver[7],
-      ver[3],
-      ver[2]
-    ];
-    AR3D.estrusione("baseA",ver[0],verticiBaseA,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseB=[
-      ver[4],
-      ver[2],
-      ver[3],
-      ver[6]
-    ];
-    AR3D.estrusione("baseB",ver[0],verticiBaseB,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseC=[
-      ver[4],
-      ver[6],
-      ver[5]
-    ];
-    AR3D.estrusione("baseC",ver[0],verticiBaseC,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseD=[
-      ver[3],
-      ver[7],
-      ver[6]
-    ];
-    AR3D.estrusione("baseD",ver[0],verticiBaseD,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseE=[
-      ver[7],
-      ver[8],
-      ver[14],
-      ver[6]
-    ];
-    AR3D.estrusione("baseE",ver[0],verticiBaseE,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseF=[
-      ver[8],
-      ver[9],
-      ver[11],
-      ver[13],
-      ver[14]
-    ];
-    AR3D.estrusione("baseF",ver[0],verticiBaseF,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseG=[
-      ver[14],
-      ver[16],
-      ver[15]
-    ];
-    AR3D.estrusione("baseG",ver[0],verticiBaseG,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseH=[
-      ver[16],
-      ver[14],
-      ver[13]
-    ];
-    AR3D.estrusione("baseH",ver[0],verticiBaseH,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseI=[
-      ver[16],
-      ver[13],
-      ver[17]
-    ];
-    AR3D.estrusione("baseI",ver[0],verticiBaseI,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseJ=[
-      ver[29],
-      ver[22],
-      ver[21],
-      ver[28]
-    ];
-    AR3D.estrusione("baseJ",ver[0],verticiBaseJ,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseK=[
-      ver[27],
-      ver[30],
-      ver[29],
-      ver[28]
-    ];
-    AR3D.estrusione("baseK",ver[0],verticiBaseK,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseL=[
-      ver[11],
-      ver[12],
-      ver[19],
-      ver[17],
-      ver[13]
-    ];
-    AR3D.estrusione("baseL",ver[0],verticiBaseL,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseM=[
-      ver[18],
-      ver[17],
-      ver[19]
-    ];
-    AR3D.estrusione("baseM",ver[0],verticiBaseM,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseN=[
-      ver[20],
-      ver[19],
-      ver[12],
-      ver[21]
-    ];
-    AR3D.estrusione("baseN",ver[0],verticiBaseN,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseO=[
-      ver[22],
-      ver[20],
-      ver[21]
-    ];
-    AR3D.estrusione("baseO",ver[0],verticiBaseO,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseP=[
-      ver[24],
-      ver[23],
-      ver[20],
-      ver[22]
-    ];
-    AR3D.estrusione("baseP",ver[0],verticiBaseP,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseQ=[
-      ver[24],
-      ver[25],
-      ver[26],
-      ver[23]
-    ];
-    AR3D.estrusione("baseQ",ver[0],verticiBaseQ,[0,0,altezzaBase],opzioniBase);
-    
-    let verticiBaseR=[
-      ver[30],
-      ver[22],
-      ver[29]
-    ];
-    AR3D.estrusione("baseR",ver[0],verticiBaseR,[0,0,altezzaBase],opzioniBase);
-  }
-
-  //EDIFICI
-
-    let altezzaNascosta=0.6;
-    let altezzaPiano=0.6;
-    let raggioSfere=0.5;
-
-    let verCase=[
-      [0,0,altezzaNascosta],
-      [7.4,6.6,altezzaNascosta],//1
-      [7,4.7,altezzaNascosta],
-      [8.4,4.3,altezzaNascosta],
-      [8.8,6.4,altezzaNascosta],
-      [5,6.1,altezzaNascosta],//5
-      [-5,8.2,altezzaNascosta],
-      [-5.2,7.2,altezzaNascosta],
-      [4.6,5.1,altezzaNascosta],
-      [-5.3,5.8,altezzaNascosta],
-      [-6.2,7,altezzaNascosta],//10
-      [-6.5,5.2,altezzaNascosta],
-      [-6.1,5.2,altezzaNascosta],
-      [-8.6,5.2,altezzaNascosta],
-      [-7.7,4.9,altezzaNascosta],
-      [-7.4,1.4,altezzaNascosta],//15
-      [-6.9,2.6,altezzaNascosta],
-      [-5.8,1.8,altezzaNascosta],
-      [-6.2,2.8,altezzaNascosta],
-      [-0.4,-6.5,altezzaNascosta],
-      [-5.2,-5.9,altezzaNascosta],//20
-      [-5.1,-7,altezzaNascosta],
-      [-0.5,-7.5,altezzaNascosta]
-    ];
-    let opzioniSfera={colore:"green"};
-    let opzioniCase={coloreFacce:0xffffff,spigoli:false};
-
-
-    let verticiCasaA=[
-      verCase[1],
-      verCase[2],
-      verCase[3],
-      verCase[4]
-      ];
-    let baricentroA=[0,0,altezzaBase];
-    verticiCasaA.forEach(el=>{
-      baricentroA[0]+=el[0];
-      baricentroA[1]+=el[1];
-    })
-    baricentroA[0]/=verticiCasaA.length;
-    baricentroA[1]/=verticiCasaA.length;
-    baricentroA[2]-=0.5;
-    AR3D.sfera("sferaAa",new THREE.Vector3(...baricentroA),raggioSfere,opzioniSfera);
-
-    function creaCasaAa(){
-      AR3D.cancellaOggetto("sferaAa");
-      let primoDelta=-1.2;
-      AR3D.estrusione("casaAa",[0,0,0],verticiCasaA,[0,0,altezzaPiano],{coloreFacce:0xaa9999,spigoli:false});
-      trasla("casaAa",primoDelta);
-      let bari=new THREE.Vector3(...baricentroA);
-      bari.z-=altezzaPiano;
-      AR3D.sfera("sferaAb",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaAb(){
-      AR3D.cancellaOggetto("sferaAb");
-      AR3D.estrusione("casaAb",[0,0,0],verticiCasaA,[0,0,altezzaPiano],{coloreFacce:0xcc9999,spigoli:false});
-      trasla("casaAb",-3*altezzaPiano);
-      let bari=new THREE.Vector3(...baricentroA);
-      bari.z-=2*altezzaPiano;
-      AR3D.sfera("sferaAc",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaAc(){
-      AR3D.cancellaOggetto("sferaAc");
-      AR3D.estrusione("casaAc",[0,0,0],verticiCasaA,[0,0,altezzaPiano],{coloreFacce:0xee9999,spigoli:false});
-      trasla("casaAc",-4*altezzaPiano);
+    function checkVittoria(){
+      let conto=0;
+      for(let i=0;i<m;i++){
+        for(let j=0;j<n;j++){
+          for(let k=0;k<o;k++){
+            if(i!=1||j!=1||k!=1) conto+=matrice[i][j][k];
+          }
+        }
+      }
+      if(conto==n*m*o-1){
+        vittoria==true;
+        setTimeout(function(){alert("Hai vinto!")},500);
+      }
     }
 
-    let verticiCasaB=[
-      verCase[5],
-      verCase[6],
-      verCase[7],
-      verCase[8]
-      ];
-    let baricentroB=[0,0,altezzaBase];
-    verticiCasaB.forEach(el=>{
-      baricentroB[0]+=el[0];
-      baricentroB[1]+=el[1];
-    })
-    baricentroB[0]/=verticiCasaB.length;
-    baricentroB[1]/=verticiCasaB.length;
-    baricentroB[2]-=0.5;
-    AR3D.sfera("sferaBa",new THREE.Vector3(...baricentroB),raggioSfere,opzioniSfera);
-
-    function creaCasaBa(){
-      AR3D.cancellaOggetto("sferaBa");
-      let primoDelta=-1.2;
-      AR3D.estrusione("casaBa",[0,0,0],verticiCasaB,[0,0,altezzaPiano],{coloreFacce:0x9999aa,spigoli:false});
-      trasla("casaBa",primoDelta);
-      let bari=new THREE.Vector3(...baricentroB);
-      bari.z-=altezzaPiano;
-      AR3D.sfera("sferaBb",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaBb(){
-      AR3D.cancellaOggetto("sferaBb");
-      AR3D.estrusione("casaBb",[0,0,0],verticiCasaB,[0,0,altezzaPiano],{coloreFacce:0x9999bb,spigoli:false});
-      trasla("casaBb",-3*altezzaPiano);
-      let bari=new THREE.Vector3(...baricentroB);
-      bari.z-=2*altezzaPiano;
-      AR3D.sfera("sferaBc",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaBc(){
-      AR3D.cancellaOggetto("sferaBc");
-      AR3D.estrusione("casaBc",[0,0,0],verticiCasaB,[0,0,altezzaPiano],{coloreFacce:0x9999ee,spigoli:false});
-      trasla("casaBc",-4*altezzaPiano);
+    function disegnaCubi(){
+      for(let i=0;i<m;i++){
+        for(let j=0;j<n;j++){
+          for(let k=0;k<o;k++){
+            let opzioni={coloreFacce:0x000000,coloreSpigoli:0xffffff}//,trasparente:true,trasparenza:0.8};
+            if(matrice[i][j][k]==1){
+              let deltaR=Math.floor(255/m);
+              let deltaG=Math.floor(255/n);
+              let deltaB=Math.floor(255/o);
+              let colorAcceso="rgb("+(i*deltaR)+","+(j*deltaG)+","+(k*deltaB)+")";
+              if(i==0&&j==0&&k==0) colorAcceso=0xffffff;
+              opzioni={coloreFacce:colorAcceso,coloreSpigoli:0x000000};
+              AR3D.cubo("cubo"+i+"x"+j+"x"+k,[origine[0]+i,origine[1]+j,origine[2]+k],1,opzioni);
+            }else if(matrice[i][j][k]==0){
+              AR3D.cubo("cubo"+i+"x"+j+"x"+k,[origine[0]+i,origine[1]+j,origine[2]+k],1,opzioni);
+            }
+          }
+        }
+      }
     }
 
-    let verticiCasaC1=[
-      verCase[9],
-      verCase[10],
-      verCase[11],
-      verCase[12]
-      ];
-    let baricentroC1=[0,0,altezzaBase];
-    verticiCasaC1.forEach(el=>{
-      baricentroC1[0]+=el[0];
-      baricentroC1[1]+=el[1];
-    })
-    baricentroC1[0]/=verticiCasaC1.length;
-    baricentroC1[1]/=verticiCasaC1.length;
-    baricentroC1[2]-=0.5;
-    AR3D.sfera("sferaC1a",new THREE.Vector3(...baricentroC1),raggioSfere,opzioniSfera);
-
-    function creaCasaC1a(){
-      AR3D.cancellaOggetto("sferaC1a");
-      let primoDelta=-1.2;
-      AR3D.estrusione("casaC1a",[0,0,0],verticiCasaC1,[0,0,altezzaPiano],{coloreFacce:0x9999aa,spigoli:false});
-      trasla("casaC1a",primoDelta);
-      let bari=new THREE.Vector3(...baricentroC1);
-      bari.z-=altezzaPiano;
-      AR3D.sfera("sferaC1b",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaC1b(){
-      AR3D.cancellaOggetto("sferaC1b");
-      AR3D.estrusione("casaC1b",[0,0,0],verticiCasaC1,[0,0,altezzaPiano],{coloreFacce:0x9999bb,spigoli:false});
-      trasla("casaC1b",-3*altezzaPiano);
-      let bari=new THREE.Vector3(...baricentroC1);
-      bari.z-=2*altezzaPiano;
-      AR3D.sfera("sferaC1c",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaC1c(){
-      AR3D.cancellaOggetto("sferaC1c");
-      AR3D.estrusione("casaC1c",[0,0,0],verticiCasaC1,[0,0,altezzaPiano],{coloreFacce:0x9999ee,spigoli:false});
-      trasla("casaC1c",-4*altezzaPiano);
+    function coloraCubi(){
+      for(let i=0;i<m;i++){
+        for(let j=0;j<n;j++){
+          for(let k=0;k<o;k++){
+            let opzioni={coloreFacce:0x000000,coloreSpigoli:0xffffff}//,trasparente:true,trasparenza:0.8};
+            if(matrice[i][j][k]==1){
+              let deltaR=Math.floor(255/m);
+              let deltaG=Math.floor(255/n);
+              let deltaB=Math.floor(255/o);
+              let colorAcceso="rgb("+(i*deltaR)+","+(j*deltaG)+","+(k*deltaB)+")";
+              if(i==0&&j==0&&k==0) colorAcceso=0xffffff;
+              opzioni={coloreFacce:colorAcceso,coloreSpigoli:0x000000};
+              AR3D.poliedro.cambiaColore("cubo"+i+"x"+j+"x"+k,opzioni.coloreFacce,opzioni.coloreSpigoli);
+            }else if(matrice[i][j][k]==0){
+              AR3D.poliedro.cambiaColore("cubo"+i+"x"+j+"x"+k,opzioni.coloreFacce,opzioni.coloreSpigoli);
+            }
+          }
+        }
+      }
     }
 
-    let verticiCasaC2=[
-      verCase[10],
-      verCase[13],
-      verCase[14],
-      verCase[11]
-      ];
-    let baricentroC2=[0,0,altezzaBase];
-    verticiCasaC2.forEach(el=>{
-      baricentroC2[0]+=el[0];
-      baricentroC2[1]+=el[1];
-    })
-    baricentroC2[0]/=verticiCasaC2.length;
-    baricentroC2[1]/=verticiCasaC2.length;
-    baricentroC2[2]-=0.5;
-    AR3D.sfera("sferaC2a",new THREE.Vector3(...baricentroC2),raggioSfere,opzioniSfera);
-    
-    function creaCasaC2a(){
-      AR3D.cancellaOggetto("sferaC2a");
-      let primoDelta=-1.2;
-      AR3D.estrusione("casaC2a",[0,0,0],verticiCasaC2,[0,0,altezzaPiano],{coloreFacce:0x9999aa,spigoli:false});
-      trasla("casaC2a",primoDelta);
-      let bari=new THREE.Vector3(...baricentroC2);
-      bari.z-=altezzaPiano;
-      AR3D.sfera("sferaC2b",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaC2b(){
-      AR3D.cancellaOggetto("sferaC2b");
-      AR3D.estrusione("casaC2b",[0,0,0],verticiCasaC2,[0,0,altezzaPiano],{coloreFacce:0x9999bb,spigoli:false});
-      trasla("casaC2b",-3*altezzaPiano);
-      let bari=new THREE.Vector3(...baricentroC2);
-      bari.z-=2*altezzaPiano;
-      AR3D.sfera("sferaC2c",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaC2c(){
-      AR3D.cancellaOggetto("sferaC2c");
-      AR3D.estrusione("casaC2c",[0,0,0],verticiCasaC2,[0,0,altezzaPiano],{coloreFacce:0x9999ee,spigoli:false});
-      trasla("casaC2c",-4*altezzaPiano);
+    function avvia(){
+      document.getElementById("ciao").innerHTML="";
+      AR3D.setup("ciao",{raycastCallback:raycast,riferimento:false});
+      AR3D.getOpzioniGlobali().raycastCallback=raycast;
+      vittoria=false;
+      m=3;
+      n=3;
+      o=3;
+
+      origine=[2-m,2-n,-1];
+
+      matrice=[];
+      for(let i=0;i<m;i++){
+        matrice[i]=[];
+        for(let j=0;j<n;j++){
+          matrice[i].push(Array(o).fill(0));
+        }
+      }
+      matrice[1][1][1]=-1;
+
+      collisioni();
+      disegnaCubi();
     }
 
-    let verticiCasaC3=[
-      verCase[13],
-      verCase[15],
-      verCase[16],
-      verCase[14]
-      ];
-    let baricentroC3=[0,0,altezzaBase];
-    verticiCasaC3.forEach(el=>{
-      baricentroC3[0]+=el[0];
-      baricentroC3[1]+=el[1];
-    })
-    baricentroC3[0]/=verticiCasaC3.length;
-    baricentroC3[1]/=verticiCasaC3.length;
-    baricentroC3[2]-=0.5;
-    AR3D.sfera("sferaC3a",new THREE.Vector3(...baricentroC3),raggioSfere,opzioniSfera);
-    
-    function creaCasaC3a(){
-      AR3D.cancellaOggetto("sferaC3a");
-      let primoDelta=-1.2;
-      AR3D.estrusione("casaC3a",[0,0,0],verticiCasaC3,[0,0,altezzaPiano],{coloreFacce:0x9999aa,spigoli:false});
-      trasla("casaC3a",primoDelta);
-      let bari=new THREE.Vector3(...baricentroC3);
-      bari.z-=altezzaPiano;
-      AR3D.sfera("sferaC3b",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaC3b(){
-      AR3D.cancellaOggetto("sferaC3b");
-      AR3D.estrusione("casaC3b",[0,0,0],verticiCasaC3,[0,0,altezzaPiano],{coloreFacce:0x9999bb,spigoli:false});
-      trasla("casaC3b",-3*altezzaPiano);
-      let bari=new THREE.Vector3(...baricentroC3);
-      bari.z-=2*altezzaPiano;
-      AR3D.sfera("sferaC3c",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaC3c(){
-      AR3D.cancellaOggetto("sferaC3c");
-      AR3D.estrusione("casaC3c",[0,0,0],verticiCasaC3,[0,0,altezzaPiano],{coloreFacce:0x9999ee,spigoli:false});
-      trasla("casaC3c",-4*altezzaPiano);
-    }
+    avvia();
 
-    let verticiCasaC4=[
-      verCase[15],
-      verCase[17],
-      verCase[18],
-      verCase[16]
-      ];
-    let baricentroC4=[0,0,altezzaBase];
-    verticiCasaC4.forEach(el=>{
-      baricentroC4[0]+=el[0];
-      baricentroC4[1]+=el[1];
-    })
-    baricentroC4[0]/=verticiCasaC4.length;
-    baricentroC4[1]/=verticiCasaC4.length;
-    baricentroC4[2]-=0.5;
-    AR3D.sfera("sferaC4a",new THREE.Vector3(...baricentroC4),raggioSfere,opzioniSfera);
 
-    function creaCasaC4a(){
-      AR3D.cancellaOggetto("sferaC4a");
-      let primoDelta=-1.2;
-      AR3D.estrusione("casaC4a",[0,0,0],verticiCasaC4,[0,0,altezzaPiano],{coloreFacce:0x9999aa,spigoli:false});
-      trasla("casaC4a",primoDelta);
-      let bari=new THREE.Vector3(...baricentroC4);
-      bari.z-=altezzaPiano;
-      AR3D.sfera("sferaC4b",bari,raggioSfere,opzioniSfera);
+    function ruota(){
+      // AR3D.trasla("cubo0x2x2",new THREE.Vector3(1,0.2,0))
+      AR3D.animaRotazioneAffine(null,new THREE.Vector3(0,0,0),new THREE.Vector3(1,0,0),Math.PI/2,10)
     }
-    function creaCasaC4b(){
-      AR3D.cancellaOggetto("sferaC4b");
-      AR3D.estrusione("casaC4b",[0,0,0],verticiCasaC4,[0,0,altezzaPiano],{coloreFacce:0x9999bb,spigoli:false});
-      trasla("casaC4b",-3*altezzaPiano);
-      let bari=new THREE.Vector3(...baricentroC4);
-      bari.z-=2*altezzaPiano;
-      AR3D.sfera("sferaC4c",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaC4c(){
-      AR3D.cancellaOggetto("sferaC4c");
-      AR3D.estrusione("casaC4c",[0,0,0],verticiCasaC4,[0,0,altezzaPiano],{coloreFacce:0x9999ee,spigoli:false});
-      trasla("casaC4c",-4*altezzaPiano);
-    }
-
-    let verticiCasaD=[
-      verCase[19],
-      verCase[20],
-      verCase[21],
-      verCase[22]
-      ];
-    let baricentroD=[0,0,altezzaBase];
-    verticiCasaD.forEach(el=>{
-      baricentroD[0]+=el[0];
-      baricentroD[1]+=el[1];
-    })
-    baricentroD[0]/=verticiCasaD.length;
-    baricentroD[1]/=verticiCasaD.length;
-    baricentroD[2]-=0.5;
-    AR3D.sfera("sferaDa",new THREE.Vector3(...baricentroD),raggioSfere,opzioniSfera);
-
-    function creaCasaDa(){
-      AR3D.cancellaOggetto("sferaDa");
-      let primoDelta=-1.2;
-      AR3D.estrusione("casaDa",[0,0,0],verticiCasaD,[0,0,altezzaPiano],{coloreFacce:0x9999aa,spigoli:false});
-      trasla("casaDa",primoDelta);
-      let bari=new THREE.Vector3(...baricentroD);
-      bari.z-=altezzaPiano;
-      AR3D.sfera("sferaDb",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaDb(){
-      AR3D.cancellaOggetto("sferaDb");
-      AR3D.estrusione("casaDb",[0,0,0],verticiCasaD,[0,0,altezzaPiano],{coloreFacce:0x9999bb,spigoli:false});
-      trasla("casaDb",-3*altezzaPiano);
-      let bari=new THREE.Vector3(...baricentroD);
-      bari.z-=2*altezzaPiano;
-      AR3D.sfera("sferaDc",bari,raggioSfere,opzioniSfera);
-    }
-    function creaCasaDc(){
-      AR3D.cancellaOggetto("sferaDc");
-      AR3D.estrusione("casaDc",[0,0,0],verticiCasaD,[0,0,altezzaPiano],{coloreFacce:0x9999ee,spigoli:false});
-      trasla("casaDc",-4*altezzaPiano);
-    }
-  
+    // AR3D.setup("ciao",{raycastCallback:raycast,riferimento:false});
+    let raggio=2;
+    // let centro=new THREE.Vector3(0,0,0);
+    // let punto=new THREE.Vector3(raggio,0,0);
+    // let punto1=new THREE.Vector3(0,raggio,0);
+    let punto2=new THREE.Vector3(0,0,raggio);
+    // AR3D.sfera("s1",centro,1,{colore:"red"});
+    // AR3D.punto("s2",punto,{colore:"green",spessore:0.1});
+    // AR3D.vettore("s1",punto,{colore:"red",spessore:0.05});
+    // AR3D.vettore("s2",punto1,{colore:"green",spessore:0.05});
+    // AR3D.vettore("s3",punto2,{colore:"blue",spessore:0.05});
+    // AR3D.retta("r",punto,new THREE.Vector3(-1,1,0));
+    // AR3D.piano("p",centro,new THREE.Vector3(1,0,0),new THREE.Vector3(0,1,0),{lato:3})
+    // AR3D.cubo("cubo",[1,1,1],1,{coloreFacce:0xff0000});
   </script>
 </body>
 </html>
