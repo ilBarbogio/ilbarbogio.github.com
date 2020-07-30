@@ -21,6 +21,7 @@
         scale="70 70 70"
         gps-entity-place="latitude: 46.112917 ; longitude: 12.891028;"
       ></a-text>
+      <a-box material="color: yellow" gps-entity-place="latitude: 46.112917; longitude: 12.891028"/>
       <a-text
         value="Nizar"
         look-at="[gps-camera]"
@@ -33,7 +34,7 @@
         scale="70 70 70"
         gps-entity-place="latitude: 46.068667 ; longitude: 13.236889;"
       ></a-text>
-      <a-camera gps-camera rotation-reader> </a-camera>
+      <a-camera gps-camera rotation-reader maxDistance=15> </a-camera>
     </a-scene>
   </body>
 </html>
