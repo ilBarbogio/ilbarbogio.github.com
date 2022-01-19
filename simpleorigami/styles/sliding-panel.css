@@ -1,0 +1,49 @@
+:host{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:0;
+	--background-color:var(--panel-primary-color);
+	--shadow-color:var(--panel-shadow-color);
+	--shadow-dimension:5px;
+	pointer-events: none;
+}
+.panel{
+	position:absolute;
+	width:fit-content;
+	height:100%;
+	margin:0;
+	padding:0;
+	left:0px;
+	top:0px;
+	background-color: var(--background-color);
+	pointer-events: all;
+}
+.horizontal{
+	display:flex;
+	align-items: center;
+	align-content: center;
+}
+.slidable{
+	transition:left .5s ease-out, top 1s;
+}
+.shadow-inset{
+	box-shadow: inset var(--shadow-dimension) var(--shadow-dimension) var(--shadow-dimension) var(--shadow-color);
+}
+.shadow-outset{
+	box-shadow: var(--shadow-dimension) var(--shadow-dimension) var(--shadow-dimension) var(--shadow-color);
+}
+.shadow-none{
+	box-shadow: none;
+}
+
+.shake{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake{
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}

@@ -1,0 +1,22 @@
+*{
+	/* background */
+	--background-primary-color:rgb(255, 149, 130);
+	/* sliding panel */
+	--panel-primary-color:transparent;
+	--panel-secondary-color:rgb(255, 100, 73);
+	--panel-shadow-color:rgb(167, 60, 41);
+	/* toolbar */
+	--toolbar-background-color:rgb(39, 15, 15);
+	--toolbar-button-color:rgb(75, 53, 53);
+	/* cards */
+	--card-paper-color:white;
+	--card-shadow-color:rgb(98, 43, 43);
+	/* step card specific*/
+	--step-card-text-color:rgb(17, 13, 13);
+	--step-card-bookmark-color:#cfc4bc;
+	--step-card-zoom-color:#ffd0b1;
+	--step-card-jump-color:#b3ff6c;
+	/* model card specific */
+	--model-card-text-color:rgb(100, 36, 25);
+	--model-card-border-color:rgb(167, 60, 41);
+}

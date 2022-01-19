@@ -1,0 +1,21 @@
+:host{
+	--background-color:var(--background-primary-color);
+	--fregio-position-x:0;
+	--fregio-position-y:10vh;
+	z-index:-20;
+}
+#background{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color: var(--background-color);
+}
+#fregio{
+	position:fixed;
+	width:60vw;
+	height:15vw;
+	right:var(--fregio-position-x);
+	top:var(--fregio-position-y);
+}

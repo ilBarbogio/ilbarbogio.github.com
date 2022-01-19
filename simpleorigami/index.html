@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Installable</title>
+	<link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles/stili.css">
+  <script src="./components.js"></script>
+</head>
+<body>
+  <fancy-background></fancy-background>
+  <main-toolbar thickness="15vh" style="grid-area:toolbar"></main-toolbar>
+  <card-deck id="step-deck" card="step-card" limit="0px -100vh" color="transparent" style="grid-area:deck;"></card-deck>
+  <card-deck id="wallet-deck" card="model-card" wallet limit="3vh 100vh" color="var(--panel-secondary-color)" shadow="inset" hide style="grid-area:deck;"></card-deck>
+  <zoomed-slide id="zoomed-slide"></zoomed-slide>
+  <loading-widget id="loading-widget"></loading-widget>
+
+  <script src="./main.js"></script>
+</body>
+</html>

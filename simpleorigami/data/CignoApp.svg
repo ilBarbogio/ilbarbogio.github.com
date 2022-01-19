@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="150mm"
+   height="150mm"
+   viewBox="0 0 150 150"
+   version="1.1"
+   id="svg5"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style
+     id="style2905">
+      .blackFill { 
+          stroke:none;
+          fill:#000000;
+      }
+      .dashMs { stroke-dasharray:2 1 0.5 1; }
+      .dashVs { stroke-dasharray:2 1; }
+      .fillShadow { fill-opacity:.8;    fill:#0000cc; }
+      .dashS { stroke-dasharray:1 1; }
+      .filled { fill:url(#fillerGradient );    fill-opacity:.8;    stroke:none;    stroke-linejoin:round; }
+      .dashM { stroke-dasharray:4 2 1 2; }
+      .dashV { stroke-dasharray:4 2; }
+      .s20 { stroke-width:2; }
+      .s025 { stroke-width:0.25; }
+      .s05 { stroke-width:0.5; }
+      .s10 { stroke-width:1; }
+      .linea { stroke-opacity:1;    stroke-miterlimit:4;    stroke-linejoin:round;    stroke-linecap:butt;    stroke:#000000;    fill:none; }
+   </style>
+  <defs
+     id="definizioni">
+    <radialGradient
+       id="fillerGradient"
+       cx="0.5"
+       cy="0.5"
+       fx="0.5"
+       fy="0.5"
+       r="0.8"
+       gradientTransform="skewX(40) translate(-.4,0)">
+      <stop
+         offset="0"
+         stop-color="#0066aa"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#0088ff"
+         id="stop6" />
+    </radialGradient>
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient81043"
+       gradientTransform="scale(1.1726495,0.85276972)"
+       cx="189.9346"
+       cy="984.54874"
+       fx="189.9346"
+       fy="984.54874"
+       r="66.756203"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient82356"
+       gradientTransform="matrix(1.0563094,0,0,0.94669234,-59.519626,-11.15993)"
+       cx="-72.632374"
+       cy="157.26768"
+       fx="-72.632374"
+       fy="157.26768"
+       r="43.071506"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient82994"
+       gradientTransform="scale(1.533169,0.6522438)"
+       cx="33.976828"
+       cy="913.78571"
+       fx="33.976828"
+       fy="913.78571"
+       r="52.348795"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient82996"
+       gradientTransform="scale(0.94088385,1.0628304)"
+       cx="76.004572"
+       cy="670.60649"
+       fx="76.004572"
+       fy="670.60649"
+       r="48.681625"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient82998"
+       gradientTransform="scale(1.5335645,0.6520756)"
+       cx="159.13412"
+       cy="721.34637"
+       fx="159.13412"
+       fy="721.34637"
+       r="51.490092"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83000"
+       gradientTransform="scale(1.2064803,0.82885732)"
+       cx="63.415238"
+       cy="419.82827"
+       fx="63.415238"
+       fy="419.82827"
+       r="62.441532"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83002"
+       gradientTransform="scale(0.31518045,3.1727857)"
+       cx="870.62461"
+       cy="113.91998"
+       fx="870.62461"
+       fy="113.91998"
+       r="3.5616677"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83004"
+       gradientTransform="scale(1.3280431,0.75298763)"
+       cx="277.90052"
+       cy="462.28027"
+       fx="277.90052"
+       fy="462.28027"
+       r="44.72234"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83006"
+       gradientTransform="scale(1.531281,0.653048)"
+       cx="49.27762"
+       cy="725.69944"
+       fx="49.27762"
+       fy="725.69944"
+       r="51.566453"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83008"
+       gradientTransform="scale(1.5308193,0.65324496)"
+       cx="243.75837"
+       cy="720.67761"
+       fx="243.75837"
+       fy="720.67761"
+       r="51.39792"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83010"
+       gradientTransform="scale(1.5343537,0.65174019)"
+       cx="133.56198"
+       cy="909.11824"
+       fx="133.56198"
+       fy="909.11824"
+       r="52.479576"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83012"
+       gradientTransform="scale(1.1664093,0.85733195)"
+       cx="184.54396"
+       cy="826.59579"
+       fx="184.54396"
+       fy="826.59579"
+       r="44.918303"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83014"
+       gradientTransform="scale(1.0905825,0.91694117)"
+       cx="81.828639"
+       cy="870.80211"
+       fx="81.828639"
+       fy="870.80211"
+       r="41.99822"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient83016"
+       gradientTransform="scale(1.1726495,0.85276972)"
+       cx="189.9346"
+       cy="984.54874"
+       fx="189.9346"
+       fy="984.54874"
+       r="66.756203"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#fillerGradient"
+       id="radialGradient1302"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.5343537,0.65174019)"
+       cx="133.56198"
+       cy="909.11824"
+       fx="133.56198"
+       fy="909.11824"
+       r="52.479576" />
+  </defs>
+  <path
+     d="M -123.01963,31.173403 -165.35296,99.96507"
+     id="valley"
+     class="linea  dashV" />
+  <path
+     d="m -154.76963,15.298403 -42.33333,58.208333"
+     id="mountain"
+     class="linea    dashM" />
+  <path
+     d="M -117.72796,115.84007 -85.977959,78.798402"
+     id="trace"
+     class="linea s025" />
+  <g
+     id="arrow"
+     transform="translate(-13.693454,3.9221011)">
+    <path
+       d="m -169.09578,127.32715 h -5.62485 l 2.81242,-8.66296 z"
+       id="path861"
+       class="blackFill" />
+    <path
+       d="m -171.83688,124.52585 c -1.16016,51.62695 21.41251,56.17119 63.64878,55.18987"
+       id="path929"
+       class="linea  s10" />
+    <path
+       d="m -109.92833,182.32607 v -5.62484 l 8.66295,2.81241 z"
+       id="path3093"
+       class="blackFill" />
+  </g>
+  <g
+     id="g7069"
+     transform="rotate(90,-435.45154,751.92348)" />
+  <g
+     id="turnarrow"
+     transform="translate(-118.03444,-1.5268225)"
+     caption="Turn the model over">
+    <path
+       d="m -116.41667,251.35417 c 7.9375,10.58333 14.55209,10.58333 21.16667,10.58333 6.614583,0 10.583333,-5.29166 10.583333,-10.58333 0,-5.29167 -3.96875,-10.58334 -10.583333,-10.58334 -6.61458,0 -10.58333,5.29167 -10.58333,10.58334 0,5.29166 3.96875,10.58333 10.58333,10.58333 6.614583,0 10.583333,-1.32292 18.520833,-6.61458"
+       id="path2721"
+       class="linea  s20" />
+    <path
+       d="m -75.373302,257.56235 -4.328308,-3.59229 7.696721,-4.86999 z"
+       id="path2723"
+       class="blackFill" />
+  </g>
+  <path
+     d="m -166.55707,206.81207 c 16.18989,10.1457 31.75001,10.5833 31.75001,10.5833 v 2.6458 l 7.9375,-5.2916 -7.9375,-5.2917 v 2.6458 c 0,0 -16.25722,-2.118 -23.8125,-23.8125"
+     id="liftarrow"
+     class="linea  s10" />
+  <g
+     id="step-13"
+     caption="Close with an inside reverse-fold"
+     transform="matrix(1.2331441,0,0,1.2329636,7.51176,-668.98643)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 52.863401,617.35117 -50.9333991,-13.67411 27.7401611,1.01247 9.487963,5.32501 22.570542,-12.64604 -13.014459,-21.98273 26.438714,14.19671 27.101517,-14.91153 -13.489857,22.27445 11.189031,6.23892 -26.202424,14.07276 z"
+       id="path38752"
+       class="filled"
+       style="fill:url(#radialGradient82994);stroke-width:0.810995" />
+    <path
+       id="polyline14"
+       class="linea s10"
+       transform="matrix(0.77079555,0,0,0.77111094,-901.56571,522.75359)"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 1238.239,122.677 27.102,-0.122 33.991,-18.25 M 1285.5808,94.789023 1302.317,67.328 1268.7792,85.913197 m -3.4382,36.641803 33.991,-18.25 -66.476,-36.05 32.482,54.29999" />
+    <line
+       x1="1.6016498"
+       y1="603.61615"
+       x2="48.714176"
+       y2="603.61615"
+       id="line16"
+       class="linea s10" />
+    <path
+       id="polygon18"
+       class="linea s10"
+       transform="matrix(0.77079555,0,0,0.77111094,-901.56571,522.75359)"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 1171.734,104.865 66.505,17.812 -30.09,-16.42 z" />
+    <path
+       id="line20"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="M 60.999008,597.96446 40.760343,609.33365" />
+    <path
+       id="line22"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="m 73.75119,617.25708 14.642021,-19.6286" />
+    <line
+       x1="73.751198"
+       y1="617.25745"
+       x2="73.675644"
+       y2="588.83044"
+       id="line24"
+       class="linea s025" />
+    <path
+       id="polyline26"
+       class="linea s10 dashV"
+       transform="matrix(0.77079555,0,0,0.77111094,-901.56571,522.75359)"
+       style="fill:none;stroke:#000000;stroke-linejoin:round;stroke-dasharray:3.24398, 1.62199"
+       d="m 1299.332,104.305 -33.991,-1.034 -32.485,-35.016" />
+    <line
+       x1="73.753456"
+       y1="602.38696"
+       x2="81.718941"
+       y2="594.41754"
+       id="line28"
+       class="linea s10 dashMs" />
+    <g
+       id="g34"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-901.56571,522.75359)">
+      <path
+         d="m 1240.433,75.991 c 5.246,-13.085 31.0102,-24.55174 49.0132,-10.12774"
+         id="path30"
+         class="linea s10" />
+      <polyline
+         points="1286.928,66.871 1292.648,69.221 1290.128,63.57   "
+         id="polyline32"
+         class="blackFilled"
+         style="stroke-width:0.278325" />
+    </g>
+    <g
+       id="g40"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-901.56571,522.75359)">
+      <path
+         d="m 1275.468,95.392 c 32.226,-21.753 5.5306,22.60517 14.6926,28.03917"
+         id="path36"
+         class="linea s10" />
+      <polyline
+         points="1288.511,125.147 1294.691,125.343 1290.351,120.933   "
+         id="polyline38"
+         class="blackFilled"
+         style="stroke-width:0.278325" />
+    </g>
+    <path
+       id="line42"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="M 50.84779,603.68351 60.619167,616.961" />
+  </g>
+  <g
+     id="step-1"
+     transform="matrix(1.2331441,0,0,1.2329636,-25.580983,-13.068765)"
+     style="stroke-width:0.810995">
+    <polygon
+       points="207.569,230.884 89.505,299.061 89.514,162.738 "
+       id="polygon672"
+       transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-106.6401)"
+       class="linea s10" />
+    <line
+       x1="128.34938"
+       y1="71.397079"
+       x2="37.349262"
+       y2="71.397842"
+       id="line674"
+       class="linea s10 dashV" />
+    <g
+       id="g1960"
+       style="stroke-width:0.810995">
+      <path
+         d="m 44.195466,28.73151 c 14.784629,22.577357 17.57568,62.652764 -0.770796,85.33191"
+         id="path676"
+         class="linea s05" />
+      <polyline
+         points="98.391,175.554 99.65,174.412 95.536,172.411 97.133,176.696   98.391,175.554 "
+         id="polyline678"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-106.6401)"
+         class="blackFill"
+         style="stroke-width:0.810995" />
+      <polyline
+         id="polyline680"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-106.6401)"
+         points="97.391,286.215 98.65,287.358 94.536,289.358 96.133,285.074   97.391,286.215 "
+         class="blackFill"
+         style="stroke-width:0.810995" />
+    </g>
+  </g>
+  <g
+     id="g734"
+     style="stroke-width:0.34319"
+     transform="matrix(0.77079555,0,0,0.77111094,70.880393,-111.30029)" />
+  <g
+     id="step-16"
+     caption="Outside reverse-fold"
+     transform="matrix(1.2331441,0,0,1.2329636,-0.91452003,-812.11364)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 49.507577,745.07869 -6.623449,-16.75624 24.852759,-47.91915 -9.36226,39.08432 37.85703,-21.74126 -16.10462,29.03867 1.02276,0.21728 18.989023,-30.06099 -17.149353,30.35088 -1.83967,-0.28989 -1.02276,-0.21728 -3.40421,6.13864 20.82073,-3.82548 -29.54768,15.9805 z"
+       id="path49353"
+       class="filled"
+       style="fill:url(#radialGradient82996);stroke-width:0.810995" />
+    <g
+       id="g766"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-1015.3218,434.60552)">
+      <path
+         d="m 1399.189,322.207 c -13.781,-8.211 -24.862,-4.369 -32,4.25 -6.596,7.964 -4.693,27.5 -21.349,22.182"
+         id="path762"
+         class="linea s10" />
+      <polyline
+         points="1346.14,348.718 1346.634,347.006 1341.64,347.521 1345.647,350.431     1346.14,348.718   "
+         id="polyline764"
+         class="blackFilled"
+         style="stroke-width:0.278325" />
+    </g>
+    <path
+       id="polyline778"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 83.609881,726.13095 16.528939,-29.18963 -2.750891,2.02413" />
+    <polyline
+       points="   1405.454,402.631 1443.788,381.907 1421.568,380.779  "
+       id="polyline780"
+       transform="matrix(0.77079555,0,0,0.77111094,-1015.3218,434.60552)"
+       class="linea s10" />
+    <path
+       id="line782"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="M 97.543557,729.09819 80.876837,726.987" />
+    <polyline
+       points="   1443.788,381.907 1416.776,386.868 1442.086,341.249  "
+       id="polyline784"
+       transform="matrix(0.77079555,0,0,0.77111094,-1015.3218,434.60552)"
+       class="linea s10" />
+    <path
+       id="line786"
+       class="linea s05"
+       d="M 81.934927,725.77628 100.13882,696.94132" />
+    <path
+       id="polyline788"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 49.507574,745.07869 h 18.488315 l 28.23577,-47.33233 -36.619187,21.08592" />
+    <path
+       id="polyline790"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 49.507577,745.07869 4.121441,-6.12494 14.107871,-58.55045 -24.852761,47.91915 z" />
+    <path
+       id="line792"
+       class="linea s10 dashVs"
+       style="fill:none;stroke:#000000;stroke-linejoin:round;stroke-dasharray:1.62199, 0.810995"
+       d="M 63.097021,711.89653 53.265042,693.76181" />
+  </g>
+  <g
+     id="g1157"
+     style="stroke-width:0.34319"
+     transform="matrix(0.77079555,0,0,0.77111094,115.15224,-106.6401)">
+    <g
+       id="g1155"
+       style="stroke-width:0.34319" />
+  </g>
+  <g
+     id="step-11"
+     transform="matrix(1.2331441,0,0,1.2329636,-230.1895,-513.22949)"
+     style="stroke-width:0.810995"
+     caption="Repeat 10. behind"
+     jump="10">
+    <path
+       d="m 218.69213,490.64817 -24.0018,-13.29839 28.7183,1.42039 8.50982,4.91709 59.95066,-34.29954 -11.6829,20.20063 12.85528,7.59873 0.35306,13.46108 -23.12696,0.17968 -2.89587,0.52917 z"
+       id="path25946"
+       class="filled"
+       style="fill:url(#radialGradient82998);stroke-width:0.810995" />
+    <path
+       id="polygon1203"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 223.40785,478.77016 20.45769,12.25989 -49.17521,-13.68028 z" />
+    <polyline
+       points="   296.645,761.65 372.869,718.052 341.075,772.479 310.579,772.055  "
+       id="polyline1205"
+       transform="matrix(0.77079555,0,0,0.77111094,4.4726285,-104.31)"
+       class="linea s10" />
+    <line
+       x1="270.26758"
+       y1="490.82785"
+       x2="293.39453"
+       y2="490.64816"
+       id="line1207"
+       class="linea s10" />
+    <path
+       id="polyline1209"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 291.2132,452.79606 4.12838,-4.12313 -1.94703,41.97522 -0.35534,-13.46031 -11.82323,-6.98164" />
+    <line
+       x1="293.03918"
+       y1="477.18787"
+       x2="268.08392"
+       y2="491.35703"
+       id="line1211"
+       class="linea s10" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="1.71661, 0.8583"
+       d="M 245.95054,491.17734"
+       id="path1213"
+       style="stroke-width:0.0843305" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="1.71661, 0.8583"
+       d="M 194.69033,477.34978"
+       id="path1215"
+       style="stroke-width:0.0843305" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       d="M 224.52782,480.02013"
+       id="path1217"
+       style="stroke-width:0.0843305" />
+    <path
+       id="line1219"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="m 243.86556,477.12253 10.97226,13.88425" />
+    <path
+       id="line1221"
+       class="linea s025"
+       d="m 287.73921,473.10174 7.56845,-23.71399 -12.7484,20.40249" />
+    <path
+       id="polyline1223"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 240.77157,477.31276 -46.12672,-0.003 24.04728,13.33849 20.99493,0.21514" />
+  </g>
+  <path
+     d="m -164.67741,143.35763 20.92425,-31.11812 35.9468,27.899 -37.55635,23.07033 z"
+     id="path7323"
+     class="filled"
+     style="fill:url(#radialGradient82356)" />
+  <g
+     id="step-2"
+     transform="matrix(1.2331441,0,0,1.2329636,-187.11594,-13.163817)"
+     style="stroke-width:0.810995">
+    <polygon
+       points="377.516,231.367 259.452,299.544 259.46,163.22 "
+       id="polygon866"
+       transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-106.6401)"
+       class="linea s10" />
+    <line
+       x1="168.34056"
+       y1="124.34156"
+       x2="214.27998"
+       y2="45.513199"
+       id="line868"
+       class="linea s10 dashV" />
+    <line
+       x1="168.34673"
+       y1="19.220629"
+       x2="214.28151"
+       y2="98.025848"
+       id="line870"
+       class="linea s10 dashV" />
+    <line
+       x1="259.34378"
+       y1="71.769531"
+       x2="168.34286"
+       y2="71.769531"
+       id="line872"
+       class="linea s025" />
+    <g
+       id="g892"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-106.6401)"
+       class="linea s05">
+      <polyline
+         points="374.219,242 375.88,242.353 375.1,237.843 372.558,241.645     374.219,242   "
+         id="polyline884"
+         class="blackFill"
+         style="stroke-width:0.278325" />
+      <polyline
+         points="270.474,303.269 270.879,301.62 266.347,302.255 270.066,304.918     270.474,303.269   "
+         id="polyline886"
+         class="blackFill"
+         style="stroke-width:0.278325" />
+      <path
+         d="m 269.734,302.93 c 31.664,3.356 93.509,-24.043 104.485,-60.93"
+         id="path888"
+         class="linea s05" />
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         d="M 269.734,302.93"
+         id="path890"
+         style="stroke-width:0.109385" />
+    </g>
+    <g
+       id="g9261"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,-0.77111094,-31.643879,249.44716)"
+       class="linea s05">
+      <polyline
+         points="374.219,242 375.88,242.353 375.1,237.843 372.558,241.645     374.219,242   "
+         id="polyline9253"
+         class="blackFill"
+         style="stroke-width:0.278325" />
+      <polyline
+         points="270.474,303.269 270.879,301.62 266.347,302.255 270.066,304.918     270.474,303.269   "
+         id="polyline9255"
+         class="blackFill"
+         style="stroke-width:0.278325" />
+      <path
+         d="m 269.734,302.93 c 31.664,3.356 93.509,-24.043 104.485,-60.93"
+         id="path9257"
+         class="linea s05" />
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         d="M 269.734,302.93"
+         id="path9259"
+         style="stroke-width:0.109385" />
+    </g>
+    <line
+       x1="168.34673"
+       y1="19.220629"
+       x2="214.28151"
+       y2="98.025848"
+       id="line9263"
+       class="linea s10 dashV" />
+  </g>
+  <g
+     id="step-3"
+     transform="matrix(1.2331441,0,0,1.2329636,-349.87704,-13.527027)"
+     style="stroke-width:0.810995">
+    <polygon
+       points="548.753,231.367 430.689,299.544 430.697,163.22 "
+       id="polygon808"
+       transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-106.6401)"
+       class="linea s10" />
+    <line
+       x1="300.32928"
+       y1="124.34156"
+       x2="346.26871"
+       y2="45.513199"
+       id="line810"
+       class="linea s025" />
+    <line
+       x1="300.33545"
+       y1="19.220629"
+       x2="346.271"
+       y2="98.025848"
+       id="line812"
+       class="linea s025" />
+    <line
+       x1="391.33249"
+       y1="71.769531"
+       x2="300.33157"
+       y2="71.769531"
+       id="line814"
+       class="linea s025" />
+    <path
+       d="m 300.32929,124.34156 13.88125,-52.572032 -13.87509,-52.5489"
+       id="path9863"
+       class="linea  dashV"
+       style="stroke-width:0.810995" />
+    <g
+       id="g12572"
+       style="stroke-width:0.278325"
+       transform="matrix(-0.61654697,-0.4625966,0.46278588,-0.61679925,346.68344,393.8982)"
+       class="linea s05">
+      <polyline
+         points="374.219,242 375.88,242.353 375.1,237.843 372.558,241.645     374.219,242   "
+         id="polyline12564"
+         class="blackFill"
+         transform="matrix(0.95681348,0.29058362,-0.29082147,0.95681349,1.987415,-45.2039)"
+         style="stroke-width:0.278325" />
+      <polyline
+         points="270.474,303.269 270.879,301.62 266.347,302.255 270.066,304.918     270.474,303.269   "
+         id="polyline12566"
+         class="blackFill"
+         transform="translate(-0.13711811,0.96076161)"
+         style="stroke-width:0.278325" />
+      <path
+         d="m 269.05195,303.99604 c 7.96296,2.21256 16.23387,0.96764 21.3854,-9.91366"
+         id="path12568"
+         class="linea s05" />
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         d="M 269.734,302.93"
+         id="path12570"
+         style="stroke-width:0.109385" />
+    </g>
+    <g
+       id="g13436"
+       style="stroke-width:0.278325"
+       transform="matrix(-0.61654697,0.4625966,0.46278588,0.61679925,346.68344,-250.68007)"
+       class="linea s05">
+      <polyline
+         points="374.219,242 375.88,242.353 375.1,237.843 372.558,241.645     374.219,242   "
+         id="polyline13428"
+         class="blackFill"
+         transform="matrix(0.95681348,0.29058362,-0.29082147,0.95681349,1.987415,-45.2039)"
+         style="stroke-width:0.278325" />
+      <polyline
+         points="270.474,303.269 270.879,301.62 266.347,302.255 270.066,304.918     270.474,303.269   "
+         id="polyline13430"
+         class="blackFill"
+         transform="translate(-0.13711811,0.96076161)"
+         style="stroke-width:0.278325" />
+      <path
+         d="m 269.05195,303.99604 c 7.96296,2.21256 16.23387,0.96764 21.3854,-9.91366"
+         id="path13432"
+         class="linea s05" />
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         d="M 269.734,302.93"
+         id="path13434"
+         style="stroke-width:0.109385" />
+    </g>
+  </g>
+  <g
+     id="step-4"
+     caption="Pinch"
+     transform="matrix(1.2331441,0,0,1.2329636,-25.727213,-183.65525)"
+     style="stroke-width:0.810995">
+    <line
+       x1="48.847095"
+       y1="183.61897"
+       x2="37.20731"
+       y2="183.62206"
+       id="line640"
+       class="linea s10 dashS" />
+    <polygon
+       points="207.706,407.287 89.645,475.464 89.654,339.139 "
+       id="polygon642"
+       transform="matrix(0.77079555,0,0,0.77111094,-31.630891,-104.31)"
+       class="linea s10" />
+    <line
+       x1="37.467075"
+       y1="262.3255"
+       x2="83.214561"
+       y2="183.61897"
+       id="line644"
+       class="linea s025" />
+    <line
+       x1="37.474003"
+       y1="157.20381"
+       x2="82.799873"
+       y2="234.96571"
+       id="line646"
+       class="linea s025" />
+    <line
+       x1="128.46796"
+       y1="209.7527"
+       x2="37.469379"
+       y2="209.7527"
+       id="line648"
+       class="linea s025" />
+    <polyline
+       points="89.645,475.464 107.654,407.288     89.308,337.805   "
+       id="polyline660"
+       transform="matrix(0.75625858,0,0,0.7636384,-30.065928,-100.75708)"
+       class="linea s025" />
+    <g
+       id="g2082"
+       transform="rotate(180,38.94079,116.95949)"
+       style="stroke-width:0.810995">
+      <path
+         d="m 43.680582,27.701743 c 7.998473,18.830294 7.785343,29.176538 -0.770796,46.130728"
+         id="path2076"
+         class="linea s05" />
+      <polyline
+         points="98.391,175.554 99.65,174.412 95.536,172.411 97.133,176.696   98.391,175.554 "
+         id="polyline2078"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-107.16927)"
+         class="blackFill"
+         style="stroke-width:0.810995" />
+      <polyline
+         id="polyline2080"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-147.38595)"
+         points="97.391,286.215 98.65,287.358 94.536,289.358 96.133,285.074   97.391,286.215 "
+         class="blackFill"
+         style="stroke-width:0.810995" />
+    </g>
+  </g>
+  <g
+     id="step-5"
+     transform="matrix(1.2331441,0,0,1.2329636,-187.36768,-183.62862)"
+     style="stroke-width:0.810995">
+    <line
+       x1="180.86508"
+       y1="183.62283"
+       x2="168.28494"
+       y2="183.62283"
+       id="line616"
+       class="linea s025" />
+    <line
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="1.70961, 0.854804"
+       x1="235.75351"
+       y1="222.92328"
+       x2="168.88336"
+       y2="222.92328"
+       id="line618"
+       style="stroke-width:0.213702" />
+    <polygon
+       points="259.71,475.435 377.764,407.288 259.699,339.111 "
+       id="polygon620"
+       transform="matrix(0.77079555,0,0,0.77111094,-31.630891,-104.31)"
+       class="linea s10" />
+    <line
+       x1="168.54703"
+       y1="262.32703"
+       x2="214.29453"
+       y2="183.62051"
+       id="line6212"
+       class="linea s025" />
+    <line
+       x1="168.55396"
+       y1="157.20535"
+       x2="213.87982"
+       y2="234.96725"
+       id="line6214"
+       class="linea s025" />
+    <line
+       x1="259.54791"
+       y1="209.75424"
+       x2="168.54935"
+       y2="209.75424"
+       id="line6216"
+       class="linea s025" />
+    <polyline
+       points="89.645,475.464 107.654,407.288     89.308,337.805   "
+       id="polyline6218"
+       transform="matrix(0.75625858,0,0,0.7636384,101.01403,-100.75554)"
+       class="linea s025" />
+    <g
+       id="g6306"
+       transform="rotate(180,103.96077,130.47574)"
+       style="stroke-width:0.810995">
+      <path
+         d="M 40.956607,0.23585024 C 50.265759,21.104979 55.252333,54.256922 42.909786,73.832471"
+         id="path6300"
+         class="linea s05" />
+      <polyline
+         id="polyline6304"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-147.38595)"
+         points="97.391,286.215 98.65,287.358 94.536,289.358 96.133,285.074   97.391,286.215 "
+         class="blackFill"
+         style="stroke-width:0.810995" />
+    </g>
+  </g>
+  <g
+     id="step-7"
+     transform="matrix(1.2331441,0,0,1.2329636,-26.50497,-377.5133)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 29.425186,367.19574 94.168094,-51.56496 -2.40489,64.6939 -68.933004,-0.65699 z"
+       id="path4381"
+       class="filled"
+       style="fill:url(#radialGradient83000);stroke-width:0.810995" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       d="M 125.17418,316.90851"
+       id="path728"
+       style="stroke-width:0.0843305" />
+    <line
+       x1="113.20145"
+       y1="338.85437"
+       x2="122.35831"
+       y2="338.85437"
+       id="line738"
+       class="linea s025" />
+    <line
+       x1="99.965248"
+       y1="379.80948"
+       x2="78.259377"
+       y2="340.41049"
+       id="line742"
+       class="linea s025" />
+    <path
+       id="polyline740"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 121.18839,380.32468 3.68286,-41.01695 -1.31283,0.77255" />
+    <path
+       id="line744"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="M 123.59328,315.63078 85.924526,380.0031" />
+    <polygon
+       points="550.541,339.869 547.421,423.766 457.99,422.914 428.371,406.74 "
+       id="polygon746"
+       transform="matrix(0.77079555,0,0,0.77111094,-300.76128,53.55408)"
+       class="linea s10" />
+    <g
+       id="g754"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-300.76128,53.55408)">
+      <path
+         id="line750"
+         class="linea s10 dashV"
+         style="fill:none;stroke:#000000;stroke-width:0.810995;stroke-linejoin:round;stroke-dasharray:3.24398, 1.62199"
+         d="m 428.371,406.74 119.49754,0.47399" />
+    </g>
+    <path
+       id="polyline758"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.156309;stroke-linejoin:round"
+       d="m 123.59327,315.63078 -15.91538,51.96054 3.70521,12.6254" />
+    <g
+       id="g11760"
+       transform="translate(84.224186,316.45327)"
+       style="stroke-width:0.810995">
+      <path
+         d="M 40.956607,0.23585024 C 50.265759,21.104979 55.252333,54.256922 42.909786,73.832471"
+         id="path11756"
+         class="linea s05" />
+      <polyline
+         id="polyline11758"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-147.38595)"
+         points="97.391,286.215 98.65,287.358 94.536,289.358 96.133,285.074   97.391,286.215 "
+         class="blackFill"
+         style="stroke-width:0.810995" />
+    </g>
+  </g>
+  <g
+     id="step-6"
+     transform="matrix(1.2331441,0,0,1.2329636,193.6349,-235.06648)"
+     caption="Turn the model over"
+     style="stroke-width:0.810995">
+    <path
+       d="m -116.41667,251.35417 c 7.9375,10.58333 14.55209,10.58333 21.16667,10.58333 6.614583,0 10.583333,-5.29166 10.583333,-10.58333 0,-5.29167 -3.96875,-10.58334 -10.583333,-10.58334 -6.61458,0 -10.58333,5.29167 -10.58333,10.58334 0,5.29166 3.96875,10.58333 10.58333,10.58333 6.614583,0 10.583333,-1.32292 18.520833,-6.61458"
+       id="path12992"
+       class="linea  s20" />
+    <path
+       d="m -75.373302,257.56235 -4.328308,-3.59229 7.696721,-4.86999 z"
+       id="path12994"
+       class="blackFill"
+       style="stroke-width:0.810995" />
+  </g>
+  <g
+     id="step-8"
+     transform="matrix(1.2331441,0,0,1.2329636,-215.33067,-362.19132)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 273.70225,368.50642 0.0389,-14.12551 1.36431,14.12444 z"
+       id="path20467"
+       class="filled"
+       style="fill:url(#radialGradient83002);stroke-width:0.810995" />
+    <path
+       id="polygon682"
+       transform="matrix(0.77079555,0,0,0.77111094,115.15224,-106.6401)"
+       d="m 205.503,666.548 0.244,-68.682 -118.307,0.503 z"
+       class="linea s10" />
+    <line
+       x1="273.55304"
+       y1="407.34235"
+       x2="242.14467"
+       y2="354.51587"
+       id="line684"
+       class="linea s025" />
+    <line
+       x1="279.36252"
+       y1="315.94412"
+       x2="256.04672"
+       y2="353.69153"
+       id="line686"
+       class="linea s025" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="2.5749, 0.643727, 0.429151, 0.643727"
+       d="M 273.74111,368.10515"
+       id="path688"
+       style="stroke-width:0.0843305" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="1.71661, 0.8583"
+       d="M 273.76424,381.40604"
+       id="path690"
+       style="stroke-width:0.0843305" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="1.71661, 0.8583"
+       d="M 273.76501,355.58153"
+       id="path692"
+       style="stroke-width:0.0843305" />
+    <polyline
+       points="   205.747,597.866 207.517,616.183 213.04,548.02 121.835,597.651  "
+       id="polyline694"
+       transform="matrix(0.77079555,0,0,0.77111094,115.15224,-106.6401)"
+       class="linea s10" />
+    <line
+       x1="241.52879"
+       y1="354.51819"
+       x2="225.87933"
+       y2="379.80057"
+       id="line696"
+       class="linea s025" />
+    <g
+       id="g706"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,115.15224,-106.6401)">
+      <g
+         id="g704"
+         style="stroke-width:0.278325">
+        <line
+           x1="119.62372"
+           y1="616.59399"
+           x2="205.51302"
+           y2="616.59399"
+           id="line33643"
+           class="linea s10 dashV" />
+      </g>
+    </g>
+    <line
+       x1="264.00363"
+       y1="383.45795"
+       x2="273.45529"
+       y2="383.45795"
+       id="line708"
+       class="linea s025" />
+    <line
+       x1="273.55304"
+       y1="407.34235"
+       x2="259.06516"
+       y2="354.51587"
+       id="line718"
+       class="linea s025" />
+    <line
+       x1="279.36252"
+       y1="315.94412"
+       x2="266.30908"
+       y2="353.69153"
+       id="line720"
+       class="linea s025" />
+    <g
+       id="g18087"
+       transform="matrix(1,0,0,-1,239.72598,393.2728)"
+       style="stroke-width:0.810995">
+      <path
+         d="m 35.943726,-12.482046 c 11.930511,19.9953422 19.308607,66.738968 6.96606,86.314517"
+         id="path18083"
+         class="linea s05" />
+      <polyline
+         id="polyline18085"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-147.38595)"
+         points="97.391,286.215 98.65,287.358 94.536,289.358 96.133,285.074   97.391,286.215 "
+         class="blackFill"
+         style="stroke-width:0.810995" />
+    </g>
+  </g>
+  <g
+     id="step-9"
+     transform="matrix(1.2331441,0,0,1.2329636,-369.38803,-362.48415)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 331.94311,369.13843 72.71686,-42.09421 0.003,39.33378 1.16938,-11.53442 0.35225,13.10349 -1.51963,-0.2517 0.002,1.31737 z"
+       id="path20471"
+       class="filled"
+       style="fill:url(#radialGradient83004);stroke-width:0.810995" />
+    <polyline
+       points="   309.362,598.682 249.52,598.677 281.256,617.004 375.609,562.415 375.604,616.841 281.256,617.004  "
+       id="polyline1133"
+       transform="matrix(0.77079555,0,0,0.77111094,115.15224,-106.6401)"
+       class="linea s10" />
+    <polyline
+       points="   377.348,564.243 380.102,561.487 377.574,615.459 377.117,598.466 375.604,616.841  "
+       id="polyline1135"
+       transform="matrix(0.77079555,0,0,0.77111094,115.15224,-106.6401)"
+       class="linea s10" />
+    <line
+       x1="307.48117"
+       y1="355.00623"
+       x2="358.74213"
+       y2="368.83304"
+       id="line1137"
+       class="linea s10 dashV" />
+    <line
+       x1="356.65561"
+       y1="354.58521"
+       x2="365.66388"
+       y2="369.1384"
+       id="line1143"
+       class="linea s025" />
+    <path
+       id="line1147"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="M 404.66999,327.04426 392.92926,369.1384" />
+    <line
+       x1="404.35626"
+       y1="350.92783"
+       x2="394.78534"
+       y2="350.92783"
+       id="line1149"
+       class="linea s025" />
+    <line
+       x1="404.65997"
+       y1="327.04422"
+       x2="379.2168"
+       y2="369.1384"
+       id="linea s025"
+       class="linea s025" />
+    <g
+       id="g18544"
+       transform="rotate(-173.05931,197.4751,206.90699)"
+       style="stroke-width:0.810995">
+      <path
+         d="m 45.503356,63.928978 c 0.984683,3.876707 -0.224698,7.627183 -2.59357,9.903493"
+         id="path18540"
+         class="linea s05" />
+      <polyline
+         id="polyline18542"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-147.38595)"
+         points="97.391,286.215 98.65,287.358 94.536,289.358 96.133,285.074   97.391,286.215 "
+         class="blackFill"
+         style="stroke-width:0.810995" />
+    </g>
+    <path
+       id="path21900"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="m 405.49242,336.3918 2.64075,-10.06313 -2.71384,5.56529" />
+  </g>
+  <g
+     id="step-10"
+     transform="matrix(1.2331441,0,0,1.2329636,-22.35703,-517.5717)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 50.568099,494.96367 -24.46192,-14.13215 28.7183,1.42039 8.50982,4.91709 59.950661,-34.29954 0.003,39.33378 1.16938,-11.53442 0.35225,13.10349 -1.51963,-0.2517 0.002,1.31737 z"
+       id="path24636"
+       class="filled"
+       style="fill:url(#radialGradient83006);stroke-width:0.810995" />
+    <polygon
+       points="487.521,616.888 422.565,598.677 459.823,600.519 "
+       id="polygon1159"
+       transform="matrix(0.77079555,0,0,0.77111094,-299.60504,19.185143)"
+       class="linea s10" />
+    <path
+       id="polyline1161"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 64.541901,486.4884 58.745439,-33.61891 0.005,41.9685 -47.117961,0.0362" />
+    <line
+       x1="123.28886"
+       y1="452.87106"
+       x2="98.787582"
+       y2="494.65829"
+       id="line1163"
+       class="linea  s10 dashM" />
+    <polyline
+       points="   550.393,564.243 553.146,561.487 550.621,615.46 550.16,598.466 548.65,616.841  "
+       id="polyline1165"
+       transform="matrix(0.77079555,0,0,0.77111094,-299.60504,19.185143)"
+       class="linea s10" />
+    <line
+       x1="124.45586"
+       y1="480.66885"
+       x2="98.787582"
+       y2="494.65829"
+       id="line1167"
+       class="linea s10 dashS" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="1.71661, 0.8583"
+       d="M 77.366399,494.65831"
+       id="path1169"
+       style="stroke-width:0.0843305" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       stroke-dasharray="1.71661, 0.8583"
+       d="M 26.106179,480.83152"
+       id="path1171"
+       style="stroke-width:0.0843305" />
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-miterlimit="3.8636"
+       d="M 55.943679,483.50265"
+       id="path1173"
+       style="stroke-width:0.0843305" />
+    <path
+       id="line1175"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="m 75.281389,480.70726 10.97305,13.88347" />
+    <line
+       x1="123.2943"
+       y1="476.75314"
+       x2="113.37181"
+       y2="476.75314"
+       id="line1177"
+       class="linea s025" />
+    <line
+       x1="123.28734"
+       y1="452.86951"
+       x2="111.77702"
+       y2="494.83801"
+       id="line1179"
+       class="linea s025" />
+    <polyline
+       points="   482.35,598.629 422.507,598.624 453.705,616.608 480.943,616.888  "
+       id="polyline1181"
+       transform="matrix(0.77079555,0,0,0.77111094,-299.60504,19.185143)"
+       class="linea s10" />
+    <g
+       id="g1191"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-299.60504,19.185143)">
+      <polyline
+         points="488.238,574.019 482.35,574.261 486.824,577.99   "
+         id="polyline1183"
+         class="blackFilled"
+         style="stroke-width:0.278325" />
+      <path
+         d="m 510.542,582.785 c -6.691,-0.699 -14.232,-2.643 -23.021,-6.78"
+         id="path1185"
+         class="linea s10" />
+      <path
+         d="m 547.818,579.418 c -9.716,0.449 -20.877,4.167 -33.62,3.633"
+         id="path1187"
+         class="linea s10 dashS" />
+      <path
+         d="m 550.898,616.608 c 15.19658,-5.1786 18.12703,-32.93902 -0.738,-37.18"
+         id="path1189"
+         class="linea s10" />
+    </g>
+    <path
+       id="path23462"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="m 124.11669,462.21704 2.64075,-10.06313 -2.71384,5.56529" />
+  </g>
+  <g
+     id="step-12"
+     caption="Fold only first layer"
+     transform="matrix(1.2331441,0,0,1.2329636,-389.61544,-513.73089)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 375.23157,491.76134 -51.25713,-14.00491 28.7183,1.42039 8.50982,4.91709 59.95066,-34.29954 -11.6829,20.20063 12.85528,7.59873 -25.66977,14.16993 z"
+       id="path35123"
+       class="filled"
+       style="fill:url(#radialGradient83008);stroke-width:0.810995" />
+    <path
+       d="M 396.12321,491.75903 V 464.52481"
+       id="valley-3"
+       class="linea  dashV"
+       style="stroke-width:0.810995" />
+    <polyline
+       points="   1056.87,111.629 1132.532,67.772 1100.048,122.194 1072.944,122.197  "
+       id="polyline56"
+       transform="matrix(0.77079555,0,0,0.77111094,-451.78889,397.5339)"
+       class="linea s10" />
+    <polyline
+       points="   1134.27,69.598 1137.024,66.842 1120.488,93.716  "
+       id="polyline58"
+       transform="matrix(0.77079555,0,0,0.77111094,-451.78889,397.5339)"
+       class="linea s10" />
+    <polyline
+       points="   1006.445,104.035 1042.86,105.429 1072.944,122.197 1006.445,104.035 1066.285,104.035  "
+       id="polyline66"
+       transform="matrix(0.77079555,0,0,0.77111094,-451.78889,397.5339)"
+       class="linea s10" />
+    <path
+       id="polyline68"
+       class="linea s10"
+       transform="matrix(0.77079555,0,0,0.77111094,-451.78889,397.5339)"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 1100.048,122.194 33.99,-18.374 -16.382,-8.453" />
+    <line
+       x1="422.32254"
+       y1="477.59061"
+       x2="411.34717"
+       y2="470.68301"
+       id="line80"
+       class="linea s10" />
+    <path
+       id="line82"
+       class="linea s025"
+       style="fill:none;stroke:#000000;stroke-width:0.202748;stroke-linejoin:round"
+       d="m 373.58591,477.48311 10.11206,14.23164" />
+    <g
+       id="g34704"
+       transform="matrix(-0.08587708,-0.99630574,-0.99630574,0.08587708,441.5449,499.04316)"
+       style="stroke-width:0.810995">
+      <path
+         d="m 40.035849,31.601234 c 12.465937,12.640638 14.771142,27.663891 2.873937,42.231237"
+         id="path34700"
+         class="linea s05" />
+      <polyline
+         id="polyline34702"
+         transform="matrix(0.77079555,0,0,0.77111094,-31.643879,-147.38595)"
+         points="97.391,286.215 98.65,287.358 94.536,289.358 96.133,285.074   97.391,286.215 "
+         class="blackFill"
+         style="stroke-width:0.810995" />
+    </g>
+  </g>
+  <g
+     id="step-15"
+     caption="Outside reverse-fold"
+     transform="matrix(1.2331441,0,0,1.2329636,-180.75842,-664.218)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 205.8636,613.81453 -51.25867,-14.00492 27.74016,1.01247 10.21612,5.39783 59.23333,-34.37464 -13.92483,25.81383 0.80431,0.21728 16.5837,-26.74439 -10.40127,18.22371 -5.10733,8.73775 -1.0751,-0.21707 -0.80431,-0.21728 -2.88391,5.28893 17.97033,-3.30344 -25.03352,14.24121 z"
+       id="path43280"
+       class="filled"
+       style="fill:url(#radialGradient1302);stroke-width:0.810995" />
+    <polyline
+       points="   1058.078,271.453 1133.743,227.593 1101.261,282.018 1074.154,282.02  "
+       id="polyline552"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <polyline
+       points="   1133.328,230.429 1138.236,226.668 1118.255,261.091  "
+       id="polyline554"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <line
+       x1="254.68504"
+       y1="572.07739"
+       x2="239.1666"
+       y2="597.00122"
+       id="line556"
+       class="linea s05" />
+    <polyline
+       points="   1007.653,263.858 1044.07,265.251 1074.154,282.02 1007.653,263.858 1067.498,263.857  "
+       id="polyline558"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <polyline
+       points="   1102.527,282.018 1135.25,263.644 1115.55,262.645  "
+       id="polyline560"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <polyline
+       points="   1133.743,227.593 1111.936,267.928 1135.25,263.644 1116.693,261.508  "
+       id="polyline562"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <g
+       id="g580"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-751.24518,301.5596)">
+      <path
+         d="m 1260.215,343.556 c -13.502,9.901 -29.959,8.396 -46.459,3.723 -19.218,-5.442 -38.75,8.673 -20,33.548"
+         id="path576"
+         class="linea s10" />
+      <polyline
+         points="1257.376,342.479 1263.312,340.737 1260.212,346.092   "
+         id="polyline578"
+         class="blackFilled"
+         style="stroke-width:0.278325" />
+    </g>
+    <path
+       id="line42560"
+       class="linea s10 dashV"
+       d="M 212.93441,613.50845 204.11468,599.4634" />
+    <line
+       x1="226.75755"
+       y1="613.81281"
+       x2="226.68201"
+       y2="586.11432"
+       id="line45742"
+       class="linea s025" />
+  </g>
+  <g
+     id="step-17"
+     caption="Inside reverse-fold"
+     transform="matrix(1.2331441,0,0,1.2329636,-183.24805,-796.89515)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 197.36827,732.73567 -6.62191,-16.16557 10.9289,-21.63567 -19.16716,-6.78979 22.14958,1.60391 4.3866,7.63631 -2.80896,9.75974 37.85703,-21.74126 -16.10462,29.03867 1.02276,0.21728 18.98902,-30.06099 -17.14935,30.35088 -1.83967,-0.28989 -1.02276,-0.21728 -3.40421,6.13864 20.82073,-3.82548 -29.54768,15.9805 z"
+       id="path54289"
+       class="filled"
+       style="fill:url(#radialGradient83012);stroke-width:0.810995" />
+    <g
+       id="g1415"
+       transform="matrix(0.77079555,0,0,0.77111094,-604.39014,301.97151)"
+       style="stroke-width:0.810995">
+      <path
+         d="m 1023.024,504.497 c -5.749,4.231 -7.421,11.12 -5.119,15.536 2.125,4.081 10.464,6.677 5.405,12.587"
+         id="path1411"
+         class="linea s10" />
+      <polyline
+         points="1024.875,531.34 1023.49,530.22 1022.024,535.021 1026.262,532.46     1024.875,531.34   "
+         id="polyline1413"
+         class="blackFill"
+         transform="translate(-0.68652014)"
+         style="stroke-width:0.810995" />
+    </g>
+    <path
+       id="polyline1443"
+       class="linea s10"
+       transform="matrix(0.77079555,0,0,0.77111094,-604.39014,301.97151)"
+       d="m 1055.318,512.784 -9.801,38.664 -5.347,7.18 -8.591,-20.964 13.8317,-27.3747" />
+    <polygon
+       points="1049.627,502.881 1020.891,500.801 1055.318,512.784 "
+       id="polygon1445"
+       transform="matrix(0.77079555,0,0,0.77111094,-604.39014,301.97151)"
+       class="linea s10" />
+    <line
+       x1="205.77846"
+       y1="684.1048"
+       x2="191.79387"
+       y2="697.88531"
+       id="line1447"
+       class="linea s10 dashMs" />
+    <path
+       id="path54291"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 245.40425,716.75517 -16.66672,-2.11119" />
+    <polyline
+       points="   1443.788,381.907 1416.776,386.868 1442.086,341.249  "
+       id="polyline54293"
+       transform="matrix(0.77079555,0,0,0.77111094,-867.46111,422.2625)"
+       class="linea s10" />
+    <path
+       id="path54295"
+       class="linea s05"
+       d="M 229.79562,713.43326 247.99951,684.5983" />
+    <path
+       id="path54297"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 197.36827,732.73567 h 18.4883 l 28.23578,-47.33233 -36.61919,21.08592" />
+    <polyline
+       points="   1405.454,402.631 1443.788,381.907 1421.568,380.779  "
+       id="polyline54301"
+       transform="matrix(0.77079555,0,0,0.77111094,-867.46111,422.2625)"
+       class="linea s10" />
+    <path
+       id="path54303"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 231.47057,713.78793 16.52894,-29.18963 -2.75089,2.02413" />
+  </g>
+  <g
+     id="step-18"
+     caption="Shape the model"
+     transform="matrix(1.2331441,0,0,1.2329636,-22.7765,-907.6243)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 67.236216,822.54299 -6.62191,-16.16557 10.9289,-21.63567 -3.669258,-1.6039 -4.503764,12.45984 0.706851,-13.94786 5.283803,-2.56471 5.164788,0.47075 4.3866,7.63631 -2.80896,9.75974 37.857034,-21.74126 -16.104624,29.03867 1.02276,0.21728 18.989024,-30.06099 -17.14935,30.35088 -1.839674,-0.28989 -1.02276,-0.21728 -3.40421,6.13864 20.820734,-3.82548 -29.547684,15.9805 z"
+       id="path56656"
+       class="filled"
+       style="fill:url(#radialGradient83014);stroke-width:0.810995" />
+    <path
+       id="path56664"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="M 78.912225,787.19219 71.357657,817.00642 67.236214,822.543 60.614309,806.37743 71.275722,785.2685" />
+    <path
+       id="polygon56666"
+       class="linea s10"
+       transform="matrix(0.77079555,0,0,0.77111094,-734.52219,391.77883)"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 1055.318,512.784 -5.691,-9.903 -6.7006,-0.61049 -6.855,3.326 z" />
+    <path
+       id="path56670"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="M 115.2722,806.56249 98.605476,804.4513" />
+    <polyline
+       points="   1443.788,381.907 1416.776,386.868 1442.086,341.249  "
+       id="polyline56672"
+       transform="matrix(0.77079555,0,0,0.77111094,-997.59316,512.06982)"
+       class="linea s10" />
+    <path
+       id="path56674"
+       class="linea s05"
+       d="M 99.663566,803.24058 117.86746,774.40562" />
+    <path
+       id="path56676"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 67.236216,822.54299 h 18.4883 L 113.9603,775.21066 77.341106,796.29658" />
+    <polyline
+       points="   1405.454,402.631 1443.788,381.907 1421.568,380.779  "
+       id="polyline56678"
+       transform="matrix(0.77079555,0,0,0.77111094,-997.59316,512.06982)"
+       class="linea s10" />
+    <path
+       id="path56680"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 101.33852,803.59525 16.52894,-29.18963 -2.75089,2.02413" />
+    <path
+       id="polygon57340"
+       class="linea s10"
+       transform="matrix(0.77079555,0,0,0.77111094,-736.79576,514.86781)"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 1043.8735,348.6499 -5.7695,15.4091 0.917,-18.088" />
+  </g>
+  <g
+     id="step-19"
+     caption="Model complete!"
+     transform="matrix(1.2331441,0,0,1.2329636,-194.53378,-958.52513)"
+     style="stroke-width:0.810995">
+    <path
+       d="m 180.25993,827.58673 12.36894,-16.48611 2.40601,2.60536 -1.02899,2.24506 5.74865,4.88488 0.6943,-1.58443 -10.78012,-11.10537 z"
+       id="path77959"
+       class="fillShadow"
+       style="stroke-width:0.810995" />
+    <path
+       d="m 177.02661,862.42435 c 2.5727,1.97763 5.13812,5.8167 10.69432,6.66289 l -0.16149,-2.55789 c 5.29193,10.66964 34.94717,2.74183 37.95612,-0.0883 7.79163,-12.07508 25.49705,-35.19732 34.68568,-42.45897 -8.92911,10.67884 -17.12963,21.35768 -24.74389,32.03653 -6.19787,9.5154 -10.34852,12.88914 -14.87981,17.40481 -9.01995,1.63225 -19.32595,2.52962 -32.66913,1.69146 z"
+       id="path76745"
+       class="fillShadow"
+       style="stroke-width:0.810995" />
+    <path
+       d="m 187.90841,875.11492 c -12.43374,-13.06347 -14.18048,-16.50256 -14.10546,-22.90076 l 21.23193,-38.50818 -2.40601,-2.60536 -12.36894,16.48611 c 2.19543,-7.51049 5.54393,-14.63662 5.7062,-22.82482 l 6.7352,-0.74835 8.51253,3.92886 c -0.0282,4.1099 0.63093,9.2508 -0.76502,11.30907 -4.54498,11.19034 -9.41635,21.23132 -12.05054,36.9598 13.14239,5.7089 25.83585,7.91999 36.99678,-3.46114 15.31932,-14.36371 30.69087,-28.04849 46.25766,-39.19507 -12.49541,10.85994 -23.38916,24.38931 -33.64944,38.97447 7.75297,-5.80042 12.98157,-8.44538 18.87117,-11.9166 -5.56401,6.04209 -16.35015,9.59198 -22.73214,17.43424 -4.0519,5.43856 -8.77685,10.42841 -13.56479,15.37627 -10.71784,2.62629 -21.71195,1.44565 -32.66913,1.69146 z"
+       id="path69751"
+       class="filled"
+       style="fill:url(#radialGradient83016);stroke-width:0.810995" />
+    <path
+       id="path59640"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 194.00589,815.95104 -20.20294,36.26312 c -0.31896,8.35084 7.83994,15.49056 14.10546,22.90076 -1.95724,-21.20531 5.23455,-38.55839 12.54043,-55.86343 l -10.78012,-11.10537 3.03261,-4.13256 8.51253,3.92886 c -0.049,4.46008 0.72641,8.77222 -0.76502,11.30907" />
+    <path
+       id="path60858"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 189.66872,808.14612 c -1.17453,7.04057 -9.40879,19.44061 -9.40879,19.44061 0,0 5.96464,-15.21655 5.7062,-22.82482 l 6.7352,-0.74835" />
+    <path
+       id="path61373"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 187.90841,875.11492 c 12.19248,0.62052 23.2192,0.18125 32.66913,-1.69146 16.89373,-15.3578 26.40987,-39.14383 51.0752,-59.86838 -14.60703,10.0204 -32.98746,27.19176 -43.21748,36.29521 -10.23002,9.10345 -16.74289,16.43775 -39.19506,6.92227" />
+    <path
+       id="path63442"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 216.04822,857.72461 c -0.75547,-4.03125 -0.53633,-6.69804 -0.0543,-8.99686 5.61142,-3.17111 24.94395,-23.12867 35.26621,-28.43748 10.32226,-5.30881 20.39266,-6.73519 20.39266,-6.73519" />
+    <path
+       id="path63767"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 195.84265,833.59018 c 10.47697,-4.86431 23.46626,-24.00336 31.75072,-30.51207 8.28446,-6.50871 16.18317,-10.28988 16.18317,-10.28988 -0.001,-0.003 -6.19638,4.44458 -9.54153,16.27672 -3.34515,11.83214 -8.92156,29.78975 -22.63222,36.81222 l -0.37418,0.84465" />
+    <path
+       id="path65983"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 236.88077,855.89715 c 7.54062,-8.0698 14.15016,-8.79138 19.9937,-15.2842 l -10.46271,2.02977" />
+    <path
+       id="path66523"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 191.78697,849.07962 24.85916,-1.93898" />
+    <path
+       id="path67945"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 191.78697,812.22315 -11.52704,15.36358" />
+    <path
+       id="path68763"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 225.27584,839.5381 c 2.38125,-5.4901 5.77612,-20.27367 5.77612,-20.27367" />
+    <path
+       id="path71823"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 239.6871,851.40702 c 7.16644,-5.91828 11.53092,-5.98505 17.18737,-10.79407" />
+  </g>
+  <path
+     d="m -129.82433,151.9065 20.92425,-31.11812 35.946792,27.899 -37.556352,23.07033 z"
+     id="path76741"
+     class="fillShadow" />
+  <g
+     id="cover-image"
+     uid="cigno-caralb"
+     caption="Model complete!"
+     transform="matrix(1.2331441,0,0,1.2329636,-194.53378,-958.52513)"
+     author="Carminati Alberto"
+     title="Simple Swan"
+     sheet="Equilateral triangle"
+     style="stroke-width:0.810995">
+    <path
+       d="m 180.25993,827.58673 12.36894,-16.48611 2.40601,2.60536 -1.02899,2.24506 5.74865,4.88488 0.6943,-1.58443 -10.78012,-11.10537 z"
+       id="path81015"
+       class="fillShadow"
+       style="stroke-width:0.810995" />
+    <path
+       d="m 177.02661,862.42435 c 2.5727,1.97763 5.13812,5.8167 10.69432,6.66289 l -0.16149,-2.55789 c 5.29193,10.66964 34.94717,2.74183 37.95612,-0.0883 7.79163,-12.07508 25.49705,-35.19732 34.68568,-42.45897 -8.92911,10.67884 -17.12963,21.35768 -24.74389,32.03653 -6.19787,9.5154 -10.34852,12.88914 -14.87981,17.40481 -9.01995,1.63225 -19.32595,2.52962 -32.66913,1.69146 z"
+       id="path81017"
+       class="fillShadow"
+       style="stroke-width:0.810995" />
+    <path
+       d="m 187.90841,875.11492 c -12.43374,-13.06347 -14.18048,-16.50256 -14.10546,-22.90076 l 21.23193,-38.50818 -2.40601,-2.60536 -12.36894,16.48611 c 2.19543,-7.51049 5.54393,-14.63662 5.7062,-22.82482 l 6.7352,-0.74835 8.51253,3.92886 c -0.0282,4.1099 0.63093,9.2508 -0.76502,11.30907 -4.54498,11.19034 -9.41635,21.23132 -12.05054,36.9598 13.14239,5.7089 25.83585,7.91999 36.99678,-3.46114 15.31932,-14.36371 30.69087,-28.04849 46.25766,-39.19507 -12.49541,10.85994 -23.38916,24.38931 -33.64944,38.97447 7.75297,-5.80042 12.98157,-8.44538 18.87117,-11.9166 -5.56401,6.04209 -16.35015,9.59198 -22.73214,17.43424 -4.0519,5.43856 -8.77685,10.42841 -13.56479,15.37627 -10.71784,2.62629 -21.71195,1.44565 -32.66913,1.69146 z"
+       id="path81019"
+       class="filled"
+       style="fill:url(#radialGradient81043);stroke-width:0.810995" />
+    <path
+       id="path81021"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 194.00589,815.95104 -20.20294,36.26312 c -0.31896,8.35084 7.83994,15.49056 14.10546,22.90076 -1.95724,-21.20531 5.23455,-38.55839 12.54043,-55.86343 l -10.78012,-11.10537 3.03261,-4.13256 8.51253,3.92886 c -0.049,4.46008 0.72641,8.77222 -0.76502,11.30907" />
+    <path
+       id="path81023"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 189.66872,808.14612 c -1.17453,7.04057 -9.40879,19.44061 -9.40879,19.44061 0,0 5.96464,-15.21655 5.7062,-22.82482 l 6.7352,-0.74835" />
+    <path
+       id="path81025"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 187.90841,875.11492 c 12.19248,0.62052 23.2192,0.18125 32.66913,-1.69146 16.89373,-15.3578 26.40987,-39.14383 51.0752,-59.86838 -14.60703,10.0204 -32.98746,27.19176 -43.21748,36.29521 -10.23002,9.10345 -16.74289,16.43775 -39.19506,6.92227" />
+    <path
+       id="path81027"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 216.04822,857.72461 c -0.75547,-4.03125 -0.53633,-6.69804 -0.0543,-8.99686 5.61142,-3.17111 24.94395,-23.12867 35.26621,-28.43748 10.32226,-5.30881 20.39266,-6.73519 20.39266,-6.73519" />
+    <path
+       id="path81029"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 195.84265,833.59018 c 10.47697,-4.86431 23.46626,-24.00336 31.75072,-30.51207 8.28446,-6.50871 16.18317,-10.28988 16.18317,-10.28988 -0.001,-0.003 -6.19638,4.44458 -9.54153,16.27672 -3.34515,11.83214 -8.92156,29.78975 -22.63222,36.81222 l -0.37418,0.84465" />
+    <path
+       id="path81031"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 236.88077,855.89715 c 7.54062,-8.0698 14.15016,-8.79138 19.9937,-15.2842 l -10.46271,2.02977" />
+    <path
+       id="path81033"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 191.78697,849.07962 24.85916,-1.93898" />
+    <path
+       id="path81035"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 191.78697,812.22315 -11.52704,15.36358" />
+    <path
+       id="path81037"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 225.27584,839.5381 c 2.38125,-5.4901 5.77612,-20.27367 5.77612,-20.27367" />
+    <path
+       id="path81039"
+       class="linea s10"
+       style="fill:none;stroke:#000000;stroke-linejoin:round"
+       d="m 239.6871,851.40702 c 7.16644,-5.91828 11.53092,-5.98505 17.18737,-10.79407" />
+  </g>
+  <g
+     id="step-14"
+     caption="Repeat 13. behind"
+     transform="matrix(1.2331441,0,0,1.2329636,-180.75842,-664.218)"
+     style="stroke-width:0.810995"
+     jump="13">
+    <path
+       d="m 205.8636,613.81453 -51.25867,-14.00492 27.74016,1.01247 10.21612,5.39783 59.23333,-34.37464 -13.92483,25.81383 0.80431,0.21728 16.5837,-26.74439 -10.40127,18.22371 -5.10733,8.73775 -1.0751,-0.21707 -0.80431,-0.21728 -2.88391,5.28893 17.97033,-3.30344 -25.03352,14.24121 z"
+       id="path1107"
+       class="filled"
+       style="fill:url(#radialGradient83010);stroke-width:0.810995" />
+    <polyline
+       points="   1058.078,271.453 1133.743,227.593 1101.261,282.018 1074.154,282.02  "
+       id="polyline1109"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <polyline
+       points="   1133.328,230.429 1138.236,226.668 1118.255,261.091  "
+       id="polyline1111"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <line
+       x1="254.68504"
+       y1="572.07739"
+       x2="239.1666"
+       y2="597.00122"
+       id="line1113"
+       class="linea s05" />
+    <polyline
+       points="   1007.653,263.858 1044.07,265.251 1074.154,282.02 1007.653,263.858 1067.498,263.857  "
+       id="polyline1115"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <polyline
+       points="   1102.527,282.018 1135.25,263.644 1115.55,262.645  "
+       id="polyline1117"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <polyline
+       points="   1133.743,227.593 1111.936,267.928 1135.25,263.644 1116.693,261.508  "
+       id="polyline1119"
+       transform="matrix(0.77079555,0,0,0.77111094,-622.08952,396.34582)"
+       class="linea s10" />
+    <g
+       id="g1125"
+       style="stroke-width:0.278325"
+       transform="matrix(0.77079555,0,0,0.77111094,-751.24518,301.5596)">
+      <path
+         d="m 1260.215,343.556 c -13.502,9.901 -29.959,8.396 -46.459,3.723 -19.218,-5.442 -38.75,8.673 -20,33.548"
+         id="path1121"
+         class="linea s10" />
+      <polyline
+         points="1257.376,342.479 1263.312,340.737 1260.212,346.092   "
+         id="polyline1123"
+         class="blackFilled"
+         style="stroke-width:0.278325" />
+    </g>
+    <path
+       id="path1127"
+       class="linea s025"
+       d="M 212.93441,613.50845 204.11468,599.4634" />
+    <line
+       x1="226.75755"
+       y1="613.81281"
+       x2="226.68201"
+       y2="586.11432"
+       id="line1129"
+       class="linea s025" />
+  </g>
+</svg>
