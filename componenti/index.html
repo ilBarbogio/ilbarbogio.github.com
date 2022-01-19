@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&display=swap" rel="stylesheet">
+  <script src="./components.js"></script>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      background-image: radial-gradient(farthest-corner at 20% 80%,#000 0%, #555 100%);
+    }
+		.tooltip {
+			position: relative;
+			border-bottom: 1px dotted black;
+		}
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 15em;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			padding: 5px 0;
+			border-radius: 6px;
+      font-weight: 100;
+		 
+			position: absolute;
+			z-index: 1;
+      top: -5px;
+      left: 105%;
+		}
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+
+    .wrapper{
+      margin:10px 0;
+      margin-top:45px;
+      padding: 10px 0;
+      background-color:black;
+      border-top:2px solid white;
+      border-bottom:2px solid white;
+    }
+    .caption{
+      margin:5px 0;
+      width:95%;
+      padding-right:5%;
+      font-size:1em;
+      text-align:right;
+      color:white;
+			font-family: 'Lato', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" style="background-color: white;border-color: green;">
+    <autumn-confetti dim="2,2" n=35 delta=500 init=10 image="foglia.png">
+      <h1>Autumn Confetti</h1>
+      <p>
+        Simple animations with css with multiple layer for 3d effect
+      </p>
+      <p>
+        A nth-child selector to alternate position of text baloons
+      </p>
+      <p>
+        Just for fun, recalls a messenger app with a theme. Try and write a new message!
+      </p>
+    </autumn-confetti>
+  </div>
+  <div class="caption">Chat component mockup,quick and dirty</div>
+
+  <div class="wrapper" style="background-color: white;border-color: yellow;">
+    <vetrina-tridimensionale id="component">
+      <span slot="sovratitolo">Aviator</span>
+      <div id="container" slot="3dviewport"></div>
+      <span slot="titolo">A make-believe model</span>
+      <span slot="testo">
+        <p>
+          <i>Aviator</i> glasses were swiftly designed using Blender. The body is built from
+          three curves with added geometry and exported without materials. Those are added after
+          importing in the webpage, using threejs PB materials and one low quality environment map.
+        </p>
+        <p>
+          The 3D view is explorable via mouse and touch inputs, replaced materials let the user
+          quickly customize the model's appareance, as one can do clicking on "Customize" just 
+          under this text.
+        </p>
+      </span>
+    </vetrina-tridimensionale>
+  </div>
+  <div class="caption">3D interactive display window</div>
+
+  <div class="wrapper">
+    <video-cubo files="./images/ele2.webm&./images/worm.mp4&./images/lamp1.mkv&./images/chibi.mp4&./images/pawned.mkv&./images/riccio.mp4">
+      <p slot="testo" style="font-size: xx-large;">Animated 3D graphics</p>
+      <p slot="testo">
+        Blender is a great open source graphics tool that opens lots of 
+        doors when it comes to animation, simulations and asset creation.
+      </p>
+      <p slot="testo">
+        Rigged characters ready to be imported in any game engine, physics simulated
+        objects, soft or liquid, can all be created with a bit of dedication adn creativity.
+      </p>
+    </video-cubo>
+  </div>
+  <div class="caption">Video gallery (not responsive)</div>
+  
+  <div class="wrapper" style="background-color: white;border-color: gray;">
+    <game-carousel immagini="drone0.png drone1.png drone2.png drone4.png talp0.jpg talp1.jpg talp2.jpg pico0.png pico1.png pico2.png">
+    </game-carousel>
+  </div>
+  <div class="caption">Simple 3D image carousel with text</div>
+
+  <div class="wrapper" style="background-color: white;border-color: gray;">
+    <fascia-polaroid immagini="Task2a Task2b Task2c">
+      <span slot="titolo">Anteater</span>
+      <span slot="testo">
+        The <b class="tooltip">International Origami Internet Olympiad<span class="tooltiptext">IOIO 2021 is the IX edition, 
+        counting from 2011 with a year lost to the global Covid disarray</span></b> 
+        is a challenging competition taking place during october and november 2021, 
+        where participants are asked to fold a number of Origami models with a high 
+        difficulty coefficient.<br>
+        <b class="tooltip">Origami<span class="tooltiptext">Origami is an ancient art, 
+        the fist japanese model is mentioned in 1680 AD</span></b> is 
+        the art of folding paper to shape an animal, an object, a geometric
+        structure and anything one can think of. The second model this year was an anteater,
+        designed by A. Ermakov, and my entry is from a sheet of rice paper, square, around 25cm.<br>
+        <b>Click an image to enlarge it</b>.
+  
+      </span>
+    </fascia-polaroid>
+  </div>
+  <div class="caption">Simple display with text and slide-in gallery</div>
+
+  
+
+  
+  
+
+  <!-- <grafico-wrapper file="data.txt" types="ntsnn" separator=" ">
+    <grafico-2d series="0,3" width=500 height=300></grafico-2d>
+  </grafico-wrapper> -->
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="foglia.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.7033109"
+     inkscape:cx="83.660593"
+     inkscape:cy="124.16993"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient890">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop886" />
+      <stop
+         style="stop-color:#3d0000;stop-opacity:1"
+         offset="1"
+         id="stop888" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient890"
+       id="radialGradient1022"
+       cx="25.086378"
+       cy="25.260445"
+       fx="25.086378"
+       fy="25.260445"
+       r="24.732571"
+       gradientTransform="matrix(1,0,0,0.994096,0,0.14913776)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:url(#radialGradient1022);fill-opacity:1;stroke:none;stroke-width:0.305248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 24.413384,0.67389542 16.505691,16.708147 6.5790126,10.02721 12.972466,29.115605 0.35380805,28.733838 12.804218,44.958974 23.908637,49.846995 38.882778,42.286598 49.81895,24.725274 35.181304,28.161186 41.574757,11.745165 29.629096,16.135496 Z"
+       id="path891"
+       sodipodi:nodetypes="ccccccccccccc"
+       inkscape:export-filename="C:\Develop\Varie\Portfolio\dist\images\foglia.png"
+       inkscape:export-xdpi="25.674646"
+       inkscape:export-ydpi="25.674646" />
+  </g>
+</svg>
