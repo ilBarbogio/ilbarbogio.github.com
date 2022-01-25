@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disegnatore Grafici 3D</title>
+  <link rel="stylesheet" href="katex.min.css">
+	<link rel="manifest" href="manifest.webmanifest">
+  <style>
+    :root{
+      --w:60vmin;
+    }
+    body{
+      margin:0;
+      padding:0;
+    }
+    #toolbar{
+      display:flex;
+      align-items: center;
+      width:100%;
+      height:2em;
+      background-color: red;
+      box-shadow: 5px 0 5px black;
+    }
+    #toolbar > img{
+      height:1.5em;
+      margin:.25em 2em;
+      border-radius: 3px;
+    }
+    #toolbar >span{
+      font-weight: bold;
+      text-transform: uppercase;
+      color:white;
+      margin: 0;
+    }
+    .descrizione{
+      margin:5px 20px;
+    }
+    #wrapperone{
+      display:flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    #lavagna4D{
+      position:relative;
+      margin:0 auto;
+      margin-bottom:1em;
+      top:0;
+      left:0;
+      width:var(--w);
+      height:var(--w);
+      outline:1px solid gray;
+    }
+    .controlli{
+      margin:0 40px;
+      position:relative;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #leggetex{
+      font-size: x-large;
+      margin:10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="toolbar">
+    <img src="./images/loghino.png">
+    <span>Grafici di funzione</span>
+  </div>
+  <p class="descrizione">
+    Un tool per disegnare grafici di funzioni in due variabili. Facendo uso di
+    <b>Threejs</b> viene generata una mesh partendo dalla funzione in input,
+    colorando i vertici in base al valore.
+    Il campo di input interpreta in tempo reale la stringa inserita 
+    in formato naturale per produrre
+    internamente una versione <b>LaTeX</b>, poi utilizzata per una corretta
+    presentazione calligrafica.
+  </p>
+  <p class="descrizione">
+    Interagisci con il grafico utilizzando il mouse per ruotare la visuale e zoomare a piacere.
+    Inserisci una funzione o clicca su "Funzione di esempio" per visualizzare
+    un grafico diverso.
+  </p>
+
+
+  <div id="wrapperone">
+    <div id="lavagna4D" class="lavagna"></div>
+    
+    <div class="controlli">
+      <span id="leggetex"></span>
+      <div>
+        <input id="legge" value="cos(x)+sin(y)"></input>
+        <button id="bottonedisegna">Disegna</button>
+        <input id="wire" name="wire" type="checkbox"></input>
+        <label for="wire">wireframe</label>
+        <button id="bottonerandom" style="margin-left:50px;">Funzione di esempio</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- <button id="install-button" class="mat-raised-button mat-primary">Installa</button> -->
+
+  <script src="./main.js"></script>
+</body>
+</html>

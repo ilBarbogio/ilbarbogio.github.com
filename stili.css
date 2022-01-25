@@ -1,0 +1,140 @@
+:root{
+	--faccione-dim:120px;
+	--body-padding:20px;
+	--content-width:85%;
+	--background-color:rgb(255, 149, 130);
+	--header-text-color:white;
+	--content-text-color:white;
+	--content-link-color:gray;
+	--card-back-color:rgb(39, 15, 15);
+	font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  :root{
+		--faccione-dim:150px;
+		--body-padding:30px;
+		--content-width:70%;
+	}
+}
+body{
+	margin:0;
+	padding:var(--body-padding);
+	background-color: var(--background-color);
+}
+#fregio{
+	position:absolute;
+	top:calc(-1 * var(--body-padding));
+	right:0;
+	width:60%;
+	height:30%;
+	z-index:-2;
+}
+#antipattern{
+	position:fixed;
+	margin:0;
+	padding:0;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:500px;
+	background-image: radial-gradient(circle at 2% 100%,rgba(255, 149, 130,0) 0%,rgba(255, 149, 130,1) 25%,rgba(255, 149, 130,1) 100%);
+	z-index:-5;
+}
+#pattern{
+	position:fixed;
+	margin:0;
+	padding:0;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:500px;
+	background-image: url("./wave.svg");
+	z-index:-10;
+}
+
+#intestazione{
+	margin:0 auto;
+	padding:20px;
+	width:var(--content-width);
+	display:grid;
+	grid-template-columns: var(--faccione-dim) 1fr;
+	column-gap: 2%;
+	grid-template-rows: var(--faccione-dim) auto;
+	row-gap: 20px;
+	grid-template-areas:
+		"faccione header"
+		"presentazione presentazione";
+
+	background-color: var(--card-back-color);
+	border-radius: 10px;
+	box-shadow:5px 5px 5px black;
+}
+#faccione{
+	grid-area: faccione;
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+}
+#titoli{
+	position:relative;
+	grid-area: header;
+	color:var(--header-text-color);
+	text-align: left;
+}
+#titoli :first-child{
+	position:relative;
+	left:-10px;
+}
+#titoli :last-child{
+	position:relative;
+	left:-20px;
+	font-size: calc(.15 * var(--faccione-dim));
+}
+#titoli > h1{
+	margin:0;
+	padding:0;
+	line-height: calc(.4 * var(--faccione-dim));
+	font-size: calc(.3 * var(--faccione-dim));
+}
+#titoli > h2{
+	margin:0;
+	padding:0;
+	line-height: calc(.3 * var(--faccione-dim));
+	font-size: calc(.2 * var(--faccione-dim));
+}
+#presentazione{
+	color:var(--header-text-color);
+	grid-area: presentazione;
+}
+
+
+
+.contenuti{
+	color:var(--header-text-color);
+	margin:0 auto;
+	margin-top:30px;
+	padding:20px;
+	width:var(--content-width);
+	display:grid;
+	grid-template-columns: 60% 1fr;
+	column-gap: 2%;
+	grid-template-rows: auto;
+
+	background-color: var(--card-back-color);
+	border-radius: 10px;
+	box-shadow:5px 5px 5px black;
+}
+.testo{
+	padding:0;
+	grid-column: 1;
+}
+.link{
+	grid-column: 2;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+a{
+	color:var(--content-link-color);
+}
