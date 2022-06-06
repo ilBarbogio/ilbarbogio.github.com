@@ -1,0 +1,16 @@
+<svg width="1000" height="10" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="noise1"  x="0" y="0">
+      <feTurbulence baseFrequency="0.01"/>
+      <feDisplacementMap in="SourceGraphic" scale=".05"/>
+    </filter>
+
+    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="rgba(0,70,200,0)"/>
+      <stop offset="5%"   stop-color="#05a"/>
+      <stop offset="95%" stop-color="#0a5"/>
+      <stop offset="100%"   stop-color="rgba(0,70,200,0)"/>
+    </linearGradient>
+  </defs>
+  <polyline points="0 4 200 5 400 4 600 5 800 4 1000 5" stroke="url(#linear)" stroke-width="1"  filter="url(#noise1)"/>
+</svg>
