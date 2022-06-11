@@ -1,0 +1,19 @@
+{
+  "name": "MyBudget ElefantinoDesign",
+  "short_name": "mybudget-elefantino",
+  "theme_color": "#70cfaa",
+  "background_color": "#333333",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/icons/elefanticon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose":"any"
+    }
+
+
+  ]
+}
