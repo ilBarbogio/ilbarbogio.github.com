@@ -1,8 +1,8 @@
 const dataDiv=document.getElementById("data")
 
 function setup(){
-	// navigator.permissions.query({ name: 'accelerometer' })
-	navigator.permissions.query({ name: 'gyroscope' })
+	navigator.permissions.query({ name: 'accelerometer' })
+	//navigator.permissions.query({ name: 'gyroscope' })
 	.then(result => {
 	  if (result.state === 'denied') {
 	    console.log('Permission to use accelerometer sensor is denied.');
