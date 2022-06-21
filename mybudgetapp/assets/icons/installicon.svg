@@ -5,7 +5,7 @@
    version="1.1"
    id="svg717"
    sodipodi:docname="installicon.svg"
-   inkscape:version="1.2-beta (1b65182ce9, 2022-04-05)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -376,15 +376,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      showgrid="false"
-     inkscape:zoom="0.86915209"
-     inkscape:cx="46.597138"
-     inkscape:cy="323.3036"
+     inkscape:zoom="1.7383042"
+     inkscape:cx="138.64087"
+     inkscape:cy="129.43649"
      inkscape:window-width="1366"
      inkscape:window-height="697"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg717" />
+     inkscape:current-layer="svg717"
+     inkscape:showpageshadow="0" />
   <defs
      id="defs721">
     <marker
@@ -454,11 +455,11 @@
        inkscape:collect="always"
        id="linearGradient1261">
       <stop
-         style="stop-color:#57ff60;stop-opacity:1;"
+         style="stop-color:#00f20c;stop-opacity:1;"
          offset="0"
          id="stop1257" />
       <stop
-         style="stop-color:#26ffac;stop-opacity:1;"
+         style="stop-color:#00fa9f;stop-opacity:1;"
          offset="1"
          id="stop1259" />
     </linearGradient>
@@ -485,12 +486,12 @@
        inkscape:collect="always"
        xlink:href="#linearGradient1261"
        id="radialGradient1263"
-       cx="23.873842"
-       cy="24.017661"
-       fx="23.873842"
-       fy="24.017661"
+       cx="24.523119"
+       cy="28.652599"
+       fx="24.523119"
+       fy="28.652599"
        r="25.168207"
-       gradientTransform="matrix(4.52,0,0,4.468343,4.5561646,4.2781232)"
+       gradientTransform="matrix(5.0914275,0,0,4.7197716,-9.5153808,-4.0771627)"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
