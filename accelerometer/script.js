@@ -27,7 +27,9 @@ function connectToAcc(){
 	    }
 	  };
 	  accelerometer.onreading = (e) => {
-	    console.log(e);
+	    if(e.target=="Accelerometer"){
+		    console.log(e.target.x+","+e.target.y+","+e.target.z);
+	    };
 	  };
 	  accelerometer.start();
 	} catch (error) {
