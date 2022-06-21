@@ -73,13 +73,12 @@ function connectToGyro(){
 	}
 }
 
-// console.log(typeof Gyroscope === "function")
-// if(window.DeviceMotionEvent){
-// 	console.log("C'è motion")
-// 	addEventListener("devicemotion",(ev)=>{
-// 		console.log(ev)
-// 	})
-// }
+console.log(typeof Gyroscope === "function")
+if(window.DeviceMotionEvent){
+	addEventListener("devicemotion",(ev)=>{
+		console.log(ev)
+	})
+}
 
 setup()
 
