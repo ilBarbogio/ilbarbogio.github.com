@@ -107,9 +107,20 @@ video{
 }
 canvas{
   position:absolute;
-  width:100%;
-  /* height:100%; */
+  /* width:50%; */
+  height:50%;
   left:0;
   top:0;
   z-index:5;
+}
+canvas#bw-canvas{
+  left:50%;
+}
+canvas#thr-canvas{
+  left:0;
+  top:50%;
+}
+canvas#res-canvas{
+  left:50%;
+  top:50%;
 }
