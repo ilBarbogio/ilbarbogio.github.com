@@ -1,16 +1,19 @@
-import { snap } from "./canvas.js"
+import { snap, finalize } from "./canvas.js"
 import { startDevice, stopCurrentStream } from "./devices.js"
 
 export let video
 export let deviceButtonContainer
 export let actionButtonContainer
-let stopButton, snapButton
+export let canvasButtonContainer
+let stopButton, snapButton, thrButton
 export let noPermissionContainer
 
 export function setup(){
 	video=document.querySelector("video")
 	deviceButtonContainer=document.querySelector(".device-button-container")
 	actionButtonContainer=document.querySelector(".action-button-container")
+	canvasButtonContainer=document.querySelector(".canvas-button-container")
+
 	noPermissionContainer=document.querySelector(".no-permission-container")
 	
 	createActionButtons()
@@ -20,6 +23,8 @@ function createActionButtons(){
 	snapButton.innerHTML="snap"
 		
 	snapButton.addEventListener("click",()=>{
+		toggle("action-button-container")
+		toggle("canvas-button-container")
 		snap()
 	})
 
@@ -39,6 +44,15 @@ function createActionButtons(){
 
 	actionButtonContainer.append(stopButton)
 	
+	thrButton=document.createElement("button")
+	thrButton.innerHTML="generate"
+		
+	thrButton.addEventListener("click",()=>{
+		toggle("canvas-button-container")
+		finalize()
+	})
+
+	canvasButtonContainer.append(thrButton)
 }
 
 export function toggle(element){
@@ -49,6 +63,9 @@ export function toggle(element){
 		case "action-button-container":
 			if(actionButtonContainer) actionButtonContainer.classList.toggle("hide")
 			break
+		case "canvas-button-container":
+			if(canvasButtonContainer) canvasButtonContainer.classList.toggle("hide")
+			break
 		case "no-permission-container":
 			if(noPermissionContainer) noPermissionContainer.classList.toggle("hide")
 			break
@@ -56,9 +73,7 @@ export function toggle(element){
 	}
 }
 
-export function createDeviceButton(device){
-	console.log("creating",device)
-	
+export function createDeviceButton(device){	
 	let button=document.createElement("button")
 	button.innerHTML=device.facingMode
 
@@ -70,4 +85,3 @@ export function createDeviceButton(device){
 	})
 	deviceButtonContainer.append(button)
 }
-

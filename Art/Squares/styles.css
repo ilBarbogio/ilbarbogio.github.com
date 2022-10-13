@@ -63,6 +63,18 @@ body{
   display:none;
 }
 
+.canvas-button-container{
+  position:absolute;
+  bottom:5%;
+  left:0;
+  width:100%;
+  z-index:10;
+  display:flex;
+  flex-direction:column;
+}
+.canvas-button-container.hide{
+  display:none;
+}
 .action-button-container{
   position:absolute;
   bottom:5%;
@@ -106,21 +118,17 @@ video{
   object-fit: cover;
 }
 canvas{
-  position:absolute;
-  /* width:50%; */
-  height:50%;
-  left:0;
+  position:fixed;
+  left:100vw;
   top:0;
   z-index:5;
 }
 canvas#bw-canvas{
-  left:50%;
+
 }
 canvas#thr-canvas{
-  left:0;
-  top:50%;
+  
 }
 canvas#res-canvas{
-  left:50%;
-  top:50%;
+ 
 }
