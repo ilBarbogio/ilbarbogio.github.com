@@ -1,0 +1,86 @@
+@keyframes slide-in{
+	0% {top: -100vh}
+	100% {top:0}
+}
+@keyframes slide-out{
+	0% {top:0}
+	100% {top:-100vh}
+}
+:host{
+	--button-dimension:8em;
+	--border-thickness:2px;
+}
+
+.wrapper{
+  position:fixed;
+  top:-100vh;
+  left:0;
+  width:100vw;
+  height:100vh;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+	animation-duration:1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+.wrapper.slide-in{
+	animation-name:slide-in;
+}
+.wrapper.slide-out{
+	animation-name:slide-out;
+}
+.wrapper > .spacer{
+	position:relative;
+	height:5em;
+}
+.wrapper > .button{
+	position:relative;
+	width:var(--button-dimension);
+	height:var(--button-dimension);
+	border-radius: 50%;
+	background-color: var(--neutral-color);
+	border:var(--border-thickness) solid var(--neutral-color-light);
+
+	margin:2em;
+	
+	background-size: 80%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+.wrapper > .button.user{
+	background-image: url("../../assets/selfiecamera.svg");
+}
+.wrapper > .button.environment{
+	background-image: url("../../assets/envcamera.svg");
+}
+
+.wrapper > .button:hover{
+	background-color: var(--neutral-color-light);
+	border:var(--border-thickness) solid var(--neutral-color);
+}
+.wrapper > .button:active{
+	background-color: var(--neutral-color-dark);
+	border:var(--border-thickness) solid var(--neutral-color);
+}
+
+
+.wrapper > .button > .under-text{
+	position:relative;
+	font-size: 12px;
+	top:calc(1.5 * var(--button-dimension));
+	text-transform: uppercase;
+  color:white;
+	text-align: center;
+}
+/* .wrapper > .button > .under-text > span{
+	font-size: 12px;
+	position:absolute;
+	text-transform: uppercase;
+  color:white;
+} */

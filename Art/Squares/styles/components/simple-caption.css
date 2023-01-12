@@ -1,0 +1,39 @@
+@keyframes slide-in{
+	0% {top: -100vh}
+	100% {top:0}
+}
+@keyframes slide-out{
+	0% {top:0}
+	100% {top:-100vh}
+}
+:host{
+	--button-dimension:8em;
+	--border-thickness:2px;
+}
+
+.wrapper{
+  position:fixed;
+  top:-100vh;
+  left:0;
+  width:100vw;
+  height:100vh;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+	animation-duration:1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+.wrapper.slide-in{
+	animation-name:slide-in;
+}
+.wrapper.slide-out{
+	animation-name:slide-out;
+}
+.wrapper > .text{
+	text-align: center;
+	max-width:12em;
+}

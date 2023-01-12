@@ -1,0 +1,59 @@
+@keyframes slide-in{
+	0% {bottom: calc(-1 * var(--bottom-position));}
+	100% {bottom: var(--bottom-position);}
+}
+@keyframes slide-out{
+	0% {bottom: var(--bottom-position);}
+	100% {bottom: calc(-1 * var(--bottom-position));}
+}
+:host{
+	--bottom-position:5em;
+	--border-thickness:2px;
+	--button-dimension:3em;
+}
+.wrapper{
+	position:fixed;
+	bottom:calc(-1 * var(--bottom-position));
+	width:var(--button-dimension);
+	height:var(--button-dimension);
+
+	animation-duration:.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+
+	background-size: 80%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	border-radius: 50%;
+	background-color: var(--neutral-color);
+	border:1px solid var(--neutral-color-dark);
+
+	box-sizing: border-box;
+
+	cursor: pointer;
+}
+.wrapper.slide-in{
+	animation-name:slide-in;
+}
+.wrapper.slide-out{
+	animation-name:slide-out;
+}
+
+.wrapper.left{
+	left:calc(40vw - var(--bottom-position));
+	background-image: url("../../assets/no.svg");
+}
+.wrapper.right{
+	right:calc(40vw - var(--bottom-position));
+	background-image: url("../../assets/ok.svg");
+}
+
+.wrapper:hover{
+	background-color: var(--neutral-color-light);
+	border:var(--border-thickness) solid var(--neutral-color);
+}
+.wrapper:active{
+	background-color: var(--neutral-color-dark);
+	border:var(--border-thickness) solid var(--neutral-color);
+}

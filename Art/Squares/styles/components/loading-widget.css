@@ -1,0 +1,49 @@
+@keyframes slide-in{
+	0% {bottom: calc(-1 * var(--bottom-position));}
+	100% {bottom: var(--bottom-position);}
+}
+@keyframes slide-out{
+	0% {bottom: var(--bottom-position);}
+	100% {bottom: calc(-1 * var(--bottom-position));}
+}
+@keyframes hop{
+	0% {bottom:0;}
+	20% {bottom:var(--hop-height)}
+	40% {bottom:calc(-1 * var(--hop-height))}
+	60% {bottom:0;}
+	100% {bottom:0;}
+}
+:host{
+	--side-length:.5em;
+	--bottom-position:8em;
+	--hop-height:1em;
+}
+.wrapper{
+	position:fixed;
+	bottom:calc(-1 * var(--bottom-position));
+	width:100vw;
+	display:flex;
+	justify-content: center;
+
+	animation-duration:1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+.wrapper.slide-in{
+	animation-name:slide-in;
+}
+.wrapper.slide-out{
+	animation-name:slide-out;
+}
+
+.wrapper > div{
+	margin:0 .25em;
+	position:relative;
+	width:var(--side-length);
+	height:var(--side-length);
+	border-radius:50%;
+	background-color: var(--neutral-color);
+
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}

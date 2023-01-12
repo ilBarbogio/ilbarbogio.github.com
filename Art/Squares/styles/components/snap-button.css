@@ -1,0 +1,81 @@
+@keyframes slide-in{
+	0% {bottom: calc(-1 * var(--bottom-position));}
+	100% {bottom: var(--bottom-position);}
+}
+@keyframes slide-out{
+	0% {bottom: var(--bottom-position);}
+	100% {bottom: calc(-1 * var(--bottom-position));}
+}
+@keyframes rotate{
+	0% {transform:translate(-50%, -50%) scale(1,1) rotate(0deg)}
+	50% {transform:translate(-50%, -50%) scale(1.1,1.1) rotate(180deg)}
+	100% {transform:translate(-50%, -50%) scale(1,1) rotate(360deg)}
+}
+:host{
+	--bottom-position:5em;
+	--backdrop-dimension:4em;
+	--border-thickness:.25em;
+	--button-dimension:3.25em;
+}
+.wrapper{
+	position:fixed;
+	bottom:calc(-1 * var(--bottom-position));
+	width:100vw;
+
+	animation-duration:.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+.wrapper.slide-in{
+	animation-name:slide-in;
+}
+.wrapper.slide-out{
+	animation-name:slide-out;
+}
+
+.wrapper > .backdrop{
+	position:absolute;
+	width:var(--backdrop-dimension);
+	height:var(--backdrop-dimension);
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+
+	border-radius: 50%;
+	background-color: transparent;
+	border:var(--border-thickness) solid var(--neutral-color);
+
+	clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80% );
+
+	box-sizing: border-box;
+}
+.wrapper > .backdrop.rotate{
+	animation-name: rotate;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	/* animation-timing-function: cubic-bezier(0.15,-0.39, 0.88, 1.32); */
+	animation-timing-function: linear;
+}
+
+.wrapper > .button{
+	position:absolute;
+	width:var(--button-dimension);
+	height:var(--button-dimension);
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+
+	border-radius: 50%;
+	background-color: var(--neutral-color-light);
+
+	box-sizing: border-box;
+}
+.wrapper > .button:hover{
+	cursor: pointer;
+	border:1px solid var(--neutral-color);
+}
+.button:active{
+	background-color: var(--neutral-color-dark);
+	border:4px solid var(--neutral-color-light);
+}
