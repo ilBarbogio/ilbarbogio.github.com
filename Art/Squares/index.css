@@ -30,6 +30,8 @@ body #canvas-container .offscreen-canvas {
   left: 100vw;
 }
 body #canvas-container #res-canvas {
-  position: fixed;
   image-rendering: pixelated;
+}
+body #canvas-container #res-canvas.hidden {
+  display: none;
 }

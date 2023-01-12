@@ -42,11 +42,34 @@
 
 .wrapper.left{
 	left:calc(40vw - var(--bottom-position));
-	background-image: url("../../assets/no.svg");
+}
+.wrapper.center{
+	left:calc(50vw - calc(var(--button-dimension) * .5));
 }
 .wrapper.right{
 	right:calc(40vw - var(--bottom-position));
+}
+.wrapper.corner{
+	left:10vw;
+}
+
+.wrapper.backToDevice{
+	background-image: url("../../assets/backtodevice.svg");
+}
+.wrapper.no{
+	background-image: url("../../assets/no.svg");
+}
+.wrapper.ok{
 	background-image: url("../../assets/ok.svg");
+}
+.wrapper.resnap{
+	background-image: url("../../assets/resnap.svg");
+}
+.wrapper.cancel{
+	background-image: url("../../assets/no.svg");
+}
+.wrapper.share{
+	background-image: url("../../assets/share.svg");
 }
 
 .wrapper:hover{

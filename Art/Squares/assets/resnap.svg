@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="TriangleStart" overflow="visible" markerHeight="12.92307692" markerUnits="userSpaceOnUse" markerWidth="12" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 5.3244081 6.1553851">
+   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+  </marker>
+ </defs>
+ <path d="m40 24c0 8.8366-7.1634 16-16 16s-16-7.1634-16-16 7.1634-16 16-16" fill="none" marker-end="url(#TriangleStart)" stop-color="#000000" stroke="#000000" stroke-linejoin="round" stroke-width="2.545"/>
+</svg>
