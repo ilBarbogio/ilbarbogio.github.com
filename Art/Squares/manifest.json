@@ -1,0 +1,36 @@
+{
+  "short_name": "EDwebSquareApp",
+  "name": "Square Art",
+  "icons": [
+    {
+      "src": "/assets/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+			"purpose":"maskable any"
+    },
+		{
+      "src": "/assets/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+			"purpose":"maskable any"
+    },
+		{
+      "src": "/assets/logo64.png",
+      "type": "image/png",
+      "sizes": "64x64",
+			"purpose":"maskable any"
+    },
+		{
+      "src": "/assets/logo16.png",
+      "type": "image/png",
+      "sizes": "16x16",
+			"purpose":"any"
+    }
+  ],
+  "id": "elefantinodesign-square-art",
+  "start_url": ".",
+  "background_color": "#000000",
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "description": "A silly web app to make artsy square compositions from camera's snapshots"
+}
