@@ -1,6 +1,6 @@
 const dataDiv=document.getElementById("data")
 
-function setup(){
+/*function setup(){
 	navigator.permissions.query({ name: 'accelerometer' })
 	//navigator.permissions.query({ name: 'gyroscope' })
 	.then(result => {
@@ -13,7 +13,7 @@ function setup(){
 		//connectToGyro()
 		connectToOrientation()
 	});
-}
+}*/
 function connectToOrientation(){
 	const sensorOptions={
       frequency:30,
@@ -101,12 +101,12 @@ function connectToGyro(){
 	}
 }
 
-//console.log(typeof Gyroscope === "function")
-//if(window.DeviceMotionEvent){
-//	addEventListener("devicemotion",(ev)=>{
-//		console.log(ev)
-//	})
-//}
+console.log(typeof Gyroscope === "function")
+if(window.DeviceMotionEvent){
+	addEventListener("devicemotion",(ev)=>{
+		console.log(ev)	
+	})
+}
 
 //setup()
 
