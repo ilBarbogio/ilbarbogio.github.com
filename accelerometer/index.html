@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<script src="./script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientating</title>
+  <style>
+    body{
+      --background-body:black;
+      background-color: var(--background-body);
+    }
+  </style>
 </head>
 <body>
-	<div id="data"></div>
+  
+  <script>
+    window.addEventListener("devicemotion",ev=>{
+      
+      let x=ev.accelerationIncludingGravity.x-ev.acceleration.x
+      let y=ev.accelerationIncludingGravity.y-ev.acceleration.y
+      let z=ev.accelerationIncludingGravity.z-ev.acceleration.z
+      console.log(x,y,z)
+
+      document.body.style.setProperty("--background-body","rgb("+Math.min(x/10*255,255)+","+Math.min(y/10*255,255)+","+Math.min(z/10*255,255)+")")
+    })
+    // window.addEventListener("devicemotion",ev=>{console.log(ev)})
+
+    const sensorOptions={
+      frequency:30,
+      referenceFrame:"device"
+    }
+    const sensor=new AbsoluteOrientationSensor(sensorOptions)
+
+    sensor.addEventListener("reading",ev=>{
+      console.log(ev)
+    })
+
+    
+
+    function askForPerms(){
+      Promise.all([
+        navigator.permissions.query({name:"accelerometer"}),
+        navigator.permissions.query({name:"magnetometer"}),
+        navigator.permissions.query({name:"gyroscope"}),
+      ])
+      .then(results=>{
+        if(results.every(res=>res.state=="granted")){
+          console.log("%cSensor is good to go :)","color:green")
+          sensor.start()
+        }else console.log("%cSensor permission denied :(","color:red")
+      })
+    }
+
+    askForPerms()
+  </script>
+
 </body>
 </html>
