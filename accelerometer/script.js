@@ -9,9 +9,37 @@ function setup(){
 	    return;
 	  }
 	  console.log("accepted")
-		connectToAcc()
-		connectToGyro()
+		//connectToAcc()
+		//connectToGyro()
+		connectToOrientation()
 	});
+}
+function connectToOrientation(){
+	const sensorOptions={
+      frequency:30,
+      referenceFrame:"device"
+    }
+    const sensor=new AbsoluteOrientationSensor(sensorOptions)
+
+    sensor.addEventListener("reading",ev=>{
+      console.log(ev)
+    })
+
+    function askForPerms(){
+      Promise.all([
+        navigator.permissions.query({name:"accelerometer"}),
+        navigator.permissions.query({name:"magnetometer"}),
+        navigator.permissions.query({name:"gyroscope"}),
+      ])
+      .then(results=>{
+        if(results.every(res=>res.state=="granted")){
+          console.log("%cSensor is good to go :)","color:green")
+          sensor.start()
+        }else console.log("%cSensor permission denied :(","color:red")
+      })
+    }
+
+    askForPerms()
 }
 
 function connectToAcc(){
