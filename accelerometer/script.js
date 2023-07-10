@@ -1,7 +1,7 @@
 const dataDiv=document.getElementById("data")
 
 function setup(){
-	navigator.permissions.query({ name: 'accelerometer' })
+	//navigator.permissions.query({ name: 'accelerometer' })
 	//navigator.permissions.query({ name: 'gyroscope' })
 	.then(result => {
 	  if (result.state === 'denied') {
@@ -101,13 +101,15 @@ function connectToGyro(){
 	}
 }
 
-console.log(typeof Gyroscope === "function")
-if(window.DeviceMotionEvent){
-	addEventListener("devicemotion",(ev)=>{
-		console.log(ev)
-	})
-}
+//console.log(typeof Gyroscope === "function")
+//if(window.DeviceMotionEvent){
+//	addEventListener("devicemotion",(ev)=>{
+//		console.log(ev)
+//	})
+//}
 
-setup()
+//setup()
 
+
+connectToOrientation()
 
