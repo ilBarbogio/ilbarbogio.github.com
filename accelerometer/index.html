@@ -5,119 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orientating</title>
-  <style>
-    body{
-      --background-body:black;
-      --focus-image:100px;
-      background-color: var(--background-body);
-      /* background-image: url("./image.png"); */
-    }
-    div{
-      height:100vh;
-      width:100vw;
-      display:flex;
-      justify-content: center;
-      align-items:center;
-    }
-    div > p{
-      background-color: white;
-    }
-    div > img{
-      filter:blur(var(--focus-image));
-      opacity:0;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <div>
-    <!-- <p id="text"></p> -->
-    <img></img>
+    <img id="image"></img>
+    <canvas id="field-canvas"></canvas>
   </div>
-  <script>
-    // let text=document.getElementById("text")
-    let image=document.querySelector("img")
-    let current=[0,0,0]
-    let target=[Math.random()*Math.PI,Math.random()*Math.PI,Math.random()*Math.PI]
-    let distance=Math.PI*Math.sqrt(3)
-    window.addEventListener("devicemotion",ev=>{
-      
-      let x=-(ev.accelerationIncludingGravity.x-ev.acceleration.x)
-      let y=-(ev.accelerationIncludingGravity.y-ev.acceleration.y)
-      let z=ev.accelerationIncludingGravity.z-ev.acceleration.z
-      let mod=Math.hypot(x,y,z)
-      
-      let theta=Math.acos(z/mod)
 
-      let flatMod=mod*Math.sin(theta)
-
-      let phi=flatMod!=0?Math.acos(x/flatMod):Math.PI
-      let beta=flatMod!=0?Math.asin(y/flatMod):Math.PI
-      if(beta==NaN) beta=Math.PI
-
-
-      lerpAngles(phi,beta,theta)
-      updateTarget()
-
-
-      // text.innerHTML=distance/(Math.PI*Math.sqrt(3))
-      //text.innerHTML="phi:"+Math.floor(current[0]/Math.PI*180).toString().padStart(3,"0")+",  phi:"+Math.floor(current[1]/Math.PI*180).toString().padStart(3,"0")+",  beta:"+Math.floor(current[2]/Math.PI*180).toString().padStart(3,"0")
-
-      //document.body.style.setProperty("--background-body","rgb("+(current[0]/Math.PI*255)+","+(current[1]/Math.PI*255)+","+(current[2]/Math.PI*255)+")")
-      document.body.style.setProperty("--focus-image",((distance-.5)*100)+"px")
-    })
-    
-    function cut(n){
-      return Math.floor(n*100)/100
-    }
-
-    let factor=.5
-    function lerpAngles(phi, beta, theta){
-      if(!isNaN(phi)) current[0]=lerp(current[0],phi,factor)
-      if(!isNaN(beta)) current[1]=lerp(current[1],beta,factor)
-      if(!isNaN(theta)) current[2]=lerp(current[2],theta,factor)
-    }
-    function lerp(a, b, t){
-      return a +t*(b-a)
-    }
-    function updateTarget(){
-      if(!current.includes(NaN)) distance=lerp(distance,Math.hypot(target[0]-current[0],target[1]-current[1],target[2]-current[2]),factor)
-    }
-
-
-    const sensorOptions={
-      frequency:1,
-      referenceFrame:"device"
-    }
-    const sensor=new AbsoluteOrientationSensor(sensorOptions)
-
-    sensor.addEventListener("reading",ev=>{
-      console.log(ev)
-    })
-
-    function askForPerms(){
-      Promise.all([
-        navigator.permissions.query({name:"accelerometer"}),
-        navigator.permissions.query({name:"magnetometer"}),
-        navigator.permissions.query({name:"gyroscope"}),
-      ])
-      .then(results=>{
-        if(results.every(res=>res.state=="granted")){
-          console.log("%cSensor is good to go :)","color:green")
-          sensor.start()
-        }else console.log("%cSensor permission denied :(","color:red")
-      })
-    }
-
-    function parseLocation(){
-      let query=window.location.search.replace("?img=","")
-      image.addEventListener("load",()=>{
-        setTimeout(()=>{image.style.opacity=1},1000)
-      })
-      image.src=decodeURIComponent(query)
-    }
-    parseLocation()
-    askForPerms()
-  </script>
+  <script src="./script.js" type="module"></script>
 
 </body>
 </html>
