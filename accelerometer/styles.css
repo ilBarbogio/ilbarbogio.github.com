@@ -1,0 +1,39 @@
+body{
+  --background-body:gray;
+  --focus-image:100px;
+  background-color: var(--background-body);
+  /* background-image: url("./image.png"); */
+}
+div{
+  position:relative;
+  height:100vh;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+div > p{
+  background-color: white;
+}
+#image{
+  position:absolute;
+  opacity:0;
+  transition:filter 2s;
+  filter:grayscale(1) blur(20px);
+}
+#image.finish{
+  filter:grayscale(0);
+}
+
+#field-canvas{
+  position:absolute;
+  margin:auto;
+  image-rendering: pixelated;
+  transform:scale(2,2);
+  position:relative;
+  transition:opacity 2s;
+  opacity:1;
+}
+#field-canvas.finish{
+  opacity:0;
+}
