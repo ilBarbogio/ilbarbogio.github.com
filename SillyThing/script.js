@@ -31,7 +31,7 @@ function setupMobile(){
 	// document.body.append(egg)
 
 	text=document.createElement("p")
-	text.style="color:white;font-size:larger;"
+	text.classList.add("fire")
 	document.body.append(text)
 text.innerHTML="ciao"
 	window.addEventListener("devicemotion",ev=>{
