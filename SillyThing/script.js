@@ -33,7 +33,7 @@ function setupMobile(){
 	text=document.createElement("p")
 	text.style="color:white;font-size:larger;"
 	document.body.append(text)
-
+text.innerHTML="ciao"
 	window.addEventListener("devicemotion",ev=>{
 	text.innerHTML=`${ev.acceleration.x},  ${ev.acceleration.y},  ${ev.acceleration.z}`	
        )
