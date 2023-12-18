@@ -34,7 +34,9 @@ function setupMobile(){
 	text.style="color:white;font-size:larger;"
 	document.body.append(text)
 
-	window.addEventListener("devicemotion",calibrateMotion)
+	window.addEventListener("devicemotion",ev=>{
+	text.innerHTML=`${ev.acceleration.x},  ${ev.acceleration.y},  ${ev.acceleration.z}`	
+       )
 }
 
 function calibrateMotion(ev){
