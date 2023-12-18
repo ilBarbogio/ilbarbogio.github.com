@@ -31,6 +31,7 @@ function setupMobile(){
 	// document.body.append(egg)
 
 	text=document.createElement("p")
+	text.style="color:white;font-size:larger;"
 	document.body.append(text)
 
 	window.addEventListener("devicemotion",calibrateMotion)
