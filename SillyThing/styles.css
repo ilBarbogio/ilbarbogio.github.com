@@ -1,0 +1,39 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	--egg-size:3em;
+	position:relative;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+	background-color: black;
+}
+
+
+#tap-egg{
+	position:relative;
+	width:var(--egg-size);
+	height:var(--egg-size);
+	background-color: white;
+	border-radius: 50%;
+}
+
+
+
+
+p.fire{
+	color: #ffffff;
+	text-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
+}
+
+p.neon{
+	color: #ffffff;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
