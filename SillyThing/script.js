@@ -17,12 +17,12 @@ let motionSequence
 let motionInterval
 
 function setup(){
-	if(ScreenOrientation.lock){
-		ScreenOrientation.lock()
-		.then((v)=>{
+	//if(ScreenOrientation.lock){
+		//ScreenOrientation.lock()
+		//.then((v)=>{
 			setupMobile()
-		})
-	}else setupUnmobile()
+		//})
+	//}else setupUnmobile()
 }
 
 function setupMobile(){
