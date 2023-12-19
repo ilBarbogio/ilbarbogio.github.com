@@ -24,7 +24,7 @@ function setup(){
 		//})
 	//}else setupUnmobile()
 }
-
+let debug=0
 function setupMobile(){
 	// egg=document.createElement("div")
 	// egg.id="tap-egg"
@@ -33,10 +33,13 @@ function setupMobile(){
 	text=document.createElement("p")
 	text.classList.add("fire")
 	document.body.append(text)
-text.innerHTML="ciao"
+  text.innerHTML="ciao"
+
 	window.addEventListener("devicemotion",ev=>{
-	//text.innerHTML=`${ev.acceleration.x},  ${ev.acceleration.y},  ${ev.acceleration.z}`	
-       )
+    let intensity=Math.hypot(ev.acceleration.x,ev.acceleration.y,ev.acceleration.z,debug)
+    debug=Math.max(intensity,debug)
+	  text.innerHTML=`${debug} <br> ${ev.acceleration.x},  ${ev.acceleration.y},  ${ev.acceleration.z}`
+  })
 }
 
 function calibrateMotion(ev){
