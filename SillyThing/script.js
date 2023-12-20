@@ -12,7 +12,7 @@ let ball, backdrop
 let lastVector
 let vectorHype=0
 let vectorHypeDelta=10
-let vectorHypeSensitivity=2
+let vectorHypeSensitivity=10
 
 let colors=["red","orange","yellow","purple","pink","lime","cyan"]
 
