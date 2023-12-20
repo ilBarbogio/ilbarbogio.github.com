@@ -1,8 +1,31 @@
+@keyframes shake-small{
+  0%{transform:rotateZ(0)}
+  25%{transform:rotateZ(10deg)}
+  50%{transform:rotateZ(0)}
+  75%{transform:rotateZ(-10deg)}
+  100%{transform:rotateZ(0)}
+}
+@keyframes shake-med{
+  0%{transform:rotateZ(0)}
+  25%{transform:rotateZ(20deg)}
+  50%{transform:rotateZ(0)}
+  75%{transform:rotateZ(-20deg)}
+  100%{transform:rotateZ(0)}
+}
+@keyframes shake-big{
+  0%{transform:rotateZ(0)}
+  25%{transform:rotateZ(40deg)}
+  50%{transform:rotateZ(0)}
+  75%{transform:rotateZ(-40deg)}
+  100%{transform:rotateZ(0)}
+}
+
 *{
 	margin:0;
 	padding:0;
 }
 body{
+  --ball-size:12em;
 	--egg-size:3em;
 	position:relative;
 	top:0;
@@ -26,10 +49,65 @@ body{
 }
 
 
+.ball{
+  transform-origin: top;
+  animation-timing-function: linear;
+  position:absolute;
+	/* width:var(--ball-size);
+	height:var(--ball-size); */
+	/* background-color: yellow; */
+	border-radius: 50%;
+}
+.ball.shake-small{
+  animation:.75s shake-small 4;
+}
+.ball.shake-med{
+  animation:.75s shake-med 4;
+}
+.ball.shake-big{
+  animation:.75s shake-big 4;
+}
+.ball > .shine{
+  position:absolute;
+	top:calc(.1 * var(--ball-size));
+	right:calc(.1 * var(--ball-size));
+	width:calc(.4 * var(--ball-size));
+	height:calc(.4 * var(--ball-size));
+	background-color: white;
+  opacity:.6;
+	border-radius: 50%;
+}
+.ball > .small-shine{
+  position:absolute;
+	top:calc(.15 * var(--ball-size));
+	right:calc(.2 * var(--ball-size));
+	width:calc(.1 * var(--ball-size));
+	height:calc(.1 * var(--ball-size));
+	background-color: white;
+	border-radius: 50%;
+}
+.ball > .cap{
+  position:absolute;
+	top:calc(-.05 * var(--ball-size));
+	left:calc(50% - calc(.05 * var(--ball-size)));
+	width:calc(.1 * var(--ball-size));
+	height:calc(.05 * var(--ball-size));
+  background-color: yellow;
+}
+.ball > .ring{
+  position:absolute;
+  box-sizing: border-box;
+	top:calc(-.1 * var(--ball-size));
+	left:calc(50% - calc(.05 * var(--ball-size)));
+	width:calc(.1 * var(--ball-size));
+	height:calc(.1 * var(--ball-size));
+  border:1px solid yellow;
+  border-radius:50%;
+}
 
 
 p.fire{
-	text-align: center;
+  text-align: center;
 	color: #ffffff;
 	text-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
 }
