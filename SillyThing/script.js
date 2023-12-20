@@ -17,6 +17,8 @@ let vectorHypeSensitivity=10
 let colors=["red","orange","yellow","purple","pink","lime","cyan"]
 
 function setup(){
+	document.body.style.width=window.innerWidth+"px"
+	document.body.style.height=window.innerHeight+"px"
   shuffledPhrases=shuffle()
 	//if(ScreenOrientation.lock){
 		//ScreenOrientation.lock()
