@@ -17,6 +17,12 @@ let vectorHypeSensitivity=10
 let colors=["red","orange","yellow","purple","pink","lime","cyan"]
 
 function setup(){
+  redirectText=document.createElement("a")
+  redirectText.classList.add("header-text")
+  redirectText.innerHTML="go to tap version"
+  redirectText.href="https://ilbarbogio.github.io/SillyThing2/"
+  document.body.append(redirectText)
+	
 	document.body.style.width=window.innerWidth+"px"
 	document.body.style.height=window.innerHeight+"px"
   shuffledPhrases=shuffle()
