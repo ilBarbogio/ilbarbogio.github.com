@@ -180,7 +180,7 @@ window.addEventListener("keydown",(ev)=>{
 function getIndex(){
   let stored=sessionStorage.getItem("usedPhrases")
   if(stored==null){
-    sessionStorage.setItem("usedPhrases","0")
+    sessionStorage.setItem("usedPhrases","1")
     return 0
   }else{
     let saved=parseInt(stored)
