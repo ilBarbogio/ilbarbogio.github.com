@@ -1,7 +1,7 @@
 import { sillyPhrases } from "./phrases.js"
 
 let shuffledPhrases
-let text, restartText, shakeText
+let text, restartText, shakeText, redirectText
 
 let hype=0
 let hypeDelta=10
