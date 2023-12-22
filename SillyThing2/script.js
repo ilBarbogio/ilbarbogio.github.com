@@ -5,7 +5,7 @@ let text, restartText, shakeText, redirectText
 
 let hype=0
 let hypeDelta=20
-let hypeGoal=200
+let hypeGoal=160
 let egg,eggInterval
 
 let ball, backdrop
