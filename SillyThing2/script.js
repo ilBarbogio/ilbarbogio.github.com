@@ -92,7 +92,7 @@ function setupUnmobile(){
 
   shakeText=document.createElement("p")
   shakeText.classList.add("footer-text")
-  shakeText.innerHTML="shake!"
+  shakeText.innerHTML="tap!"
   document.body.append(shakeText)
 
   hype=0
@@ -110,7 +110,7 @@ function addHype(){
 	}else reactToHype()
 }
 function subtractHype(){
-	hype-=hypeDelta
+	hype-=hypeDelta/2
 	if(hype<0) hype=0
   reactToHype()
 }
