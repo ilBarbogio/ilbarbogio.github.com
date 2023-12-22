@@ -4,7 +4,7 @@ let shuffledPhrases
 let text, restartText, shakeText, redirectText
 
 let hype=0
-let hypeDelta=10
+let hypeDelta=20
 let hypeGoal=200
 let egg,eggInterval
 
