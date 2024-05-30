@@ -1,20 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="./">
-  <title>MyBudget</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./scripts/components.js" type="module"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alberto Carminati Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./stili.css">
 </head>
 <body>
-  <main-toolbar class="toolbar"></main-toolbar>
-  <main-sidebar class="sidebar"></main-sidebar>
+	<svg id="fregio" viewBox="0,0,100,100" preserveAspectRatio="none">
+		<polyline points="0,0 20,100 40,0" style="fill:rgba(255,0,0,.5);stroke:none;" />
+		<polyline points="20,0 40,100 60,0" style="fill:rgba(255,255,0,.5);stroke:none;" />
+		<polyline points="40,0 60,100 80,0" style="fill:rgba(255,0,255,.5);stroke:none;" />
+		<polyline points="60,0 80,100 100,0" style="fill:rgba(0,255,255,.5);stroke:none;" />
+		<polyline points="80,0 100,100 100,0" style="fill:rgba(0,255,0,.5);stroke:none;" />
+	</svg>
 
-  <record-input class="input"></record-input>
-  
-  <script src="./script.js" type="module"></script>
-  
+	<div id="intestazione">
+		<img id="faccione" src="./faccione.jpg">
+		<div id="titoli">
+			<h1>PORTFOLIO</h1>
+			<h2>Carminati Alberto</h2>
+			<h2>Applicazioni web, didattica, design</h2>
+		</div>
+		<div id="presentazione">
+			<p>
+				Partendo da una formazione scientifica ho esplorato le potenzialità delle nuove
+				tecnologie applicandole alla didattica ed al design, le mie due grandi passioni.
+				Sono stato attratto dallo sviluppo importante e tutt'ora in corso delle
+				tecnologie web, che hanno un ruolo di primo piano nella comunicazione di
+				tutti i giorni e permettono di raggiungere un'utenza in continua espansione.
+			</p>
+			<p>
+				Questo è il mio <a href="./CarminatiAlbertoCV.pdf" target="blank">curriculum</a>.
+			</p>
+		</div>
+	</div>
+
+	<div class="contenuti">
+		<h3>Didattica</h3>
+		<div class="testo">
+			<p>
+				Ho avviato il progetto <i>EduNiBa</i>, 
+				che nasce proponendosi di applicare alla didattica della Matematica nuove 
+				tecnologie, immaginando strategie altrettanto nuove comunque basate su una solida
+				esperienza nel mondo dell'istruzione.
+			</p>
+			<p>
+				Ho sviluppato una suite di librerie in <i>Typescript</i> per presentare,
+				risolvere e produrre proceduralmente esercizi, spiegazioni e concetti matematici,
+				nel campo dell'algebra lineare e dell'analisi. Le librerie sono modulari
+				e si integrano con altre librerie specializzate quali <i>Threejs</i>, 
+				<i>KaTeX</i> ed altre.
+			</p>
+			<p>
+				Nell'ambito di un progetto universitario, ho sviluppato un provider 
+				LTI 1.1-compliant di tools per la didattica, basato su <i>MEAN</i> stack,
+				del quale ho gestito frontend e backend.
+				Ho reso disponibile il provider all'Università di Udine tramite la piattaforma 
+				<i>Moodle</i> di ateneo in formato SaaS.
+				Questa attività è nata come progetto didattico sviluppato durante diversi
+				anni, ampliandone respiro ed obiettivi. I risultati sono stati documentati
+				producendo due articoli di carattere scientifico.
+			</p>
+			<p>
+				Questo progetto è gestito in collaborazione con Nizar Salahi Al Asbahi.
+				Per ragioni tecniche e professionali gli esempi di software qui rese
+				disponibili riguardano un singolo strumento:
+				un'app capace di gestire formule in input testuale, codificarle in 
+				<i>LaTeX</i> in tempo reale e quindi disegnarle in uno spazio tridimensionale, 
+				utilizzando <i>ThreeJs</i>. Sono resi disponibili anche i link alle due
+				pubblicazioni scientifiche relative.
+			</p>
+		</div>
+		<div class="link">
+			<a href="./eduniba/grafici.html" target="blank">3D bivariate plot</a>
+			<a href="https://library.iated.org/view/LEPELLERE2020MAT" target="blank">Articolo MatUniUd</a>
+			<a href="http://math.unipa.it/~grim/QRD_Sp8_2020_Lepellere.pdf" target="blank">Articolo GeoUniUd</a>
+		</div>
+	</div>
+
+	<div class="contenuti">
+		<h3>Web Components</h3>
+		<div class="testo">
+			<p>
+				Spesso preferisco costruire componenti web
+				utilizzando soltanto javascript, html e css, partendo quindi da zero.
+				Pur utilizzando spesso framework complessi, quali ad esempio 
+				<i>Angular</i>, ripartire dalle basi è un'occasione per rimanere in 
+				contatto con gli sviluppi del web, spesso nascosti dietro una catena
+				lunghissima, ed a volte opaca, di librerie.
+			</p>
+			<p>
+				Ho creato una piccola galleria di componenti per presentare immagini,
+				video e modelli tridimensionali con un buon livello di interattività.
+			</p>
+		</div>
+		<div class="link">
+			<a href="./componenti/index.html" target="blank">Components gallery</a>
+		</div>
+	</div>
+
+	<div class="contenuti">
+		<h3>Web Apps</h3>
+		<div class="testo">
+			<p>
+				Sviluppo spesso piccole app per risolvere problemi
+				incontrati partecipando a concorsi online di varia natura, o semplicemente
+				per sperimentare alcune funzionalità di un linguaggio di programmazione.
+				Alcuni esempi sono la creazione di loghi applicando maschere di ritaglio,
+				il recupero di dati topologici per ricreare un ambiente tridimensionale 
+				nel quale ambientare il render di un progetto architettonico, la
+				preparazione di forme tridimensionali destinate alla stampa 3D.
+			</p>
+			<p>
+				Sto lavorando all'applicazione web <i>Simple Origami</i>, per presentare e 
+				distribuire diagrammi per i miei Origami, costituiti da immagini vettoriali 
+				accompagnate da sostanziali metadata. Avevo già programmato e pubblicato una versione
+				nativa con <i>Android Studio</i> e sto ripercorrendo e migliorando l'idea originale.
+			</p>
+			<p>
+				Sto sviluppando l'applicazione <i>MyBudget</i>, imponendomi una progressione precisa nello sviluppo
+				come sfida personale. Ad oggi sono state completate le seguenti tappe:
+				funzionalità e grafica minime, interattività touch e mouse, gestione local storage, layout reactive,
+				funzionalità per definire un color theme, possibilità di scaricare/caricare file csv di backup,
+				service worker e pwa installabile.
+			</p>
+			<p>
+				I link rimandano all'ultima versione stabile disponibile di SimpleOrigami e ad
+				un piccolo portfolio di applicazioni sperimentali, inserite sul mio sito personale.
+			</p>
+		</div>
+		<div class="link">
+			<a href="./simpleorigami/index.html" target="blank">Simple Origami</a>
+			<a href="./mybudgetapp/index.html" target="blank">MyBudget</a>
+			<a href="https://elefantinodesign.com/alberto" target="blank">Portfolio su ED</a>
+		</div>
+	</div>
+
+	<!-- <div class="contenuti">
+		<p class="testo">Esperimenti con realtà aumentata</p>
+		<a href="./arvarie/index.html" class="link">Lights AR</a>
+	</div> -->
+
+	<div class="contenuti">
+		<h3>Design</h3>
+		<div class="testo">
+			<p>
+				Sviluppo diversi progetti di design a nome <i>ElefantinoDesign</i>. Sotto questo
+				"marchio", gestito in collaborazione con 
+				<a href="https://elefantinodesign.com/elena" target="blank">Elena Feruglio</a>,
+				raccolgo esperienze di coding creativo, architettura, Origami ed altro ancora.
+			</p>
+		</div>
+		<div class="link">
+			<a href="https://www.instagram.com/barbogio/" target="blank">Instagram personale</a>
+			<a href="https://elefantinodesign.com" target="blank">ElefantinoDesign</a>
+			<a href="https://www.instagram.com/elefantinodesign/" target="blank">ElefantinoDesign su Instagram</a>
+		</div>
+	</div>
+
+	<div class="contenuti">
+		<h3>Game Dev</h3>
+		<div class="testo">
+			<p>
+				Per hobby ma anche per ampliare le mie conoscenze, mi dedico allo sviluppo di
+				videogiochi, privilegiando javascript come linguaggio di base ed evitando se
+				possibile di dipendere troppo da game engine che comunque conosco ed utilizzo,
+				quali <i>Unity</i>, <i>Godot</i> e <i>Pico8</i>.
+				Produrre codice ed assets che rimangano acettabili in ambiente web senza sacrificare
+				la qualità si è dimostrata una sfida sempre interessante.
+			</p>
+			<p>
+				Qui acccanto i link ad alcuni giochi ospitati sulla piattaforma itch.io, sulla 
+				quale ho partecipato a diverse game jams.
+			</p>
+		</div>
+		<div class="link">
+			<a href="https://ilbarbogio.itch.io/droneleaves" target="blank">Drone Leaves</a>
+			<a href="https://ilbarbogio.itch.io/picos-big-adventure" target="blank">Pico's Big Adventure</a>
+			<a href="https://ilbarbogio.itch.io/adventures-extraordinaire-talp" target="blank">Adventures Extraordinaire</a>
+			<a href="https://ilbarbogio.itch.io/spherical-qix" target="blank">Spherical Qix</a>
+		</div>
+	</div>
+
+	<div class="contenuti">
+		<h3>Origami</h3>
+		<div class="testo">
+			<p>
+				Coltivo alcuni hobby prettamente artistici, primo tra tutti quello dell'
+				<a href="https://en.wikipedia.org/wiki/Origami">Origami</a>. Ho inventato
+				diversi modelli originali, faccio parte di gruppi nazionali ed internazionali
+				di autori ed appassionati e frequento, quando possibile, i convegni internazionali.
+				Da anni sono socio attivo del più grande gruppo nazionale, il CDO.
+			</p>
+			<p>
+				Questa disciplina ha profonde relazioni con la Geometria e la Matematica, proprio
+				per questo la mia testi di laurea discute la costruibilità di figure
+				tridimensionali con l'Origami. Ho collaborato con il CDO per rendere più accessibili
+				questi aspetti producendo un commento divulgativo ed ho contribuito alle pubblicazioni
+				dedicate alla didattica dello stesso gruppo.
+			</p>
+			<p>
+				I link rimandano alla presentazione di alcuni modelli e ad una lista
+				delle mie pubblicazioni su diverse riviste, entrambe le risorse riguardano
+				solo una minima parte delle mie creazioni.
+			</p>
+		</div>
+		<div class="link">
+			
+			<a href="https://elefantinodesign.com/origami" target="blank">Modelli originali</a>
+			<a href="https://www.giladorigami.com/origami-database/carminati%20alberto" target="blank">Origami Database</a>
+			<a href="https://www.origami-cdo.it/articoli/files/fullereni-colorazioni-origami.html" target="blank">"Parafrasi" divulgativa</a>
+			<a href="https://www.amazon.it/Dinamiche-educative-didattica-lorigami-esperienze/dp/8890591838/ref=pd_bxgy_img_1/257-3679587-6011108?pd_rd_w=lu9ap&pf_rd_p=cfeaf550-9f5f-483e-bd28-a83e8ccd8083&pf_rd_r=JDF4AYC35SC2E5S6H5ES&pd_rd_r=82c42bc0-f0af-42c1-8a67-8daa84299c35&pd_rd_wg=NDrCe&pd_rd_i=8890591838&psc=1" target="blank">Atti Origami e Didattica</a>
+		</div>
+	</div>
+
+	<div id="patternwrapper">
+		<div id="pattern"></div>
+		<div id="antipattern"></div>
+	</div>
 </body>
 </html>
