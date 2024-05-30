@@ -79,8 +79,10 @@ class recordInput extends HTMLElement{
     window.addEventListener(ADD_ENTRY_CONFIRM_EVENT,()=>{this.close()})
     window.addEventListener(UPDATE_ENTRY_CONFIRM_EVENT,()=>{this.close()})
     this.container.addEventListener("click",(ev)=>{
-      console.log(ev)
       this.close()
+    })
+    this.inputContainer.addEventListener("click",(ev)=>{
+      ev.preventDefault()
     })
 
     this.signButton.addEventListener("click",(ev)=>{
