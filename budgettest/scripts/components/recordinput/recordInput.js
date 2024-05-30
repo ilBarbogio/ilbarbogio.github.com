@@ -82,7 +82,7 @@ class recordInput extends HTMLElement{
       this.close()
     })
     this.inputContainer.addEventListener("click",(ev)=>{
-      ev.preventDefault()
+      ev.stopPropagation()
     })
 
     this.signButton.addEventListener("click",(ev)=>{
