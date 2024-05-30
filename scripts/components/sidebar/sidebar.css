@@ -1,0 +1,17 @@
+.container{
+  position:absolute;
+  top:0;
+  left:-60vw;
+  width:60vw;
+  height:100vh;
+  background-color: slategray;
+  background-image: url("../../../assets/sfondotex.png");
+  background-repeat: repeat;
+  z-index:100;
+  transition:left 1s;
+  padding-top:var(--toolbar-height);
+}
+
+.container.open{
+  left:0;
+}
