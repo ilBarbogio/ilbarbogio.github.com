@@ -1,0 +1,32 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  width:100vw;
+  height:100vh;
+  background-color: black;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container{
+  position: relative;
+  transform:translate(-200px, -100px);
+  margin-bottom:6em;
+}
+
+canvas{
+  position:absolute;
+  image-rendering: pixelated;
+}
+
+
+.info{
+  position:fixed;
+  bottom:1em;
+  left:1em;
+  color:white;
+}

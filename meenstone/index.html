@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meenstone Prototype</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <script src="./scripts/components.js" type="module"></script>
+</head>
+<body>
+
+  <div id="container">
+    <canvas id="sfondo"></canvas>
+  </div>
+  
+  <div class="info">
+    <p>WASD for movement,   left-left/right-right to run,   up-up to jump</p>
+    <p>J or up + J to attack,   down + J to block, run + J for running attack</p>
+    <p>K (hold) for special, run + K for running attack</p>
+  </div>
+
+  <controls-manager enabled="true" type="8dir">
+    <span data-key="w">up</span>
+    <span data-key="d">right</span>
+    <span data-key="s">down</span>
+    <span data-key="a">left</span>
+    <span data-key="j">fire1</span>
+    <span data-key="k">fire2</span>
+  </controls-manager>
+
+  <script defer src="./scripts/index.js" type="module"></script>
+  <!-- <script src="./bundle.min.js" type="module"></script> -->
+</body>
+</html>
