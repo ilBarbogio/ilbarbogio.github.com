@@ -72,6 +72,7 @@ const loop=(time)=>{
   // controls.tick()
 
   let delta=Math.min(100,Math.max(time-clock,0))
+  console.log(delta)
   clock=time
   
   ENTITIES=ENTITIES.filter(el=>el.sprite.isConnected)
