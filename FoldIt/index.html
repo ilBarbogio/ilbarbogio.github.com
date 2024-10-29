@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fold It!</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Honk&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+	<span class="honk language it">IT</span>
+	<span class="honk language en">EN</span>
+	
+	<h1 class="title honk">Fold It !</h1>
+	<div class="paragraph">
+
+		<div class="en">
+			<p class="honk subtitle">What's this?</p>
+			<p>
+				<b>Fold It!</b> is an imagined <em>dice & paper</em> game for Origami lovers and daring
+				tabletop gamers. It is imagined as in "wouldn't it be funny if
+				this was something people can play?". As such, you should take it as a suggestion, with rules laid
+				out as guideline. So take this with a grain of salt or two, and don't expect it to be funny
+				right out of the box. About that, The fact it doesn't even come in a box should have been a flying red flag!
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle">Cos'è?</p>
+			<p>
+				<b>Fold It!</b> è un gioco <em>dice & paper</em> "immaginario" per amanti dell'Origami e coraggiosi
+				appassionati di giochi da tavolo. È soltanto "immaginario" perchè nasce con l'idea "non sarebbe
+				bello se questo fosse un vero gioco?", e come tale non va preso troppo sul serio, ma piuttosto
+				come una bozza di gioco, che traccia a grandi linee quello che potrebbe, in futuro, diventare
+				qualcosa di più definito.
+			</p>
+		</div>
+	</div>
+
+	<div class="paragraph">	
+		<div class="en">
+			<p class="honk subtitle">In short</p>
+			<p class="row">
+				<svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" fill="white"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+				<span>2<sup>+</sup></span>
+			</p><br>
+			<p class="row">
+				<svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" fill="white"><path d="M280-160v-441q0-33 24-56t57-23h439q33 0 56.5 23.5T880-600v320L680-80H360q-33 0-56.5-23.5T280-160ZM81-710q-6-33 13-59.5t52-32.5l434-77q33-6 59.5 13t32.5 52l10 54h-82l-7-40-433 77 40 226v279q-16-9-27.5-24T158-276L81-710Zm279 110v440h280v-160h160v-280H360Zm220 220Z"/></svg>
+				<span>1 x player</span>
+			</p><br>
+			<p class="row">
+				<svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" fill="white"><path d="M300-240q25 0 42.5-17.5T360-300q0-25-17.5-42.5T300-360q-25 0-42.5 17.5T240-300q0 25 17.5 42.5T300-240Zm0-360q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm180 180q25 0 42.5-17.5T540-480q0-25-17.5-42.5T480-540q-25 0-42.5 17.5T420-480q0 25 17.5 42.5T480-420Zm180 180q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm0-360q25 0 42.5-17.5T720-660q0-25-17.5-42.5T660-720q-25 0-42.5 17.5T600-660q0 25 17.5 42.5T660-600ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+				<span>x3, 6-sided</span>
+			</p><br>
+			<p>
+				You can play with 2<sup>+</sup> teams, dice can be origami or virtual. Click here for <a href="#setup">setup</a>
+				or go to <a href="#start">game start</a>, <a href="#game">game loop</a> or <a href="#ending">
+				ending</a> sections. You can find a brief summary of the <a href="#rules">rules</a> below.
+			</p>
+			<p>
+				Take turns folding a sheet of paper to get a better model than your opponents, but each of your folds
+				is dictated by dice rolls!
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle">In breve</p>
+			<p class="row">
+				<svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" fill="white"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+				<span>2<sup>+</sup></span>
+			</p><br>
+			<p class="row">
+				<svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" fill="white"><path d="M280-160v-441q0-33 24-56t57-23h439q33 0 56.5 23.5T880-600v320L680-80H360q-33 0-56.5-23.5T280-160ZM81-710q-6-33 13-59.5t52-32.5l434-77q33-6 59.5 13t32.5 52l10 54h-82l-7-40-433 77 40 226v279q-16-9-27.5-24T158-276L81-710Zm279 110v440h280v-160h160v-280H360Zm220 220Z"/></svg>
+				<span>1 x giocatore</span>
+			</p><br>
+			<p class="row">
+				<svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" fill="white"><path d="M300-240q25 0 42.5-17.5T360-300q0-25-17.5-42.5T300-360q-25 0-42.5 17.5T240-300q0 25 17.5 42.5T300-240Zm0-360q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm180 180q25 0 42.5-17.5T540-480q0-25-17.5-42.5T480-540q-25 0-42.5 17.5T420-480q0 25 17.5 42.5T480-420Zm180 180q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm0-360q25 0 42.5-17.5T720-660q0-25-17.5-42.5T660-720q-25 0-42.5 17.5T600-660q0 25 17.5 42.5T660-600ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+				<span>x3, sei lati</span>
+			</p><br>
+			<p>
+				Possono giocare 2<sup>+</sup> squadre, i dadi possono essere fatti in origami o virtuali.
+				Clicca qui per il <a href="#setupit">setup</a>, oppure vai alle sezioni <a href="#startit">inizio
+				del gioco</a>, <a href="#gameit">svolgimento</a> o <a href="#endingit">conclusione</a> del gioco.
+				Trovi un breve riassunto delle <a href="#rulesit">regole</a> in fondo.
+			</p>
+			<p>
+				Alternati con gli altri giocatori nel piegare un foglio in un modello più bello di quello dei tuoi
+				avversari, ma ogni piega è dettata da un tiro del dado!
+			</p>
+		</div>
+	</div>
+
+	<div class="paragraph">
+
+		<div class="en">
+			<p class="honk subtitle" id="setup">Setup</p>
+			<p>
+				Playing <b>Fold It!</b> requires little: a sheet per person/team and three 6-sided dice. You can
+				use normal dice, fold three traditional waterbombs or more refined origami cubic model, or even use
+				an online widget (easy as you are already online to read this).
+			</p>
+			<p>
+				The game can be played by two or more players, or two or more teams with any number of players.
+				Players or teams should have a space whereon to lay the paper and keep it during the game, where all
+				players can see it at all times. The paper should not be turned or tossed around.
+			</p>
+			<p>
+				Also plan a space to roll the dice, obviously. Noone likes to go search for dice under a table.
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle" id="setupit">Setup</p>
+			<p>
+				Ci vuole poco per giocare a <b>Fold It!</b>: un foglio per persona/squadra e 3 dadi a sei facce.
+				Si possono usare dadi normali, piegare tre waterbomb tradizionali o qualche cubo origami più
+				raffinato, oppure ancora usare un qualsiasi widget trovato online (dove già vi trovare se state
+				leggendo questa pagina).
+			</p>
+			<p>
+				Il gioco può essere giocato da due o più giocatori, o due o più squadre con un qualsiasi numero
+				di giocatori. Deve essere possibile per ogni giocatore o squadra posizionare il proprio modello
+				su un'apposita superficie, dove può essere sempre visto da tutti. Il foglio non dovrebbe essere
+				maneggiato o spostato tra un turno e l'altro.
+			</p>
+			<p>
+				È bene prevedere anche uno spazio per lanciare i dadi: a nessuno piace rincorrerli sotto al tavolo!
+			</p>
+		</div>
+
+	</div>
+	
+	<div class="paragraph">
+		
+		<div class="en">
+			<p class="honk subtitle" id="start">Start & Goal</p>
+			<p>
+				At the start players should agree upon a <em>subject</em> to be folded: it may be some large category, e.g.
+				"an animal", or more specific, like "a dog". All player can suggest something, or a non player can
+				choose. Don't go too much into specific, and keep player skill into account.
+			</p>
+			<p>
+				After the subject, players should agree on a <em>minimum number of turns</em>. This vary wildy
+				based on skill, subject and experience with the game, but something around ten is a good start. A
+				maximum should also be defined, but it's not mandatory as player can agree upon if they are
+				done with the folding at any time.
+			</p>
+			<p>
+				After subject and turns are chosen, each player/team gets one sheet of paper. The kind of paper
+				doesn't really matter, as long as it isn't too much "specialized": we don't know what style or
+				complexity the player will go for. The younger player get the dice first, and the game is about
+				to start!
+			</p>
+			<p>
+				Fold away until you get a model that fits the given subject, nicer than the others' models, and
+				you win!
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle" id="startit">Inizio & Obiettivo</p>
+			<p>
+				All'inzio tutti i giocatori devono convenire su un <em>soggetto</em> da piegare: può essere una
+				categoria, ad esempio "un animale", oppure qualcosa di più specifico, come "un cane". Tutti
+				possono suggerire qualcosa, oppure una persona non giocante può decidere per tutti. L'importante
+				è non essere troppo specifici e tenere comunque conto delle abilità dei giocatori.
+			</p>
+			<p>
+				Dpo il soggetto, i giocatori devono stabilire un <em>minimo numero di turni</em> da disputare.
+				Questo può variare parecchio in base all'abilità dei giocatori, al soggetto e all'esperienza,
+				ma qualcosa come dieci turni è un buon punto di partenza. Si può stabilire anche un massimo
+				numero di turni, ma non è necessario in qanto in ogni momento i giocatori possono decidere, di
+				comune accordo, che il gioco può terminare.
+			</p>
+			<p>
+				Dopo aver deciso soggetto e turni, ogni giocatore/squadra riceve un foglio. Il tipo di carta non
+				è importante, purchè non sia troppo "specializzata": non sappiamo che stile o complessità
+				adotteranno i giocatori. Il giocatore più giovane riceve per primo i dadi, e il gioco è
+				pronto per partire!
+			</p>
+			<p>
+				Piega fino a che non ottieni un modello che soddisfa la condizione imposta dal soggetto che sia più
+				bello di quello degli avversari, e hai vinto!
+			</p>
+		</div>
+	</div>
+
+	<div class="paragraph">
+		
+		<div class="en">
+			<p class="honk subtitle" id="game">Game loop</p>
+			<p>
+				At turn's start the player throws the dice and get a set of three numbers. These plain <u>numbers let
+				the player valley or mountain fold</u> the paper: <em>even for a valley</em> fold, <em>odd for a
+				mountain</em> fold. These folds are to be made without turning the model over, and the model should
+				return to its starting position afterwards. A player can pick up the model to do a mountain fold,
+				but not lay it down on its back to fold it.
+			</p>
+			<p>
+				Player can <u>combine the dice to get more complex folds</u> or actions: two fold of the same kind
+				give the player the ability to do a reverse fold, either the inside or outside kind.
+				Additionally, the player can discard a die at leisure to just turn the model around, or all
+				of them at once to fold a sink. In contrast to the reverse folds, the trace
+				for the sink must be here beforehand! But open and closed sink are threated as equals.
+			</p>
+			<p>
+				When the player rolls all even (or odd) number, it's possibile to <u>perform a "classic" fold</u>:
+				a rabbit ear, a petal fold, a squash or a swivel.
+			</p>
+			<p>
+				Some things could seem tricky, but are easy to destructure: you can get a petal fold
+				with two reverse fold and one valley instead of waiting for a lucky roll. Other things
+				can be up to debate: a sviwel fold can be equalled to a reverse fold, discounting the extra
+				(usually) shorter fold it creates, or the player can agree that little extra should be already
+				traced. Just try not to come to fisticuff! This game is imagined as a nice way to have fun and
+				also to elicit some debate about fold definition, so discussing these details is a must.
+			</p>
+			<p>
+				Players (and also players inside a team) take turns throwing dice until the minimum numeber of 
+				turns is reached, and all players/teams are satisfied with their creation. A player canl also
+				declare defeat or choose to sit out, or all can agree to extend the game, only requisite is a
+				consensus between all involved.
+			</p>
+			<p>
+				When the minimum number of turns is reached, players should agree on ending the game, or on
+				extending it a number of turns. From this point on (not before), a player could also resign
+				and declare defeat, sitting out until the game's end.
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle" id="gameit">Svolgimento</p>
+			<p>
+				All'inizio del turno il giocatore tira i dadi per ottenere tre nueri. Questi <u>numeri consentono
+				al giocatore di eseguire una piega a monte o a valle</u>: <em>numeri pari per valle</em>, e
+				<em>numeri dispari per monte</em>. Le pieghe vanno fatte senza voltare il modello, che dovrà
+				tornare sempre alla sua posizione iniziale dopo l'esecuzione. Un giocatore può prendere in mano
+				il modello per eseguire una piega a monte, ma non può appoggiarlo sul tavolo per eseguirla.
+			</p>
+			<p>
+				I giocatori possono <u>compbinare i dadi per ottenere pieghe più complesse</u> o altre azioni:
+				due pieghe dello stesso tipo permettono di eseguire una piega rovescia, interna o esterna a scelta.
+				Inoltre il giocatore può scartare un dado a scelta per voltare il modello, oppure tutti i dadi
+				in un sol colpo per eseguire un sink. Diversamente dal caso delle pieghe rovesciate, per eseguire
+				un sink le tracce necessarie dovranno essere già presenti. Sink chiusi e aperti non sono
+				trattati diversamente.
+			</p>
+			<p>
+				Se un giocatore ottiene tre numeri pari, otre dispari, è possibile <u>eseguire una piega
+				"classica"</u>: una piega a orecchio di coniglio, una piega a petalo, uno squash o uni sviwel.
+			</p>
+			<p>
+				Alcune cose possono sembrare spinose, ma sono facilmente scomponibili: si può ottenere una
+				piega a petalo con due rovesciate e una piega a valle, anzichè attenedere un lancio fortunato.
+				Altre cose saran sempre aperte a dibattito: uno sviwel potrebbe essere equiparato a una roesciata,
+				ignorando la piccola piega extra che potrebbe creare, oppure i giocatori potrebbero decidere che
+				anche quella piega deve essere tracciata preventivamente. L'importante è non azzuffarsi! Questo
+				gioco è pensato come un'occasione di divertimento ma anche di riflessione su come veramente
+				sono strutturare le pieghe che usiamo nell'Origami, quindi discuterne è un obbligo!
+			</p>
+			<p>
+				I giocatori si alternano (così come i componenti di una squadra, se si gioca in questo formato)
+				fino a superare il numero di turni minimo stabilito e a raggiungere risultati soddisfacenti per
+				tutti. È possibile arrendersi, o accordarsi per prolungare la durata del gioco, purchè ci sia
+				consenso tra tutti. 
+			</p>
+			<p>
+				Quando il numero minimo di turni è stato giocato, i giocatori devono decidere all'unanimità se
+				concludere il gioco, oppure se estendere la partita di un certo numero di turni. Da questo punto
+				(e non prima!) un giocatore può decidere di arrendersi, oppure di uscire dal gioco e attendere
+				la valuazione finale.
+			</p>
+		</div>
+	</div>
+
+	<div class="paragraph">
+		
+		<div class="en">
+			<p class="honk subtitle" id="ending">Endgame</p>
+			<p>
+				Game ends when the minimum number of turns is reached and any extensions agreed upon is also
+				reached, or when the maximum number of turns, if established at the start, is reached.
+			</p>
+			<p>
+				As judging an Origami model is mostly a matter of taste, <u>at the end all player votes the best model</u>.
+				The goal here is to go along with the game vibe, not to get a great model putting all the others
+				to shame. Be the adult in the room who pats the proverbial elephant on the head, not the one who
+				sends the poor beast on a rampage. Please don't think too hard about this metaphore. Also, having
+				a non playing jury/referee could come in handy.
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle" id="endingit">Conclusione</p>
+			<p>
+				Il gioco termina quando il minimo numero di turni è stato giocato, ogni estensione decisa di
+				comune accordo è stata completata oppure il massimo numero di turni, se stabilito all'inizio,
+				è stato raggiunto.
+			</p>
+			<p>
+				Siccome valutare un modello Origami è questione di gusti, <u>alla fine tutti i giocatori
+				votano il modello migliore</u> per dichiarare il vincitore. L'imporantante è rispettare l'atmosfera
+				giocosa senza esser quello che vuole schiacciare gli avversari costi quel che costi (leggasi:
+				uno s******). Avere qualcuno esterno al gioco a fare da giuria e da arbitro può tornare utile,
+				soprattutto in questa fase.
+			</p>
+		</div>
+
+	</div>
+
+	<div class="paragraph">
+		
+		<div class="en">
+			<p class="honk subtitle" id="rules">(tl:dr) Rules</p>
+			<p>
+				One even number -> one valley fold
+			</p>
+			<p>
+				One odd number -> one mountain fold
+			</p>
+			<p>
+				two even/two odd numbers -> one reverse fold
+			</p>
+			<p>
+				Three dice, any combo -> one sink, oper or closed
+			</p>
+			<p>
+				Three even/three odd numbers -> one "classic": rabbit ear, petal fold, squash, sviwel
+			</p>
+			<p>
+				Any one die -> turn the model over
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle" id="rulesit">(tl:dr) Regole</p>
+			<p>
+				Un numero pari -> una piega a valle
+			</p>
+			<p>
+				Un numero dispari -> una piega a monte
+			</p>
+			<p>
+				due numeri pari/due dispari -> una peiga rovesciata
+			</p>
+			<p>
+				Tre numeri qualsiasi -> un sink, aperto o chiuso
+			</p>
+			<p>
+				Tre numeri pari/tre dispari -> un "classico": orecchio di coniglio, a petalo, squash, sviwel
+			</p>
+			<p>
+				Un numero qualsiasi -> voltare il modello
+			</p>
+		</div>
+
+	</div>
+
+	<div class="paragraph">
+		
+		<div class="en">
+			<p class="honk subtitle">Have fun!</p>
+			<p>
+				That's it for <b>Fold It!</b> Still don't know if this is a viable game, but I had fun imagining it.
+				You can send feedback, (much appreciated) telling of game you had with friend, any mean or kind
+				comments to <a href:"mailto:barbogioster@gmail.com">barbogioster@gmail.com</a>
+			</p>
+		</div>
+
+		<div class="it">
+			<p class="honk subtitle">Divertitevi!</p>
+			<p>
+				E questo è tutto per <b>Fold It!</b> Non so ancora se sia un gioco valido, ma mi sono divertito
+				ad immaginarlo. Potete mandare feedback, (apprezzatissimi) resoconti delle vostre partite e
+				commenti, buoni o cattivi che siano, a <a href:"mailto:barbogioster@gmail.com">barbogioster@gmail.com</a>
+			</p>
+		</div>
+
+	</div>
+
+	<script>
+		document.querySelector(".language.it").addEventListener("click",(ev)=>{
+			for(let el of document.querySelectorAll("div.it")) el.style.display="block"
+			for(let el of document.querySelectorAll("div.en"))el.style.display="none"
+		})
+		document.querySelector(".language.en").addEventListener("click",(ev)=>{
+			for(let el of document.querySelectorAll("div.it")) el.style.display="none"
+			for(let el of document.querySelectorAll("div.en")) el.style.display="block"
+		})
+	</script>
+</body>
+</html>
