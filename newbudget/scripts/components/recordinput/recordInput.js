@@ -11,7 +11,7 @@ const template=
     <div class="input-container">
       <div class="first-row">
         <icon-button class="sign button" sides="2em" icon="subtract" color="red"></icon-button>
-        <input class="number-input" type="number"/>
+        <input class="number-input" type="number" min=0 step=.01/>
       </div>
 
       <select class="category-input">
@@ -36,25 +36,20 @@ const template=
 `
 export class RecordInput extends HTMLElement{
   set value(v){
-    if(!isNaN(v)){
-      this._valid=true
-      this._value=v
-      this._sign=v>=0?1:-1
-      if(this.mounted){
-        this.valueInput.value=Math.abs(v)
-        this.setSignButton()
-      }
-    }else{
-      this._valid=false
-    }
+    this._value=v
+    if(this.valueInput) this.valueInput.value=v
   }
   get value(){
     return this._sign*this._value
   }
 
+  set sign(s){
+    this._sign=s
+    this.setSignButton()
+  }
+
   constructor(){
     super()
-    this._valid=true
   }
 
   connectedCallback(){
@@ -64,15 +59,15 @@ export class RecordInput extends HTMLElement{
     this.container=this.shadow.querySelector(".container")
     this.inputContainer=this.container.querySelector(".input-container")
     this.signButton=this.inputContainer.querySelector("icon-button.sign.button")
-    this.valueInput=this.inputContainer.querySelector("input[type=number]")
+    this.valueInput=this.inputContainer.querySelector("input.number-input")
     this.categoryInput=this.inputContainer.querySelector("select.category-input")
-    console.log(this.categoryInput)
     this.dateInput=this.inputContainer.querySelector("input[type=date]")
     this.textArea=this.inputContainer.querySelector("textarea")
     this.saveButton=this.inputContainer.querySelector("icon-button.save.button")
     this.closeButton=this.inputContainer.querySelector("icon-button.close.button")
 
     this._action=undefined
+    this._sign=1
 
     this.mounted=true
     this.setSignButton()
@@ -85,15 +80,17 @@ export class RecordInput extends HTMLElement{
       this._action=ADD_ENTRY_EVENT
       this._recordId=undefined
       this.value=0
+      this.sign=1
       let currentDate=new Date()
-      this.dateInput.value=`${currentDate.getFullYear()}-${(currentDate.getMonth()+1).toString().padStart(2,"0")}-${currentDate.getDay().toString().padStart(2,"0")}`
+      this.dateInput.value=`${currentDate.getFullYear()}-${(currentDate.getMonth()+1).toString().padStart(2,"0")}-${currentDate.getDate().toString().padStart(2,"0")}`
       this.container.classList.toggle("open")
     })
     window.addEventListener(UPDATE_ENTRY_REQUEST_EVENT,(ev)=>{
-      console.log(this.categoryInput)
+      console.log(ev.detail)
       this._action=UPDATE_ENTRY_EVENT
       this._recordId=ev.detail.id
-      this.value=ev.detail.value
+      this.value=Math.abs(ev.detail.value)
+      this.sign=ev.detail.value>=0?1:-1
       this.dateInput.value=ev.detail.date
       this.textArea.value=ev.detail.cause
       this.categoryInput.value=ev.detail.category??""
@@ -112,7 +109,10 @@ export class RecordInput extends HTMLElement{
       this.toggleSign()
     })
     this.valueInput.addEventListener("input",(ev)=>{
-      this.value=ev.target.value
+      this._value=Math.abs(ev.target.value)
+    })
+    this.valueInput.addEventListener("focus",(ev)=>{
+      if(ev.target.value==0) ev.target.value=""
     })
     this.saveButton.addEventListener("click",(ev)=>{
       let detail={

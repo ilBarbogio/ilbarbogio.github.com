@@ -7,6 +7,7 @@
   scroll-snap-align: center;
 
   overflow-y: scroll;
+  overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -18,7 +19,7 @@
 
   min-height:50vh;
   background-color: #369878;
-  background-image: url("../../../assets/sfondotex.png");
+  /* background-image: url("../../../assets/sfondotex.png"); */
   border-radius:0 0 6px 6px;
   box-shadow:0 0 3px #585d5a;
 
