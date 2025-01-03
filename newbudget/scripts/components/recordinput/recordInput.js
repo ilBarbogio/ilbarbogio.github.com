@@ -1,6 +1,7 @@
 import {
   ADD_ENTRY_EVENT, ADD_ENTRY_REQUEST_EVENT, ADD_ENTRY_CONFIRM_EVENT,
-  UPDATE_ENTRY_EVENT, UPDATE_ENTRY_REQUEST_EVENT, UPDATE_ENTRY_CONFIRM_EVENT
+  UPDATE_ENTRY_EVENT, UPDATE_ENTRY_REQUEST_EVENT, UPDATE_ENTRY_CONFIRM_EVENT,
+  categories
 } from "../../variables.js"
 
 const template=
@@ -12,6 +13,15 @@ const template=
         <icon-button class="sign button" sides="2em" icon="subtract" color="red"></icon-button>
         <input class="number-input" type="number"/>
       </div>
+
+      <select class="category-input">
+        <option value=-1>Nessuna</option>
+        ${(()=>{
+          let options=[]
+          for(let c of categories) options.push(`<option value="${c.id}">${c.label}</option>`)
+          return options.join("\n")
+        })()}
+      </select>
       
       <input class="date-input" type="date"/>
 
@@ -24,7 +34,7 @@ const template=
     </div>
   </div>
 `
-class recordInput extends HTMLElement{
+export class RecordInput extends HTMLElement{
   set value(v){
     if(!isNaN(v)){
       this._valid=true
@@ -55,6 +65,8 @@ class recordInput extends HTMLElement{
     this.inputContainer=this.container.querySelector(".input-container")
     this.signButton=this.inputContainer.querySelector("icon-button.sign.button")
     this.valueInput=this.inputContainer.querySelector("input[type=number]")
+    this.categoryInput=this.inputContainer.querySelector("select.category-input")
+    console.log(this.categoryInput)
     this.dateInput=this.inputContainer.querySelector("input[type=date]")
     this.textArea=this.inputContainer.querySelector("textarea")
     this.saveButton=this.inputContainer.querySelector("icon-button.save.button")
@@ -73,14 +85,18 @@ class recordInput extends HTMLElement{
       this._action=ADD_ENTRY_EVENT
       this._recordId=undefined
       this.value=0
+      let currentDate=new Date()
+      this.dateInput.value=`${currentDate.getFullYear()}-${(currentDate.getMonth()+1).toString().padStart(2,"0")}-${currentDate.getDay().toString().padStart(2,"0")}`
       this.container.classList.toggle("open")
     })
     window.addEventListener(UPDATE_ENTRY_REQUEST_EVENT,(ev)=>{
+      console.log(this.categoryInput)
       this._action=UPDATE_ENTRY_EVENT
       this._recordId=ev.detail.id
       this.value=ev.detail.value
       this.dateInput.value=ev.detail.date
       this.textArea.value=ev.detail.cause
+      this.categoryInput.value=ev.detail.category??""
       this.container.classList.toggle("open")
     })
     window.addEventListener(ADD_ENTRY_CONFIRM_EVENT,()=>{this.close()})
@@ -102,7 +118,8 @@ class recordInput extends HTMLElement{
       let detail={
         value:this.value,
         date:this.dateInput.value,
-        cause:this.textArea.value
+        cause:this.textArea.value,
+        category:this.categoryInput.value
       }
       if(this._action==UPDATE_ENTRY_EVENT) detail.id=this._recordId
       let event=new CustomEvent(this._action,{detail})
@@ -136,10 +153,9 @@ class recordInput extends HTMLElement{
     this._recordId=undefined
     this.valueInput.value=""
     this.dateInput.value=""
+    this.categoryInput.value=""
     this.textArea.value=""
     this.isPositive=false
     this.container.classList.remove("open")
   }
 }
-
-customElements.define("record-input",recordInput)

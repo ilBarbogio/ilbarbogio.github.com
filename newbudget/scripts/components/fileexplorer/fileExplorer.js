@@ -22,7 +22,7 @@ const template=
     <file-input></file-input>
   </div>
 `
-class fileExplorer extends HTMLElement{
+export class FileExplorer extends HTMLElement{
   constructor(){
     super()
   }
@@ -40,6 +40,8 @@ class fileExplorer extends HTMLElement{
 
     this.mounted=true
 
+    this.loadFiles()
+
     this.setupListeners()
   }
 
@@ -51,7 +53,10 @@ class fileExplorer extends HTMLElement{
       let data=new FormData(this.form)
       let user=data.get("user")
       let year=data.get("year")
-      if(user && year){
+
+      if(state.availableFiles.find(el=>el==`${user}__${year}.json`)){
+        alert("Un file con questo nome esiste già, cambia nome o cancella il file prima di salvarne uno uguale!")
+      }else if(user && year){
         let response=await createRecordFile(user,year,{records:[],goals:[]},{openAfter:true})
         if(response.result) window.dispatchEvent(new CustomEvent(LOADED_DATA_FROM_FILE))
       }
@@ -60,6 +65,7 @@ class fileExplorer extends HTMLElement{
 
   loadFiles=async ()=>{
     await listFiles()
+    console.log(state)
     this.list.innerHTML=""
     if(state.availableFiles.length==0) this.list.innerHTML=`<p>Nessun file salvato</p>`
     else for(let f of state.availableFiles){
@@ -89,5 +95,3 @@ class fileExplorer extends HTMLElement{
   }
 
 }
-
-customElements.define("file-explorer",fileExplorer)

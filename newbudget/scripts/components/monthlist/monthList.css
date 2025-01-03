@@ -3,7 +3,7 @@
   width:var(--list-width);
   flex-shrink:0;
   margin:0 var(--list-margin);
-  padding-top: var(--toolbar-height);
+  /* padding-top: var(--toolbar-height); */
   scroll-snap-align: center;
 
   overflow-y: scroll;

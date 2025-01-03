@@ -6,7 +6,7 @@ const template=
   <div class="container">
   </div>
 `
-class yearContainer extends HTMLElement{
+export class YearContainer extends HTMLElement{
   // static observedAttributes=["year"]
 
   set data(data){
@@ -96,5 +96,3 @@ class yearContainer extends HTMLElement{
     state.yearContainer=undefined
   }
 }
-
-customElements.define("year-container",yearContainer)

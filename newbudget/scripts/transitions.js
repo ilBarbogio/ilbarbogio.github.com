@@ -1,4 +1,4 @@
-import { state, NAVIGATE, LS_KEY_CURRENT_FILE, LOADED_DATA_FROM_FILE } from "./variables.js"
+import { state, NAVIGATE, LS_KEY_CURRENT_FILE, LOADED_DATA_FROM_FILE, pages, categories } from "./variables.js"
 import { readRecordFile } from "./data/opfsdata.js"
 
 function updateView(ev){
@@ -7,46 +7,46 @@ function updateView(ev){
   //trasition
   let buildDestination
   switch(page){
-    case "calendar":
+    case pages.calendar:
       buildDestination=buildCalendarPage
       break
-    case "filemanager":
+    case pages.filemanager:
       buildDestination=buildFileManagerPage
       break
-    case "options":
-      buildDestination=buildOptionsPage
+    case pages.categorymanager:
+      buildDestination=buildCategoryManagerPage
       break
     default: break
   }
   const transition = document.startViewTransition(buildDestination)
 
-  if(ev.clientX!==undefined && ev.clientY!==undefined){
-    const x = ev?.clientX ?? innerWidth / 2
-    const y = ev?.clientY ?? innerHeight / 2
-    // Get the distance to the furthest corner
-    const endRadius = Math.hypot(
-      Math.max(x, innerWidth - x),
-      Math.max(y, innerHeight - y),
-    )
+  // if(ev.clientX!==undefined && ev.clientY!==undefined){
+  //   const x = ev?.clientX ?? innerWidth / 2
+  //   const y = ev?.clientY ?? innerHeight / 2
+  //   // Get the distance to the furthest corner
+  //   const endRadius = Math.hypot(
+  //     Math.max(x, innerWidth - x),
+  //     Math.max(y, innerHeight - y),
+  //   )
 
-    transition.ready.then(() => {
-      // Animate the root's new view
-      document.documentElement.animate(
-        {
-          clipPath: [
-            `circle(0 at ${x}px ${y}px)`,
-            `circle(${endRadius}px at ${x}px ${y}px)`,
-          ],
-        },
-        {
-          duration: 500,
-          easing: "ease-in",
-          // Specify which pseudo-element to animate
-          pseudoElement: "::view-transition-new(root)",
-        },
-      )
-    })
-  }
+  //   transition.ready.then(() => {
+  //     // Animate the root's new view
+  //     document.documentElement.animate(
+  //       {
+  //         clipPath: [
+  //           `circle(0 at ${x}px ${y}px)`,
+  //           `circle(${endRadius}px at ${x}px ${y}px)`,
+  //         ],
+  //       },
+  //       {
+  //         duration: 500,
+  //         easing: "ease-in",
+  //         // Specify which pseudo-element to animate
+  //         pseudoElement: "::view-transition-new(root)",
+  //       },
+  //     )
+  //   })
+  // }
 }
 
 export const buildCalendarPage=async ()=>{
@@ -64,6 +64,7 @@ export const buildCalendarPage=async ()=>{
       
       state.yearContainer.data=state.records
 
+      state.currentPage=pages.calendar
     }
   }
 
@@ -77,14 +78,24 @@ export const buildFileManagerPage=async ()=>{
 
   let fileExplorer=document.createElement("file-explorer")
   state.container.append(fileExplorer)
+
+  state.currentPage=pages.filemanager
 }
 
-const buildOptionsPage=()=>{
+const buildCategoryManagerPage=()=>{
   if(state.container){
     state.container.innerHTML=""//UNMOUNT OPTIONS PAGE
     state.container.innerHTML=`
-    <div sytle="width:100%; height:24em; background-color:black"></div>
+    <div sytle="width:100%; height:24em; background-color:black">
+      ${(()=>{
+        let options=[]
+        for(let c of categories) options.push(`<p>${c.id} - ${c.label}</p>`)
+        return options.join("\n")
+      })()}
+    </div>
     `
+
+    state.currentPage=pages.categorymanager
   }
 }
 

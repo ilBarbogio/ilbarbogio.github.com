@@ -5,7 +5,7 @@ const template=
   <style>@import url("./scripts/components/iconbutton/iconButton.css")</style>
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 0 0" stroke="currentColor" fill="currentColor"></svg>
 `
-class iconButton extends HTMLElement{
+export class IconButton extends HTMLElement{
   static observedAttributes=["icon","color","sides"]
 
   /**
@@ -138,5 +138,3 @@ class iconButton extends HTMLElement{
     this.remove()
   }
 }
-
-customElements.define("icon-button",iconButton)

@@ -2,19 +2,18 @@
   isolation: auto;
 }
 
-::view-transition-old(root),
+/* ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
   display: block;
-}
+} */
 
 *{
   margin:0;
   padding:0;
-  touch-action: none;
 }
 
-#container{
-  position:relative;
+.toolbar{
+  /* view-transition-name: none; */
 }

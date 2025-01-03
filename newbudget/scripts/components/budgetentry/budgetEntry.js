@@ -5,6 +5,7 @@ const template=`
   <style>@import url("./scripts/components/budgetentry/budgetEntry.css")</style>
   <div class="container">
     <div class="date"></div>
+    <div class="category"></div>
     <div class="value"></div>
     <div class="cause"></div>
     <div class="actions">
@@ -13,13 +14,14 @@ const template=`
     </div>
   </div>
 `
-class budgetEntry extends HTMLElement{
+export class BudgetEntry extends HTMLElement{
   // static observedAttributes=["id","value","cause"]
   set data(data){
     this._id=data.id
     this._value=data.value
     this._cause=data.cause
     this._date=data.date
+    this._category=data.category
     this.renderData()
   }
 
@@ -44,6 +46,12 @@ class budgetEntry extends HTMLElement{
   }
   get date(){ return this._date}
 
+  set category(cat){
+    this._category=cat
+    this.renderData()
+  }
+  get category(){ return this._category}
+
   constructor(){
     super()
   }
@@ -55,6 +63,7 @@ class budgetEntry extends HTMLElement{
     this.container=this.shadow.querySelector(".container")
     this.valueDisplay=this.container.querySelector(".value")
     this.causeDisplay=this.container.querySelector(".cause")
+    this.categoryDisplay=this.container.querySelector(".category")
     this.dateDisplay=this.container.querySelector(".date")
     this.actions=this.container.querySelector(".actions")
     this.deleteButton=this.container.querySelector(".button.delete")
@@ -74,6 +83,7 @@ class budgetEntry extends HTMLElement{
             id:this._id,
             value:this._value,
             cause:this._cause,
+            category:this._category,
             month
           }
         })
@@ -87,6 +97,7 @@ class budgetEntry extends HTMLElement{
           id:this._id,
           value:this._value,
           cause:this._cause,
+          category:this._category,
           date:this._date
         }
       })
@@ -94,24 +105,11 @@ class budgetEntry extends HTMLElement{
     }
   }
 
-  // attributeChangedCallback(name, oldValue, newValue){
-  //   switch(name){
-  //     case "value":
-  //       this._value=newValue
-  //       this.renderData()
-  //       break
-  //     case "cause":
-  //       this._cause=newValue
-  //       this.renderData()
-  //       break
-  //     default: break
-  //   }
-  // }
-
   renderData(){
     this.setAttribute("id",`entry-${this._id}`)
     if(this.valueDisplay) this.valueDisplay.innerHTML=`${this._value} ${CURRENCY_SYMBOL}`
     if(this.causeDisplay) this.causeDisplay.innerHTML=this._cause
+    if(this.categoryDisplay) this.categoryDisplay.innerHTML=this._category!=-1?this._category:" "
     if(this.dateDisplay){
       const {day,date}=dayDateFormat(this._date)
       this.dateDisplay.innerHTML=`<span>${day}</span><span>${date}</span>`
@@ -122,5 +120,3 @@ class budgetEntry extends HTMLElement{
 
   }
 }
-
-customElements.define("budget-entry",budgetEntry)

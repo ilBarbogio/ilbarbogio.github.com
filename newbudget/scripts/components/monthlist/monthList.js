@@ -17,7 +17,7 @@ const template=
     <div class="spacer"></div>
   </div>
 `
-class monthList extends HTMLElement{
+export class MonthList extends HTMLElement{
   static observedAttributes=["month","year"]
 
   set records(records){
@@ -132,6 +132,7 @@ class monthList extends HTMLElement{
       foundElement.value=record.value
       foundElement.date=record.date
       foundElement.cause=record.cause
+      foundElement.category=record.category
       this.updateTotals()
     }
   }
@@ -168,5 +169,3 @@ class monthList extends HTMLElement{
     this.remove()
   }
 }
-
-customElements.define("month-list",monthList)

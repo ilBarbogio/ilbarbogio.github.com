@@ -4,8 +4,8 @@
   --button-diameter:3em;
   --button-timing:.125s;
 
-  --n-buttons:2;
-  --top-hidden:calc(calc(-1.75 * var(--n-buttons)) * var(--button-diameter));
+  --n-buttons:3;
+  --top-hidden:calc(calc(-1.5 * var(--n-buttons)) * var(--button-diameter));
   --top-showing:0;
   --top-drag-delta:2em;
 
@@ -24,7 +24,6 @@
   box-sizing: border-box;
   width:var(--area-diameter);
   height:var(--area-diameter);
-  background-image:radial-gradient(#ffffff55, #ffffff00);
   border-radius:50%;
   opacity:0;
 }
@@ -64,5 +63,14 @@
     flex-shrink:0;
     border-radius: 50%;
     background-color: lightseagreen;
+
+    text-align: center;
+    font-weight: bold;
+    line-height:var(--button-diameter);
+
+    &.disabled{
+      opacity:.5;
+      pointer-events: none;
+    }
   }
 }

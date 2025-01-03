@@ -46,6 +46,28 @@ class State{
 }
 
 
+export const categories=[
+  {id:0, label:"casa"},
+  {id:1, label:"spesa"},
+  {id:2, label:"animali"},
+  {id:3, label:"auto"},
+  {id:4, label:"arch. work"},
+  {id:5, label:"tasse"},
+  {id:6, label:"banca"},
+  {id:7, label:"salute"},
+  {id:8, label:"hobbies"},
+  {id:9, label:"vacanze"},
+  {id:10, label:"regali"},
+  {id:11, label:"cura persona"},
+  {id:12, label:"cibo fuori"},
+]
+
+export const pages={
+  calendar:"calendar",
+  filemanager:"filemanager",
+  categorymanager:"categorymanager"
+}
+
 export const state={
   toolbar:undefined,
   container:undefined,
@@ -56,7 +78,8 @@ export const state={
   year:undefined,
   currentFile:undefined,
   yearContainer:undefined,
-  availableFiles:[]
+  availableFiles:[],
+  currentPage:undefined//"calendar"|"filemanager"|"recaps"
 }
 
 export const resetState=()=>{

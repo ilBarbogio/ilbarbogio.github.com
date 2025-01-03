@@ -13,7 +13,7 @@ const template=
     <button class="save-button">save</button>
   </div>
 `
-class fileInput extends HTMLElement{
+export class FileInput extends HTMLElement{
   constructor(){
     super()
   }
@@ -38,7 +38,6 @@ class fileInput extends HTMLElement{
     this.fileInput.addEventListener("change",async(ev)=>{
       if(this.legacyCheckbox.checked){
         let file=this.fileInput.files[0]
-        console.log(file)
         let textData=await file.text()
         let {user,year,data}=parseLegacyData(textData)
         this.uploadedData={user,year,data}
@@ -57,5 +56,3 @@ class fileInput extends HTMLElement{
   }
 
 }
-
-customElements.define("file-input",fileInput)

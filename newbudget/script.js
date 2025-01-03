@@ -15,12 +15,7 @@ const appSetup=async()=>{
   if(localStorage.getItem(LS_KEY_CURRENT_FILE)) state.currentFile=localStorage.getItem(LS_KEY_CURRENT_FILE)
   console.log(state.currentFile)
   if(state.currentFile){
-    // const {result,message}=await readRecordFile()
-    // let event=new CustomEvent(LOADED_DATA_FROM_FILE)
-    // window.dispatchEvent(event)
     await buildCalendarPage()
-    // if(result) await buildFileManagerPage()
-    // else buildCalendarPage()
   }else{
     await buildFileManagerPage()
   }
